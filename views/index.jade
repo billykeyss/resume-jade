@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  #home.wholepage
+    .container.titleContainer
+      h1.titleText Hey! My name is Bill Huang
+      hr
+      h2
+        | And I'm a 
+        #word Developer
+
+  #about.wholepage
+    p Caption 2
+  #skills.wholepage
+    p Caption 3
+  #experiences.wholepage
+    p Caption 4
+  #projects.wholepage
+    p Caption 5
+  #test
+    p Caption 5
+
+  ul.sidenavbar
+    #menu-center
+        li
+          a(href='#home').active Home
+        li
+          a(href='#about') About
+        li
+          a(href='#skills') Skills
+        li
+          a(href='#experiences') Experiences
+        li
+          a(href='#projects') Projects

@@ -1,0 +1,91 @@
+html,
+body {
+    height: 100%;
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wholepage {
+    height: 100vh;
+    width: 100%;
+}
+
+#home {
+    background-color: #588C7E;
+    opacity: 20;
+    color: white;
+    background-image: url("/images/plitvice_Fotor.jpg");
+    background-size: cover;
+}
+
+#about {
+    background-color: #F2E394;
+}
+
+#skills {
+    background-color: #F2AE72;
+}
+
+#experiences {
+    background-color: #D96459;
+}
+
+#projects {
+    background-color: #8C4646;
+}
+
+#word {
+    display: inline;
+}
+
+
+/*NAVBAR STYLING*/
+.sidenavbar {
+    position: fixed;
+    right: 10%;
+    top: 10%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    border-radius: 5px;
+}
+
+li a {
+    display: block;
+    color: #FFF;
+    padding-top: 30px;
+    width: 110px;
+    height: 80px;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #555;
+    color: white;
+    text-decoration: none;
+}
+
+.active {
+    background-color: #22A39F;
+    color: white;
+}
+
+
+
+/*TEXT STYLING*/
+.titleContainer {
+    position: relative;
+    top: 28%;
+    text-align: center;
+}
+
+.titleText {
+    font-size: 70px;
+}
