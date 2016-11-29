@@ -1,15 +1,14 @@
-html,
-body {
+html, body {
     height: 100%;
     margin: 0px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Didact Gothic', 'Open Sans', sans-serif !important;
+    font-size: 16px !important;
 }
-
 .wholepage {
     height: 100vh;
     width: 100%;
+    position: relative;
 }
-
 #home {
     background-color: #588C7E;
     opacity: 20;
@@ -17,44 +16,41 @@ body {
     background-image: url("/images/plitvice_Fotor.jpg");
     background-size: cover;
 }
-
 #about {
-    background-color: #F2E394;
+    background-color: #C4ECFC;
 }
-
 #skills {
-    background-color: #F2AE72;
+    background-color: #e0ebe8;
 }
-
 #experiences {
     background-color: #D96459;
 }
-
 #projects {
     background-color: #8C4646;
 }
-
+#footer {
+    background-color: #c5ded7;
+    color: #777;
+}
 #word {
     display: inline;
+    text-decoration: underline;
 }
-
 
 /*NAVBAR STYLING*/
-.sidenavbar {
-    position: fixed;
-    right: 10%;
-    top: 10%;
-}
 
-ul {
+.sidenavbar {
+    display: none;
+    position: fixed;
+    right: 5%;
+    top: 10%;
     list-style-type: none;
     margin: 0;
     padding: 0;
     background-color: black;
     border-radius: 5px;
 }
-
-li a {
+.navlink a {
     display: block;
     color: #FFF;
     padding-top: 30px;
@@ -66,26 +62,150 @@ li a {
 }
 
 /* Change the link color on hover */
-li a:hover {
+
+.navlink a:hover {
     background-color: #555;
     color: white;
     text-decoration: none;
 }
-
 .active {
     background-color: #22A39F;
     color: white;
 }
 
-
-
 /*TEXT STYLING*/
+
 .titleContainer {
     position: relative;
     top: 28%;
     text-align: center;
 }
-
 .titleText {
     font-size: 70px;
+    text-align: center;
+}
+.align-center {
+    text-align: center;
+}
+
+/*ABOUT SECTION*/
+
+.container {
+    margin-right: 20%;
+    margin-left: 20%;
+}
+.profileContainer {
+    position: relative;
+    top: 5%;
+}
+.quote {}
+.rightQuote {
+    text-align: right;
+}
+
+.leftQuote {
+    text-align: left;
+}
+
+/*
+* === FOOTER SECTION ===
+*/
+
+.footertext {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.footertitle {
+    color: #FFF;
+    font-size: 50px;
+}
+.socialcircle li a, .socialcircle li i, section#footer .copyright {
+    text-align: center
+}
+ul.footer-menu, ul.socialnetwork {
+    display: inline;
+    list-style: none;
+    padding: 0;
+}
+section#footer {
+    background: #242424;
+    margin: 0;
+    margin-top: 50px;
+}
+ul.socialnetwork {
+    margin-left: 0!important;
+}
+ul.socialnetwork li {
+    display: inline;
+    margin: 0 5px;
+}
+.socialnetwork a.icoFacebook:hover {
+    background-color: #3B5998;
+}
+.socialnetwork a.icoDropbox:hover {
+    background-color: #3cf;
+}
+.socialnetwork a.icoGithub:hover {
+    background-color: #0590B8;
+}
+.socialnetwork a.icoLinkedin:hover {
+    background-color: #007bb7;
+}
+.socialnetwork a.icoInstagram:hover {
+    background-color: #125688;
+}
+.btn-cta:hover {
+    color: #fff;
+}
+.socialcircle li a {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+}
+.socialcircle li i {
+    margin: 0;
+    line-height: 50px;
+}
+.socialcircle li a:hover i {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    -ms-transition: all .2s;
+    transition: all .2s
+}
+.socialcircle i {
+    color: #fff;
+    -webkit-transition: all .8s;
+    -moz-transition: all .8s;
+    -o-transition: all .8s;
+    -ms-transition: all .8s;
+    transition: all .8s
+}
+.socialcircle li a {
+    background: #35A49C
+}
+.socialgroup {
+    margin-top: 50px;
+}
+
+
+/*MOBILE PHONE STYLES*/
+@media (max-width: 40em) {
+  .sidenavbar {
+    display: none;
+  }
+}
+
+#quotes {
+  display: none;
 }

@@ -6,29 +6,142 @@ block content
       h1.titleText Hey! My name is Bill Huang
       hr
       h2
-        | And I'm a 
+        | And I'm a&nbsp
         #word Developer
+      .mouse_scroll
+        .mouse
+          .wheel
+        div
+          span.m_scroll_arrows.unu
+          span.m_scroll_arrows.doi
+          span.m_scroll_arrows.trei
+
 
   #about.wholepage
-    p Caption 2
+    .container.profileContainer
+      h1.titleText Profile
+      .row
+        .col-sm-4
+          p test
+        .col-sm-4
+          p test2
+        .col-sm-4
+          p test3
+          .container-scene-width
+    .container-scene
+      .scene
+        .sun
+        .cloud1
+        .cloud2
+        .cloud3
+        .buildings
+          .windows
+          .tower-windows
+            .tower-window
+            .window-sill
+          .blue
+            .triangle
+            .main
+            .chimney
+            .tower
+          .green
+            .accent1
+            .accent2
+          .red
+            .roof1
+            .main
+            .chimney-roof
+            .tower-roof
+            .roof2
+          .white
+            .tower
+            .triangle
+            .main
+          .pink
+            .facade
+            .tower-roof
+        .land
+          .tops
+            .top1
+            .top2
+            .top3
+          .edge
+        .trees
+          .tree1
+            .foliage
+            .trunk
+            .branch1
+            .branch2
+          .tree2
+            .foliage
+            .trunk
+            .branch1
+            .branch2
+          .tree3
+            .foliage
+            .trunk
+            .branch1
+            .branch2
+          .tree4
+            .foliage
+            .trunk
+            .branch1
+            .branch2
+          .tree-white
+            .foliage
+            .trunk
+            .branch1
+            .branch2
+
   #skills.wholepage
-    p Caption 3
+    img(src='images/bb8.png', style='width:auto; height:370px; display: block; margin-left: auto; margin-right: auto; top:50%; vertical-align: middle;')
+
   #experiences.wholepage
-    p Caption 4
+    .fox
+      .head
+        .eye
+        .eye
+      .ear
+      .ear
+      .nose
+      .body
+      .tail
+
   #projects.wholepage
     p Caption 5
-  #test
-    p Caption 5
+  #quotes.wholepage.align-center
+    .container
+      h1.titleText Quotes
+      .row
+        .col-sm-6.leftQuote
+          .quote Beautiful things don't ask for attention
+          .authorLeft - James Thurber
+          hr
+          .quote Ideals are peaceful, history is violent
+          .authorLeft - David Adler
+          hr
+          .quote Where they have burned books, they will end in burning men
+          .authorLeft - Heinrich Heine
+        .col-sm-6.rightQuote
+          .quote Do not seek battle until the victory has been won
+          .authorRight - Sun Tzu
+          hr
+          .quote Nature is history's greatest artist
+          .authorRight - unknown
+          hr
+          .quote Life can only be understood backwards but it must be lived forwards
+          .authorRight - Sören Kierkegaard
+
 
   ul.sidenavbar
     #menu-center
-        li
-          a(href='#home').active Home
-        li
-          a(href='#about') About
-        li
-          a(href='#skills') Skills
-        li
-          a(href='#experiences') Experiences
-        li
-          a(href='#projects') Projects
+      li.navlink
+        a(href='#home').active Home
+      li.navlink
+        a(href='#about') About
+      li.navlink
+        a(href='#skills') Skills
+      li.navlink
+        a(href='#experiences') Experiences
+      li.navlink
+        a(href='#projects') Projects
