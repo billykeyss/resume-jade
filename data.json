@@ -1,0 +1,41 @@
+{
+  "title": "Bill Huang",
+  "description": "Hi, I'm Bill. I do stuff on the internet.",
+  "aboutlong": "My name is Bill Huang... <br> I was raised in the wintery city of Calgary, Alberta. In 2013, I left my hometown for Waterloo, Ontario in order to pursue an undergraduate degree in Computer Engineering. I have always possessed an interest for technology and this degree allows me to sate my curiosity. <br>If you have any questions or concerns, I can be reached through email at any time.",
+  "aboutshort": "I am a fullstack software engineer interested in front end design and front end UI/UX. I am passionate about all things web design and writing clean code. I am currently studying Computer Engineering at the University of Waterloo. ",
+  "name": "Yichen Bill Huang",
+  "location": "Toronto, Ontario, Canada",
+  "email": "yichenhuang95@gmail.com",
+  "phone": "+1 (403) 828-6082",
+  "age": 21,
+  "experiences": [
+    {
+      "company": "Connected Lab",
+      "description": "Connected Lab is a company that is building standalone mobile and web apps, while increasingly building ‘connected software’ across multiple devices and environments. At Connected Lab, I worked on the connected allocations web tool. The allocations web tool is an internal tool used by Connected Lab for resource, client, and project management. Functionalities for report/invoice generation was also implemented during my time at Connected. This project used ReactJS on a Node Framework. Swig was used for HTML templating PostgreSQL and Sequelize was used for the back end.",
+      "location": "Toronto, Ontario",
+      "dates": "Jan 2016 - April 2015",
+      "url": "https://www.google.ca/maps/place/171+E+Liberty+St+%23303,+Toronto,+ON+M6K+3P6/@43.6331596,-79.4141207,15z/data=!4m2!3m1!1s0x882b35038ee3e361:0xf323210028f78e7c?hl=en"
+    },
+    {
+      "company": "nanoPay",
+      "description": "nanoPay is a relatively new startup company that streamlines checkout and creates a smoother shopping experiences by delivering loyalty, coupons and payment with a single touch. I have had the pleasure to work for nanoPay as a Front End Developer, spending my time creating the loyalty portal that the clients of nanoPay will use. Here, I gained significant experience in development using AngularJS and also the Continuous Integration Software Development Cycle. I also started development on an mobile app for android using Android Studio.",
+      "location": "Toronto, Ontario",
+      "dates": "May 2015 - August 2015",
+      "url": "https://www.google.ca/maps/place/171+E+Liberty+St+%23303,+Toronto,+ON+M6K+3P6/@43.6331596,-79.4141207,15z/data=!4m2!3m1!1s0x882b35038ee3e361:0xf323210028f78e7c?hl=en"
+    },
+    {
+      "company": "Kearl Expansion Project / PCL Intracon",
+      "description": "The Kearl Expansion Project is an oil sands mine in the Athabasca Oil Sands Region in northern Alberta. I feel lucky to have played a part in both the construction portion as well as the quality control portion for the Electrical Heat Trace of this project. Here I learned more about the turnover to client process as I have worked at Kearl to it's completion in terms of EHT.",
+      "location": "Fort McMurray, Alberta",
+      "dates": "September 2014 - December 2014",
+      "url": "https://www.google.ca/maps/place/171+E+Liberty+St+%23303,+Toronto,+ON+M6K+3P6/@43.6331596,-79.4141207,15z/data=!4m2!3m1!1s0x882b35038ee3e361:0xf323210028f78e7c?hl=en"
+    },
+    {
+      "company": "Janurary 2014 - April 2014",
+      "description": "I have had the pleasure to have been apart of the team that is currently constructing the worlds largest Steam-assisted gravity drainage (or SAGD) facility in the world. Here, I gained extensive knowledge and experience with regards to Project Coordination and Project planning.",
+      "location": "Fort McMurray, Alberta",
+      "dates": "September 2014 - December 2014",
+      "url": "https://www.google.ca/maps/place/171+E+Liberty+St+%23303,+Toronto,+ON+M6K+3P6/@43.6331596,-79.4141207,15z/data=!4m2!3m1!1s0x882b35038ee3e361:0xf323210028f78e7c?hl=en"
+    }
+  ]
+}

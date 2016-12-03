@@ -3,11 +3,11 @@ extends layout
 block content
   #home.wholepage
     .container.titleContainer
-      h1.titleText Hey! My name is Bill Huang
+      h1.titleText hey i'm bill huang.
       hr
       h2
-        | And I'm a&nbsp
-        #word Developer
+        | and i'm a&nbsp
+        #word developer
       .mouse_scroll
         .mouse
           .wheel
@@ -18,16 +18,6 @@ block content
 
 
   #about.wholepage
-    .container.profileContainer
-      h1.titleText Profile
-      .row
-        .col-sm-4
-          p test
-        .col-sm-4
-          p test2
-        .col-sm-4
-          p test3
-          .container-scene-width
     .container-scene
       .scene
         .sun
@@ -87,28 +77,74 @@ block content
             .trunk
             .branch1
             .branch2
+          .tree5
+            .foliage1
+            .trunk
+            .branch1
+            .branch2
           .tree-white
             .foliage
             .trunk
             .branch1
             .branch2
+    .container.profileContainer.align-center
+      h1.titleText Profile
+        h3 !{data.aboutshort}
+
 
   #skills.wholepage
-    img(src='images/bb8.png', style='width:auto; height:370px; display: block; margin-left: auto; margin-right: auto; top:50%; vertical-align: middle;')
+    .container.profileContainer.align-center
+      h1.titleText Skills
+    .wrapper.align-center
+      #one.border-circle
+      #two.border-circle
+      .background-circle
+        .triangle-light
+        .body
+        span.shirt-text I
+        span.shirt-text ♥
+        span#change-text.shirt-text CSS
+        .triangle-dark
+      .head
+        #left.ear
+        #right.ear
+        .hair-main
+          #left.sideburn
+          #right.sideburn
+          .hair-top
+        .face
+          .hair-bottom
+          .nose
+          #left.eye-shadow
+            .eyebrow
+            .eye
+          #right.eye-shadow
+            .eyebrow
+            .eye
+          .mouth
+          .shadow-wrapper
+            .shadow
 
   #experiences.wholepage
+    .container.profileContainer.align-center
+      h1.titleText Experiences
     .fox
-      .head
-        .eye
-        .eye
-      .ear
-      .ear
-      .nose
-      .body
-      .tail
+      .fox-head
+        .fox-eye
+        .fox-eye
+      .fox-ear
+      .fox-ear
+      .fox-nose
+      .fox-body
+      .fox-tail
 
   #projects.wholepage
-    p Caption 5
+    .container.profileContainer.align-center
+      h1.titleText Projects
+    img.bb8(src='images/bb8.png')
+
+
+
   #quotes.wholepage.align-center
     .container
       h1.titleText Quotes

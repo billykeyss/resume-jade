@@ -3,7 +3,7 @@
 	height: 275px;
 	display: block;
 	position: absolute;
-	top: 50%;
+	top: 80%;
 	left: 50%;
 	-webkit-transform: translate(-50%,-50%);
 	        transform: translate(-50%,-50%);
@@ -16,7 +16,7 @@
   transition: all 200ms ease-in;
 }
 
-.fox .head{
+.fox .fox-head{
 	width: 184px;
 	height: 184px;
 	display: block;
@@ -28,7 +28,7 @@
 	right: 0px;
 	overflow: hidden;
 }
-.fox .head:before, .fox .head:after{
+.fox .fox-head:before, .fox .fox-head:after{
 	content: '';
 	width: 184px;
 	height: 184px;
@@ -39,13 +39,13 @@
 	z-index: 1;
 	bottom: -92px;
 }
-.fox .head:before{
+.fox .fox-head:before{
 	left: -92px;
 }
-.fox .head:after{
+.fox .fox-head:after{
 	right: -92px;
 }
-.fox .head .eye{
+.fox .fox-head .fox-eye{
 	width: 18px;
 	height: 9px;
 	display: block;
@@ -57,19 +57,19 @@
 	animation: piscar 5s step-start 0s infinite;
 	-webkit-animation: piscar 5s step-start 0s infinite;
 }
-.fox .head .eye:nth-child(odd){
+.fox .fox-head .fox-eye:nth-child(odd){
 	left: 37px;
 	transform: rotate(45deg);
 	-moz-transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);
 }
-.fox .head .eye:nth-child(even){
+.fox .fox-head .fox-eye:nth-child(even){
 	right: 37px;
 	transform: rotate(-45deg);
 	-moz-transform: rotate(-45deg);
 	-webkit-transform: rotate(-45deg);
 }
-.fox .ear{
+.fox .fox-ear{
 	width: 93px;
 	height: 93px;
 	display: block;
@@ -77,15 +77,15 @@
 	position: absolute;
 	top: 0px;
 }
-.fox .ear:nth-child(odd){
+.fox .fox-ear:nth-child(odd){
 	border-radius: 0 93px 0 0;
 	left: 31px;
 }
-.fox .ear:nth-child(even){
+.fox .fox-ear:nth-child(even){
 	border-radius: 93px 0 0 0;
 	right: 0px;
 }
-.fox .nose{
+.fox .fox-nose{
 	width: 27px;
 	height: 27px;
 	display: block;
@@ -96,7 +96,7 @@
 	top: 169px;
 	right: 78px;
 }
-.fox .body{
+.fox .fox-body{
 	width: 107px;
 	height: 214px;
 	display: block;
@@ -107,7 +107,7 @@
 	bottom: 0px;
 	right: 0px;
 }
-.fox .tail{
+.fox .fox-tail{
 	width: 215px;
 	height: 107px;
 	display: block;
@@ -119,7 +119,7 @@
 	right: 0px;
 	overflow: hidden;
 }
-.fox .tail:before{
+.fox .fox-tail:before{
 	content: '';
 	width: 57px;
 	height: 57px;
@@ -132,31 +132,23 @@
 }
 
 
-.fox:hover .head, .fox:hover .ear{
+.fox:hover .fox-head, .fox:hover .ear{
 	transform: rotate(15deg);
 	-moz-transform: rotate(15deg);
 	-webkit-transform: rotate(15deg);
 }
-.fox:hover .ear:nth-child(odd) {
+.fox:hover .fox-ear:nth-child(odd) {
     left: 48px;
 }
-.fox:hover .ear:nth-child(even) {
+.fox:hover .fox-ear:nth-child(even) {
     right: -3px;
     top: 20px;
 }
-.fox:hover .nose {
+.fox:hover .fox-nose {
     width: 24px;
     height: 24px;
     top: 165px;
     right: 103px;
-}
-a.author{
-  font-size: 12px;
-  text-decoration: none;
-  color: #f47c7c;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
 }
 
 @keyframes piscar {
