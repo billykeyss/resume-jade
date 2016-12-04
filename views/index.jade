@@ -3,11 +3,12 @@ extends layout
 block content
   #home.wholepage
     .container.titleContainer
-      h1.titleText hey i'm bill huang.
-      hr
-      h2
-        | and i'm a&nbsp
-        #word developer
+      .borderContainer
+        h1.titleText hey i'm bill huang.
+        hr
+        h2
+          | and i'm a&nbsp
+          #word developer
       .mouse_scroll
         .mouse
           .wheel
@@ -18,6 +19,43 @@ block content
 
 
   #about.wholepage
+    .wrapper.align-center
+      #one.border-circle
+      #two.border-circle
+      .background-circle
+        .triangle-light
+        .body
+        span.shirt-text I
+        span.shirt-text ♥
+        span#change-text.shirt-text CSS
+        .triangle-dark
+      .head
+        #left.ear
+        #right.ear
+        .hair-main
+          #left.sideburn
+          #right.sideburn
+          .hair-top
+        .face
+          .hair-bottom
+          .nose
+          #left.eye-shadow
+            .eyebrow
+            .eye
+          #right.eye-shadow
+            .eyebrow
+            .eye
+          .mouth
+          .shadow-wrapper
+            .shadow
+        span#one.music-note ♫
+        span#two.music-note ♪
+    .container.profileContainer.aboutContainer.align-center
+      h1.titleText Profile
+        h3.aboutShort !{data.aboutshort}
+
+
+  #skills.wholepage
     .container-scene
       .scene
         .sun
@@ -88,42 +126,60 @@ block content
             .branch1
             .branch2
     .container.profileContainer.align-center
-      h1.titleText Profile
-        h3 !{data.aboutshort}
-
-
-  #skills.wholepage
-    .container.profileContainer.align-center
       h1.titleText Skills
-    .wrapper.align-center
-      #one.border-circle
-      #two.border-circle
-      .background-circle
-        .triangle-light
-        .body
-        span.shirt-text I
-        span.shirt-text ♥
-        span#change-text.shirt-text CSS
-        .triangle-dark
-      .head
-        #left.ear
-        #right.ear
-        .hair-main
-          #left.sideburn
-          #right.sideburn
-          .hair-top
-        .face
-          .hair-bottom
-          .nose
-          #left.eye-shadow
-            .eyebrow
-            .eye
-          #right.eye-shadow
-            .eyebrow
-            .eye
-          .mouth
-          .shadow-wrapper
-            .shadow
+      .set-size.charts-container
+        .pie-wrapper.progress-95
+          span.label JS
+          .pie
+            .left-side.half-circle
+            .right-side.half-circle
+        .pie-wrapper.progress-90
+          span.label Node
+          .pie
+            .left-side.half-circle
+            .right-side.half-circle
+        .pie-wrapper.progress-100
+          span.label HTML
+          .pie
+            .left-side.half-circle
+            .right-side.half-circle
+        .pie-wrapper.progress-95
+          span.label CSS
+          .pie
+            .left-side.half-circle
+            .right-side.half-circle
+        .pie-wrapper.progress-75
+          span.label(style='padding-left: 18px;') React
+          .pie
+            .left-side.half-circle
+            .right-side.half-circle
+        .pie-wrapper.progress-85
+          span.label(style='font-size: 30px; padding-top: 24px;') Angular
+          .pie
+            .left-side.half-circle
+            .right-side.half-circle
+        .pie-wrapper.progress-45
+          span.label C++
+          .pie
+            .left-side.half-circle
+            .right-side.half-circle
+        .pie-wrapper.progress-45
+          span.label Java
+          .pie
+            .left-side.half-circle
+            .right-side.half-circle
+        .pie-wrapper.progress-65
+          span.label(style='font-size: 30px; padding-top: 24px;') Python
+          .pie
+            .left-side.half-circle
+            .right-side.half-circle
+        .pie-wrapper.progress-95
+          span.label(style='font-size: 30px; padding-top: 24px;') Express
+          .pie
+            .left-side.half-circle
+            .right-side.half-circle
+
+
 
   #experiences.wholepage
     .container.profileContainer.align-center
@@ -142,6 +198,11 @@ block content
     .container.profileContainer.align-center
       h1.titleText Projects
     img.bb8(src='images/bb8.png')
+
+  #photos
+    .container.profileContainer.align-center
+      h1.titleText Photos
+    .container#instafeed
 
 
 

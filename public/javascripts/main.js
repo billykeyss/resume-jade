@@ -3,7 +3,30 @@ $(document).ready(function() {
 
   for (var i = 1; i <= 3; i++) {
     // divRender("about", "cloud4");
-    $("#about").prepend(
+    // $("#about").prepend(
+    //   $('<div class="cloud4" />').css({
+    //     position: 'absolute',
+    //     top: Math.floor(Math.random() * 55) + 5 + '%',
+    //     left: Math.floor(Math.random() * 100) + '%',
+    //     'background-color': cloudColor[Math.floor(Math.random() * 5)]
+    //   }));
+    //
+    // $("#about").prepend(
+    //   $('<div class="cloud5" />').css({
+    //     position: 'absolute',
+    //     top: Math.floor(Math.random() * 55) + 5 + '%',
+    //     left: Math.floor(Math.random() * 100) + '%',
+    //     'background-color': cloudColor[Math.floor(Math.random() * 5)]
+    //   }));
+    //
+    // $("#about").prepend(
+    //   $('<div class="cloud6" />').css({
+    //     position: 'absolute',
+    //     top: Math.floor(Math.random() * 55) + 5 + '%',
+    //     left: Math.floor(Math.random() * 100) + '%'
+    //   }));
+
+    $("#skills").prepend(
       $('<div class="cloud4" />').css({
         position: 'absolute',
         top: Math.floor(Math.random() * 55) + 5 + '%',
@@ -11,7 +34,7 @@ $(document).ready(function() {
         'background-color': cloudColor[Math.floor(Math.random() * 5)]
       }));
 
-    $("#about").prepend(
+    $("#skills").prepend(
       $('<div class="cloud5" />').css({
         position: 'absolute',
         top: Math.floor(Math.random() * 55) + 5 + '%',
@@ -19,13 +42,24 @@ $(document).ready(function() {
         'background-color': cloudColor[Math.floor(Math.random() * 5)]
       }));
 
-    $("#about").prepend(
+    $("#skills").prepend(
       $('<div class="cloud6" />').css({
         position: 'absolute',
         top: Math.floor(Math.random() * 55) + 5 + '%',
         left: Math.floor(Math.random() * 100) + '%'
       }));
   }
+
+  var feed = new Instafeed({
+    get: 'user',
+    userId: '28940206',
+    clientId: 'b0bd23583f3f48f6a5c00eab0207f6b7',
+    accessToken: '28940206.1677ed0.2f83218cc4644a699b42ac0bdf1147ec',
+    resolution: 'low_resolution',
+    limit: '12',
+    template: '<a href="{{link}}"><img style="margin:20px" src="{{image}}" /></a>'
+  });
+  feed.run();
 
   $(document).on("scroll", onScroll);
 

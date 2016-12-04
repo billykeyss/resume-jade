@@ -132,7 +132,7 @@
 }
 
 
-.fox:hover .fox-head, .fox:hover .ear{
+.fox:hover .fox-head, .fox:hover .fox-ear{
 	transform: rotate(15deg);
 	-moz-transform: rotate(15deg);
 	-webkit-transform: rotate(15deg);
