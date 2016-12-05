@@ -22,7 +22,7 @@
     width: 40px;
     top: 130px;
     background-color: #F6F3F2;
-    border-radius: 40px 40px 0 0;
+    border-radius: 40px 40px 0px 0px;
     box-shadow: 50px -15px 0 15px #F6F3F2, 105px 0px 0 #F6F3F2;
 }
 .cloud2 {
@@ -31,7 +31,7 @@
     top: 50px;
     left: 386px;
     background-color: #F6F3F2;
-    border-radius: 40px 40px 0 0;
+    border-radius: 40px 40px 0px 0px;
     box-shadow: 60px -20px 0 20px #F6F3F2, 120px 0px 0 #F6F3F2, 180px -20px 0 20px #F6F3F2, 240px 0px 0 #F6F3F2;
 }
 .cloud3 {
@@ -40,7 +40,7 @@
     top: 140px;
     left: 400px;
     background-color: #F6F3F2;
-    border-radius: 40px 40px 0 0;
+    border-radius: 40px 40px 2px 2px;
     box-shadow: 50px -15px 0 15px #F6F3F2;
 }
 .cloud4 {
@@ -50,7 +50,7 @@
     top: 230px;
     left: 800px;
     background-color: #F6F3F2;
-    border-radius: 40px 40px 0 0;
+    border-radius: 40px 40px 5px 5px;
     box-shadow: 69px -25px 0 15px #F6F3F2, 138px 0px 0 #F6F3F2;
 }
 .cloud5 {
@@ -61,7 +61,7 @@
     top: 130px;
     left: 600px;
     background-color: #F6F3F2;
-    border-radius: 40px 40px 0 0;
+    border-radius: 40px 40px 5px 5px;
     box-shadow: 50px -15px 0 15px #F6F3F2, 105px 0px 0 #F6F3F2;
 }
 .cloud6 {
@@ -69,7 +69,7 @@
     height: 100px;
     width: 200px;
     background-color: #F6F3F2;
-    border-radius: 120px 120px 0 0;
+    border-radius: 120px 120px 5px 5px;
     box-shadow: -28px -15px 0 15px #F6F3F2, 105px 0px 0 #F6F3F2;
 }
 .sun {
@@ -362,12 +362,12 @@
     top: 120px;
     z-index: 4!important;
 }
-.foliage1{
-  height: 75%;
-  width: 100%;
-  background-color: #61A1A1;
-  border-top-left-radius: 100%;
-  border-top-right-radius: 100%;
+.foliage1 {
+    height: 75%;
+    width: 100%;
+    background-color: #61A1A1;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
 }
 .tree-white {
     width: 70px;

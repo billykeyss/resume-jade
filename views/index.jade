@@ -3,6 +3,8 @@ extends layout
 block content
   #home.wholepage
     .stars
+    img.spaceStation(src='images/svg/space-station-1.svg')
+    img.mars(src='images/svg/mars.svg')
     .container.titleContainer
       .borderContainer
         h1.titleText hey i'm bill huang.
@@ -19,6 +21,7 @@ block content
           span.m_scroll_arrows.trei
 
   #about.wholepage
+    img.spaceShip(src='images/svg/rocket.svg')
     .wrapper.align-center
       #one.border-circle
       #two.border-circle
@@ -75,6 +78,7 @@ block content
         line.st0.smoke.smoke4(x1='-312.5', y1='295.9', x2='-318.9', y2='295.9')
 
     .sunMain
+    img.pirateShipOne(src='images/svg/pirate-ship-1.svg')
     .container-scene
       .scene
         .sun
@@ -201,6 +205,9 @@ block content
 
 
   #experiences.wholepage
+    img.fishSVGOne(src='images/svg/fish.svg')
+
+    
     .container.profileContainer.align-center
       h1.titleText Experiences
     svg#fish.fish
@@ -228,6 +235,8 @@ block content
       .fox-tail
 
   #projects.wholepage(style='height:auto;')
+    img.bb8.fish(src='images/svg/submarine.svg', style='display:block;')
+    img.octopus(src='images/svg/octopus-1.svg', style='display:inline;')
     .container.profileContainer.align-center
       h1.titleText Projects
       ul#categories.clr
@@ -285,6 +294,19 @@ block content
             h1 Casty
             p Some sample text about the article this hexagon leads to
     img.bb8(src='images/bb8.png')
+    .sea
+      .circle-wrapper
+        .bubble
+        .submarine-wrapper
+          .submarine-body
+            .window
+            .engine
+            .light
+          .helix
+          .hat
+            .leds-wrapper
+              .periscope
+              .leds
 
   #photos
     .container.profileContainer.align-center

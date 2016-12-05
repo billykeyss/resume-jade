@@ -1,109 +1,86 @@
 .plane {
-  display: block;
-  width: 456px;
-  height: 86px;
-  margin: auto;
-  animation: flight 10s linear infinite;
+    display: block;
+    width: 236px;
+    margin: auto;
+    animation: flight 20s linear infinite;
 }
-
 .plane svg {
-  animation: plane-stutter 5s infinite;
+    animation: plane-stutter 8s infinite;
 }
-
 .smoke1 {
-  animation: smoke 1s infinite;
+    animation: smoke 1s infinite;
 }
-
 .smoke2 {
-  animation: smoke 1s infinite;
-  animation-delay: 0.4s;
+    animation: smoke 1s infinite;
+    animation-delay: 0.4s;
 }
-
 .smoke3 {
-  animation: smoke 1s infinite;
-  animation-delay: 0.2s;
+    animation: smoke 1s infinite;
+    animation-delay: 0.2s;
 }
-
 .smoke4 {
-  animation: smoke 1s infinite;
-  animation-delay: 0.7s;
+    animation: smoke 1s infinite;
+    animation-delay: 0.7s;
 }
-
 .path {
-  animation: draw 0.2s linear infinite;
+    animation: draw 0.2s linear infinite;
 }
-
- @keyframes draw {
-  50% {
-    stroke-dashoffset: 0;
-  }
+@keyframes draw {
+    50% {
+        stroke-dashoffset: 0;
+    }
 }
-
 @keyframes plane-stutter {
-  0% {
-    transform: translateY(100%);
-  }
-
-  25% {
-    transform: translateY(20%);
-  }
-
-   50% {
-    transform: translateY(80%);
-  }
-
-  75% {
-    transform: translateY(0%);
-  }
-
-  100% {
-    transform: translateY(100%);
-  }
+    0% {
+        transform: translateY(100%);
+    }
+    25% {
+        transform: translateY(20%);
+    }
+    50% {
+        transform: translateY(80%);
+    }
+    75% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
 }
-
 @keyframes smoke {
-  0% {
-    transform: translateX(100%);
-  }
-
-  70% {
-    opacity: 0.8;
-  }
-
-  100% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
+    0% {
+        transform: translateX(100%);
+    }
+    70% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
 }
-
 @keyframes plane-stutter {
-  0% {
-    transform: translateY(100%);
-  }
-
-  25% {
-    transform: translateY(20%);
-  }
-
-   50% {
-    transform: translateY(80%);
-  }
-
-  75% {
-    transform: translateY(0%);
-  }
-
-  100% {
-    transform: translateY(100%);
-  }
+    0% {
+        transform: translateY(100%);
+    }
+    25% {
+        transform: translateY(60%);
+    }
+    50% {
+        transform: translateY(80%);
+    }
+    75% {
+        transform: translateY(60%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
 }
-
 @keyframes flight {
-  0% {
-    transform: translateX(-300%);
-  }
-
-  100% {
-    transform: translateX(400%);
-  }
+    0% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(400%);
+    }
 }
