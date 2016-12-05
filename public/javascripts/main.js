@@ -57,7 +57,7 @@ $(document).ready(function() {
     accessToken: '28940206.1677ed0.2f83218cc4644a699b42ac0bdf1147ec',
     resolution: 'standard_resolution',
     limit: '12',
-    template: '<a href="{{link}}"><img style="margin:20px; border:solid; border-color:white;" src="{{image}}" /></a>'
+    template: '<a href="{{link}}"><img style="border:solid; border-color:white;" src="{{image}}" /></a>'
   });
   feed.run();
 
@@ -109,7 +109,6 @@ $(document).ready(function() {
 
   $(window).scroll(function() {
     var y = $(this).scrollTop();
-    console.log(y);
     if (y > 700 && $(window).width() > 500) {
       $('.sidenavbar').fadeIn();
     } else {
@@ -123,6 +122,26 @@ $(document).ready(function() {
       scrollTop: $(window).height()
     }, 1300);
   });
+
+  var stars=800;
+  var $stars=$(".stars");
+  var r=800;
+  for(var i=0;i<stars;i++){
+    var $star=$("<div/>").addClass("star");
+    $stars.append($star);
+  }
+  $(".star").each(function(){
+    var cur=$(this);
+    var s=0.2+(Math.random()*1);
+    var curR=r+(Math.random()*300);
+    cur.css({
+      transformOrigin:"0 0 "+curR+"px",
+      transform:" translate3d(0,0,-"+curR+"px) rotateY("+(Math.random()*360)+"deg) rotateX("+(Math.random()*-50)+"deg) scale("+s+","+s+")"
+
+    })
+  })
+
+
 });
 
 function onScroll(event) {
