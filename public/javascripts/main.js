@@ -1,7 +1,7 @@
 $(document).ready(function() {
   var cloudColor = ["#d7d7d7", "#e0e0e0", "#F6F3F2", "#e9e9e9", "#e4e4e4", "#bdbdbd"];
 
-  for (var i = 1; i <= 3; i++) {
+  for (var i = 1; i <= 2; i++) {
     // divRender("about", "cloud4");
     // $("#about").prepend(
     //   $('<div class="cloud4" />').css({
@@ -29,7 +29,7 @@ $(document).ready(function() {
     $("#skills").prepend(
       $('<div class="cloud4" />').css({
         position: 'absolute',
-        top: Math.floor(Math.random() * 55) + 5 + '%',
+        top: Math.floor(Math.random() * 75) + 5 + '%',
         left: Math.floor(Math.random() * 100) + '%',
         'background-color': cloudColor[Math.floor(Math.random() * 5)]
       }));
@@ -37,7 +37,7 @@ $(document).ready(function() {
     $("#skills").prepend(
       $('<div class="cloud5" />').css({
         position: 'absolute',
-        top: Math.floor(Math.random() * 55) + 5 + '%',
+        top: Math.floor(Math.random() * 75) + 5 + '%',
         left: Math.floor(Math.random() * 100) + '%',
         'background-color': cloudColor[Math.floor(Math.random() * 5)]
       }));
@@ -45,7 +45,7 @@ $(document).ready(function() {
     $("#skills").prepend(
       $('<div class="cloud6" />').css({
         position: 'absolute',
-        top: Math.floor(Math.random() * 55) + 5 + '%',
+        top: Math.floor(Math.random() * 75) + 5 + '%',
         left: Math.floor(Math.random() * 100) + '%'
       }));
   }
@@ -55,9 +55,9 @@ $(document).ready(function() {
     userId: '28940206',
     clientId: 'b0bd23583f3f48f6a5c00eab0207f6b7',
     accessToken: '28940206.1677ed0.2f83218cc4644a699b42ac0bdf1147ec',
-    resolution: 'low_resolution',
+    resolution: 'standard_resolution',
     limit: '12',
-    template: '<a href="{{link}}"><img style="margin:20px" src="{{image}}" /></a>'
+    template: '<a href="{{link}}"><img style="margin:20px; border:solid; border-color:white;" src="{{image}}" /></a>'
   });
   feed.run();
 
@@ -107,8 +107,9 @@ $(document).ready(function() {
     }, 8000);
   });
 
-  $(document).scroll(function() {
+  $(window).scroll(function() {
     var y = $(this).scrollTop();
+    console.log(y);
     if (y > 700 && $(window).width() > 500) {
       $('.sidenavbar').fadeIn();
     } else {
@@ -118,7 +119,6 @@ $(document).ready(function() {
 
   $(".mouse_scroll").click(function(e) {
     e.preventDefault();
-    console.log('test');
     $('html, body').stop().animate({
       scrollTop: $(window).height()
     }, 1300);

@@ -17,7 +17,6 @@ block content
           span.m_scroll_arrows.doi
           span.m_scroll_arrows.trei
 
-
   #about.wholepage
     .wrapper.align-center
       #one.border-circle
@@ -56,6 +55,7 @@ block content
 
 
   #skills.wholepage
+    .sunMain
     .container-scene
       .scene
         .sun
@@ -194,14 +194,68 @@ block content
       .fox-body
       .fox-tail
 
-  #projects.wholepage
+  #projects.wholepage(style='height:auto;')
     .container.profileContainer.align-center
       h1.titleText Projects
+      ul#categories.clr
+        li
+          div
+            img(src='images/projects/armboard.png', alt='')
+            h1 Morse Code Translator
+            p Takes in string inputs and outputs morse signals. Programmed using an ARM board and assembly language.
+        li
+          div
+            img(src='images/projects/echohackathon.jpg', alt='')
+            h1.projectTitle Alexa Rap Bot
+            p.projectDescription Node project that uses AWS Lambda and DynamoDB to create an application that allows you to participate in a rap battle with Alexa.
+        li.pusher
+        li
+          div
+            img(src='images/projects/tapExchange.png', alt='')
+            h1 TapExchange
+            p TapExchange is a simple phone app that allows users to transmit contact info via NFC.
+        li
+          div
+            img(src='images/projects/blog.png', alt='')
+            h1 This is a title
+            p Some sample text about the article this hexagon leads to
+        li
+          div
+            img(src='images/projects/pedometer.png', alt='')
+            h1 Android Pedometer
+            p Designed and implemented Android Pedometer using finite state machines and sensor event handlers. Contains map loading and path finding capabilities.
+        li
+          div
+            img(src='images/projects/reaction.jpg', alt='')
+            h1 Reaction Timer
+            p Designed a program using the ARM board that records the reaction time of user based on LED stimulus and button input.
+        li
+          div
+            img(src='images/projects/trafficlight.jpg', alt='')
+            h1 This is a title
+            p Some sample text about the article this hexagon leads to
+        li
+          div
+            img(src='images/projects/pong.png', alt='' style="height:50%; top: 25%;")
+            h1 Pong
+            p A Recreation of the classic game of Pong using Unity.
+        li
+          div
+            img(src='images/projects/portfolio-site.png', alt='')
+            h1 Portfolio sites
+            p Some sample text about the article this hexagon leads to
+        li.pusher
+        li.pusher
+        li
+          div
+            img(src='images/projects/casty.png', alt='')
+            h1 Casty
+            p Some sample text about the article this hexagon leads to
     img.bb8(src='images/bb8.png')
 
   #photos
     .container.profileContainer.align-center
-      h1.titleText Photos
+      h1.titleText(style='color:white;') Photos
     .container#instafeed
 
 
