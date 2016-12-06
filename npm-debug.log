@@ -1,40 +1,223 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'start' ]
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
 2 info using npm@2.15.1
 3 info using node@v4.4.3
-4 verbose run-script [ 'prestart', 'start', 'poststart' ]
-5 info prestart resume-jade@0.0.0
-6 info start resume-jade@0.0.0
-7 verbose unsafe-perm in lifecycle true
-8 info resume-jade@0.0.0 Failed to exec start script
-9 verbose stack Error: resume-jade@0.0.0 start: `node ./bin/www`
-9 verbose stack Exit status 1
-9 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:217:16)
-9 verbose stack     at emitTwo (events.js:87:13)
-9 verbose stack     at EventEmitter.emit (events.js:172:7)
-9 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
-9 verbose stack     at emitTwo (events.js:87:13)
-9 verbose stack     at ChildProcess.emit (events.js:172:7)
-9 verbose stack     at maybeClose (internal/child_process.js:827:16)
-9 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
-10 verbose pkgid resume-jade@0.0.0
-11 verbose cwd /Users/Bill/Documents/GitProjects/resume-jade
-12 error Darwin 16.1.0
-13 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
-14 error node v4.4.3
-15 error npm  v2.15.1
-16 error code ELIFECYCLE
-17 error resume-jade@0.0.0 start: `node ./bin/www`
-17 error Exit status 1
-18 error Failed at the resume-jade@0.0.0 start script 'node ./bin/www'.
-18 error This is most likely a problem with the resume-jade package,
-18 error not with npm itself.
-18 error Tell the author that this fails on your system:
-18 error     node ./bin/www
-18 error You can get information on how to open an issue for this project with:
-18 error     npm bugs resume-jade
-18 error Or if that isn't available, you can get their info via:
-18 error
-18 error     npm owner ls resume-jade
-18 error There is likely additional logging output above.
-19 verbose exit [ 1, true ]
+4 verbose readDependencies loading dependencies from /Users/Bill/Documents/GitProjects/resume-jade/package.json
+5 verbose install where, deps [ '/Users/Bill/Documents/GitProjects/resume-jade',
+5 verbose install   [ 'body-parser',
+5 verbose install     'cookie-parser',
+5 verbose install     'debug',
+5 verbose install     'express',
+5 verbose install     'jade',
+5 verbose install     'morgan',
+5 verbose install     'serve-favicon' ] ]
+6 verbose install where, peers [ '/Users/Bill/Documents/GitProjects/resume-jade', [] ]
+7 verbose installManyTop reading for lifecycle /Users/Bill/Documents/GitProjects/resume-jade/package.json
+8 info preinstall resume-jade@0.0.0
+9 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/body-parser/package.json
+10 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/cookie-parser/package.json
+11 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/debug/package.json
+12 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint/package.json
+13 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-config-airbnb/package.json
+14 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-config-google/package.json
+15 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-plugin-import/package.json
+16 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-plugin-jsx-a11y/package.json
+17 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-plugin-react/package.json
+18 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/express/package.json
+19 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/jade/package.json
+20 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/jquery/package.json
+21 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/morgan/package.json
+22 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/serve-favicon/package.json
+23 verbose readDependencies loading dependencies from /Users/Bill/Documents/GitProjects/resume-jade/package.json
+24 verbose targetResolver reading package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/body-parser/package.json
+25 verbose targetResolver reading package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/cookie-parser/package.json
+26 verbose targetResolver reading package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/debug/package.json
+27 verbose targetResolver reading package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint/package.json
+28 verbose targetResolver reading package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-config-airbnb/package.json
+29 verbose targetResolver reading package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-config-google/package.json
+30 verbose targetResolver reading package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-plugin-import/package.json
+31 verbose targetResolver reading package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-plugin-jsx-a11y/package.json
+32 verbose targetResolver reading package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-plugin-react/package.json
+33 verbose targetResolver reading package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/express/package.json
+34 verbose targetResolver reading package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/jade/package.json
+35 verbose targetResolver reading package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/jquery/package.json
+36 verbose targetResolver reading package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/morgan/package.json
+37 verbose targetResolver reading package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/serve-favicon/package.json
+38 verbose targetResolver reading package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/.bin/eslint/package.json
+39 verbose targetResolver reading package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/.bin/jade/package.json
+40 verbose already installed skipping cookie-parser@~1.4.3 /Users/Bill/Documents/GitProjects/resume-jade
+41 verbose already installed skipping debug@~2.2.0 /Users/Bill/Documents/GitProjects/resume-jade
+42 verbose already installed skipping express@~4.14.0 /Users/Bill/Documents/GitProjects/resume-jade
+43 verbose already installed skipping jade@~1.11.0 /Users/Bill/Documents/GitProjects/resume-jade
+44 verbose already installed skipping morgan@~1.7.0 /Users/Bill/Documents/GitProjects/resume-jade
+45 verbose already installed skipping serve-favicon@~2.3.0 /Users/Bill/Documents/GitProjects/resume-jade
+46 verbose already installed skipping body-parser@~1.15.2 /Users/Bill/Documents/GitProjects/resume-jade
+47 silly install resolved []
+48 info build /Users/Bill/Documents/GitProjects/resume-jade
+49 info linkStuff resume-jade@0.0.0
+50 silly linkStuff resume-jade@0.0.0 has /Users/Bill/Documents/GitProjects as its parent node_modules
+51 verbose linkBins resume-jade@0.0.0
+52 verbose linkMans resume-jade@0.0.0
+53 verbose rebuildBundles resume-jade@0.0.0
+54 verbose rebuildBundles [ '.bin',
+54 verbose rebuildBundles   'body-parser',
+54 verbose rebuildBundles   'cookie-parser',
+54 verbose rebuildBundles   'debug',
+54 verbose rebuildBundles   'eslint',
+54 verbose rebuildBundles   'eslint-config-airbnb',
+54 verbose rebuildBundles   'eslint-config-google',
+54 verbose rebuildBundles   'eslint-plugin-import',
+54 verbose rebuildBundles   'eslint-plugin-jsx-a11y',
+54 verbose rebuildBundles   'eslint-plugin-react',
+54 verbose rebuildBundles   'express',
+54 verbose rebuildBundles   'jade',
+54 verbose rebuildBundles   'jquery',
+54 verbose rebuildBundles   'morgan',
+54 verbose rebuildBundles   'serve-favicon' ]
+55 verbose rebuild bundle /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint
+56 info build /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint
+57 info preinstall eslint@3.11.1
+58 info linkStuff eslint@3.11.1
+59 silly linkStuff eslint@3.11.1 has /Users/Bill/Documents/GitProjects/resume-jade/node_modules as its parent node_modules
+60 verbose linkBins eslint@3.11.1
+61 verbose link bins [ { eslint: './bin/eslint.js' },
+61 verbose link bins   '/Users/Bill/Documents/GitProjects/resume-jade/node_modules/.bin',
+61 verbose link bins   false ]
+62 verbose linkMans eslint@3.11.1
+63 verbose rebuildBundles eslint@3.11.1
+64 silly gentlyRm /Users/Bill/Documents/GitProjects/resume-jade/node_modules/.bin/eslint is being purged
+65 verbose gentlyRm don't care about contents; nuking /Users/Bill/Documents/GitProjects/resume-jade/node_modules/.bin/eslint
+66 verbose rebuildBundles [ '.bin',
+66 verbose rebuildBundles   'babel-code-frame',
+66 verbose rebuildBundles   'chalk',
+66 verbose rebuildBundles   'concat-stream',
+66 verbose rebuildBundles   'doctrine',
+66 verbose rebuildBundles   'escope',
+66 verbose rebuildBundles   'espree',
+66 verbose rebuildBundles   'estraverse',
+66 verbose rebuildBundles   'esutils',
+66 verbose rebuildBundles   'file-entry-cache',
+66 verbose rebuildBundles   'glob',
+66 verbose rebuildBundles   'globals',
+66 verbose rebuildBundles   'ignore',
+66 verbose rebuildBundles   'imurmurhash',
+66 verbose rebuildBundles   'inquirer',
+66 verbose rebuildBundles   'is-my-json-valid',
+66 verbose rebuildBundles   'is-resolvable',
+66 verbose rebuildBundles   'js-yaml',
+66 verbose rebuildBundles   'json-stable-stringify',
+66 verbose rebuildBundles   'levn',
+66 verbose rebuildBundles   'lodash',
+66 verbose rebuildBundles   'mkdirp',
+66 verbose rebuildBundles   'natural-compare',
+66 verbose rebuildBundles   'optionator',
+66 verbose rebuildBundles   'path-is-inside',
+66 verbose rebuildBundles   'pluralize',
+66 verbose rebuildBundles   'progress',
+66 verbose rebuildBundles   'require-uncached',
+66 verbose rebuildBundles   'shelljs',
+66 verbose rebuildBundles   'strip-bom',
+66 verbose rebuildBundles   'strip-json-comments',
+66 verbose rebuildBundles   'table',
+66 verbose rebuildBundles   'text-table',
+66 verbose rebuildBundles   'user-home' ]
+67 silly vacuum-fs purging /Users/Bill/Documents/GitProjects/resume-jade/node_modules/.bin/eslint
+68 silly vacuum-fs quitting because other entries in /Users/Bill/Documents/GitProjects/resume-jade/node_modules/.bin
+69 info install eslint@3.11.1
+70 info postinstall eslint@3.11.1
+71 verbose rebuild bundle /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-config-airbnb
+72 info build /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-config-airbnb
+73 info preinstall eslint-config-airbnb@13.0.0
+74 info linkStuff eslint-config-airbnb@13.0.0
+75 silly linkStuff eslint-config-airbnb@13.0.0 has /Users/Bill/Documents/GitProjects/resume-jade/node_modules as its parent node_modules
+76 verbose linkBins eslint-config-airbnb@13.0.0
+77 verbose linkMans eslint-config-airbnb@13.0.0
+78 verbose rebuildBundles eslint-config-airbnb@13.0.0
+79 verbose rebuildBundles [ 'eslint-config-airbnb-base' ]
+80 info install eslint-config-airbnb@13.0.0
+81 info postinstall eslint-config-airbnb@13.0.0
+82 verbose rebuild bundle /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-config-google
+83 info build /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-config-google
+84 info preinstall eslint-config-google@0.7.1
+85 info linkStuff eslint-config-google@0.7.1
+86 silly linkStuff eslint-config-google@0.7.1 has /Users/Bill/Documents/GitProjects/resume-jade/node_modules as its parent node_modules
+87 verbose linkBins eslint-config-google@0.7.1
+88 verbose linkMans eslint-config-google@0.7.1
+89 verbose rebuildBundles eslint-config-google@0.7.1
+90 info install eslint-config-google@0.7.1
+91 info postinstall eslint-config-google@0.7.1
+92 verbose rebuild bundle /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-plugin-import
+93 info build /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-plugin-import
+94 info preinstall eslint-plugin-import@2.2.0
+95 info linkStuff eslint-plugin-import@2.2.0
+96 silly linkStuff eslint-plugin-import@2.2.0 has /Users/Bill/Documents/GitProjects/resume-jade/node_modules as its parent node_modules
+97 verbose linkBins eslint-plugin-import@2.2.0
+98 verbose linkMans eslint-plugin-import@2.2.0
+99 verbose rebuildBundles eslint-plugin-import@2.2.0
+100 verbose rebuildBundles [ 'builtin-modules',
+100 verbose rebuildBundles   'contains-path',
+100 verbose rebuildBundles   'doctrine',
+100 verbose rebuildBundles   'eslint-import-resolver-node',
+100 verbose rebuildBundles   'eslint-module-utils',
+100 verbose rebuildBundles   'has',
+100 verbose rebuildBundles   'lodash.cond',
+100 verbose rebuildBundles   'minimatch',
+100 verbose rebuildBundles   'pkg-up' ]
+101 info install eslint-plugin-import@2.2.0
+102 info postinstall eslint-plugin-import@2.2.0
+103 verbose rebuild bundle /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-plugin-jsx-a11y
+104 info build /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-plugin-jsx-a11y
+105 info preinstall eslint-plugin-jsx-a11y@3.0.1
+106 info linkStuff eslint-plugin-jsx-a11y@3.0.1
+107 silly linkStuff eslint-plugin-jsx-a11y@3.0.1 has /Users/Bill/Documents/GitProjects/resume-jade/node_modules as its parent node_modules
+108 verbose linkBins eslint-plugin-jsx-a11y@3.0.1
+109 verbose linkMans eslint-plugin-jsx-a11y@3.0.1
+110 verbose rebuildBundles eslint-plugin-jsx-a11y@3.0.1
+111 verbose rebuildBundles [ 'damerau-levenshtein', 'jsx-ast-utils', 'object-assign' ]
+112 info install eslint-plugin-jsx-a11y@3.0.1
+113 info postinstall eslint-plugin-jsx-a11y@3.0.1
+114 verbose rebuild bundle /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-plugin-react
+115 info build /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-plugin-react
+116 info preinstall eslint-plugin-react@6.7.1
+117 info linkStuff eslint-plugin-react@6.7.1
+118 silly linkStuff eslint-plugin-react@6.7.1 has /Users/Bill/Documents/GitProjects/resume-jade/node_modules as its parent node_modules
+119 verbose linkBins eslint-plugin-react@6.7.1
+120 verbose linkMans eslint-plugin-react@6.7.1
+121 verbose rebuildBundles eslint-plugin-react@6.7.1
+122 verbose rebuildBundles [ 'doctrine', 'jsx-ast-utils' ]
+123 info install eslint-plugin-react@6.7.1
+124 info postinstall eslint-plugin-react@6.7.1
+125 verbose rebuild bundle /Users/Bill/Documents/GitProjects/resume-jade/node_modules/jquery
+126 info build /Users/Bill/Documents/GitProjects/resume-jade/node_modules/jquery
+127 info preinstall jquery@3.1.1
+128 info linkStuff jquery@3.1.1
+129 silly linkStuff jquery@3.1.1 has /Users/Bill/Documents/GitProjects/resume-jade/node_modules as its parent node_modules
+130 verbose linkBins jquery@3.1.1
+131 verbose linkMans jquery@3.1.1
+132 verbose rebuildBundles jquery@3.1.1
+133 info install jquery@3.1.1
+134 info postinstall jquery@3.1.1
+135 info install resume-jade@0.0.0
+136 info postinstall resume-jade@0.0.0
+137 info prepublish resume-jade@0.0.0
+138 verbose validateInstall loading /Users/Bill/Documents/GitProjects/resume-jade/package.json for validation
+139 verbose stack Error: The package eslint-plugin-jsx-a11y@3.0.1 does not satisfy its siblings' peerDependencies requirements!
+139 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:125:32
+139 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:268:7
+139 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
+139 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+139 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+139 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+139 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+139 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+139 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+139 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+140 verbose cwd /Users/Bill/Documents/GitProjects/resume-jade
+141 error Darwin 16.1.0
+142 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+143 error node v4.4.3
+144 error npm  v2.15.1
+145 error code EPEERINVALID
+146 error peerinvalid The package eslint-plugin-jsx-a11y@3.0.1 does not satisfy its siblings' peerDependencies requirements!
+146 error peerinvalid Peer eslint-config-airbnb@13.0.0 wants eslint-plugin-jsx-a11y@^2.2.3
+147 verbose exit [ 1, true ]

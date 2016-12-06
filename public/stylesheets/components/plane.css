@@ -1,0 +1,2 @@
+.plane{display:block;width:236px;height:20vh;margin:auto;animation:flight 10s linear infinite}.plane img{animation:plane-stutter 8s infinite;position:absolute;bottom:80%}.path{animation:draw 0.2s linear infinite}@keyframes draw{50%{stroke-dashoffset:0}}@keyframes plane-stutter{0%{transform:translateY(100%)}25%{transform:translateY(60%)}50%{transform:translateY(80%)}75%{transform:translateY(60%)}100%{transform:translateY(100%)}}@keyframes flight{0%{transform:translateX(400%)}100%{transform:translateX(-400%)}}
+/*# sourceMappingURL=plane.css.map */

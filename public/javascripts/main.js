@@ -19,19 +19,28 @@ $(document).ready(function() {
     //     'background-color': cloudColor[Math.floor(Math.random() * 5)]
     //   }));
     //
-    // $("#about").prepend(
-    //   $('<div class="cloud6" />').css({
-    //     position: 'absolute',
-    //     top: Math.floor(Math.random() * 55) + 5 + '%',
-    //     left: Math.floor(Math.random() * 100) + '%'
-    //   }));
+    $("#about").prepend(
+      $('<img src="images/svg/cloud.svg" />').css({
+        position: 'absolute',
+        top: Math.floor(Math.random() * 80) + 5 + '%',
+        left: Math.floor(Math.random() * 100) + '%',
+        opacity: Math.random()
+      }));
+    $("#about").prepend(
+      $('<div class="cloud8" />').css({
+        position: 'absolute',
+        top: Math.floor(Math.random() * 80) + 5 + '%',
+        left: Math.floor(Math.random() * 100) + '%',
+        opacity: Math.random()
+      }));
 
     $("#skills").prepend(
       $('<div class="cloud4" />').css({
         position: 'absolute',
         top: Math.floor(Math.random() * 75) + 5 + '%',
         left: Math.floor(Math.random() * 100) + '%',
-        'background-color': cloudColor[Math.floor(Math.random() * 5)]
+        'background-color': cloudColor[Math.floor(Math.random() * 5)],
+        opacity: Math.random()/2 + 0.5
       }));
 
     $("#skills").prepend(
@@ -39,14 +48,16 @@ $(document).ready(function() {
         position: 'absolute',
         top: Math.floor(Math.random() * 75) + 5 + '%',
         left: Math.floor(Math.random() * 100) + '%',
-        'background-color': cloudColor[Math.floor(Math.random() * 5)]
+        'background-color': cloudColor[Math.floor(Math.random() * 5)],
+        opacity: Math.random()/2 + 0.6
       }));
 
     $("#skills").prepend(
       $('<div class="cloud6" />').css({
         position: 'absolute',
         top: Math.floor(Math.random() * 75) + 5 + '%',
-        left: Math.floor(Math.random() * 100) + '%'
+        left: Math.floor(Math.random() * 100) + '%',
+        opacity: Math.random()/2 + 0.5
       }));
   }
 
@@ -123,20 +134,20 @@ $(document).ready(function() {
     }, 1300);
   });
 
-  var stars=800;
-  var $stars=$(".stars");
-  var r=800;
-  for(var i=0;i<stars;i++){
-    var $star=$("<div/>").addClass("star");
+  var stars = 800;
+  var $stars = $(".stars");
+  var r = 800;
+  for (var i = 0; i < stars; i++) {
+    var $star = $("<div/>").addClass("star");
     $stars.append($star);
   }
-  $(".star").each(function(){
-    var cur=$(this);
-    var s=0.2+(Math.random()*1);
-    var curR=r+(Math.random()*300);
+  $(".star").each(function() {
+    var cur = $(this);
+    var s = 0.2 + (Math.random() * 1);
+    var curR = r + (Math.random() * 300);
     cur.css({
-      transformOrigin:"0 0 "+curR+"px",
-      transform:" translate3d(0,0,-"+curR+"px) rotateY("+(Math.random()*360)+"deg) rotateX("+(Math.random()*-50)+"deg) scale("+s+","+s+")"
+      transformOrigin: "0 0 " + curR + "px",
+      transform: " translate3d(0,0,-" + curR + "px) rotateY(" + (Math.random() * 360) + "deg) rotateX(" + (Math.random() * -50) + "deg) scale(" + s + "," + s + ")"
 
     })
   })
