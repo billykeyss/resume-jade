@@ -2,47 +2,28 @@ $(document).ready(function() {
   var cloudColor = ["#d7d7d7", "#e0e0e0", "#F6F3F2", "#e9e9e9", "#e4e4e4", "#bdbdbd"];
 
   for (var i = 1; i <= 2; i++) {
-    // divRender("about", "cloud4");
-    // $("#about").prepend(
-    //   $('<div class="cloud4" />').css({
-    //     position: 'absolute',
-    //     top: Math.floor(Math.random() * 55) + 5 + '%',
-    //     left: Math.floor(Math.random() * 100) + '%',
-    //     'background-color': cloudColor[Math.floor(Math.random() * 5)]
-    //   }));
-    //
-    // $("#about").prepend(
-    //   $('<div class="cloud5" />').css({
-    //     position: 'absolute',
-    //     top: Math.floor(Math.random() * 55) + 5 + '%',
-    //     left: Math.floor(Math.random() * 100) + '%',
-    //     'background-color': cloudColor[Math.floor(Math.random() * 5)]
-    //   }));
-    //
     $("#about").prepend(
       $('<img src="images/svg/cloud.svg" />').css({
         position: 'absolute',
         top: Math.floor(Math.random() * 80) + 5 + '%',
         left: Math.floor(Math.random() * 100) + '%',
-        opacity: Math.random()
+        opacity: Math.random()/2 + 0.25,
+      }));
+    $("#about").prepend(
+      $('<img src="images/svg/cloud-1.svg" />').css({
+        position: 'absolute',
+        top: Math.floor(Math.random() * 80) + 5 + '%',
+        left: Math.floor(Math.random() * 100) + '%',
+        opacity: Math.random()/2 + 0.25,
+        height:"150px"
       }));
     $("#about").prepend(
       $('<div class="cloud8" />').css({
         position: 'absolute',
         top: Math.floor(Math.random() * 80) + 5 + '%',
         left: Math.floor(Math.random() * 100) + '%',
-        opacity: Math.random()
+        opacity: Math.random()/2 + 0.25,
       }));
-
-    $("#skills").prepend(
-      $('<div class="cloud4" />').css({
-        position: 'absolute',
-        top: Math.floor(Math.random() * 75) + 5 + '%',
-        left: Math.floor(Math.random() * 100) + '%',
-        'background-color': cloudColor[Math.floor(Math.random() * 5)],
-        opacity: Math.random()/2 + 0.5
-      }));
-
     $("#skills").prepend(
       $('<div class="cloud5" />').css({
         position: 'absolute',
@@ -58,6 +39,13 @@ $(document).ready(function() {
         top: Math.floor(Math.random() * 75) + 5 + '%',
         left: Math.floor(Math.random() * 100) + '%',
         opacity: Math.random()/2 + 0.5
+      }));
+    $("#skills").prepend(
+      $('<img src="images/svg/cloud.svg" />').css({
+        position: 'absolute',
+        top: Math.floor(Math.random() * 80) + 5 + '%',
+        left: Math.floor(Math.random() * 100) + '%',
+        opacity: Math.random()
       }));
   }
 

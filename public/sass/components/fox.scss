@@ -10,21 +10,6 @@
   transform: translate(-50%, -50%);
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  -webkit-transition: all 200ms ease-in;
-  transition: all 200ms ease-in;
-  &:after, &:before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    -webkit-transition: all 200ms ease-in;
-    transition: all 200ms ease-in;
-  }
-}
-
 .fox {
   .fox-head {
     width: 184px;
