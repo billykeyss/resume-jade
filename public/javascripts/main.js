@@ -30,6 +30,7 @@ $(document).ready(function() {
         top: Math.floor(Math.random() * 80) + 5 + '%',
         left: Math.floor(Math.random() * 100) + '%',
         opacity: Math.random()/2 + 0.25,
+        height: Math.random()/2 * 300
       }));
     $("#skills").prepend(
       $('<div class="cloud5" />').css({
