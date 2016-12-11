@@ -24,6 +24,13 @@ $(document).ready(function() {
         left: Math.floor(Math.random() * 100) + '%',
         opacity: Math.random()/2 + 0.25,
       }));
+    $("#about").prepend(
+      $('<img src="images/svg/cloud-2.svg" />').css({
+        position: 'absolute',
+        top: Math.floor(Math.random() * 80) + 5 + '%',
+        left: Math.floor(Math.random() * 100) + '%',
+        opacity: Math.random()/2 + 0.25,
+      }));
     $("#skills").prepend(
       $('<div class="cloud5" />').css({
         position: 'absolute',
