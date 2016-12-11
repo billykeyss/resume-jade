@@ -61,7 +61,7 @@ $(document).ready(function() {
     userId: '28940206',
     clientId: 'b0bd23583f3f48f6a5c00eab0207f6b7',
     accessToken: '28940206.1677ed0.2f83218cc4644a699b42ac0bdf1147ec',
-    resolution: 'standard_resolution',
+    resolution: 'low_resolution',
     limit: '12',
     template: '<a href="{{link}}"><img style="border:solid; border-color:white;" src="{{image}}" /></a>'
   });
