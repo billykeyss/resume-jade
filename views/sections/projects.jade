@@ -1,0 +1,17 @@
+#projects.wholepage(style='')
+	img.bb8.fish(src='images/svg/submarine.svg', style='display:block;')
+	img.angler(src='images/svg/angler.svg')
+	img.octopus(src='images/svg/octopus-1.svg', style='display:inline;')
+	.container.profileContainer.align-center
+		h1.titleText Projects
+
+		ul#categories.clr
+			each project, index in data.projects
+				if project.name == "pusher"
+					li.pusher
+				else
+					li
+						div
+							img(src=project.src, alt='')
+							h1=project.name
+							p=project.description

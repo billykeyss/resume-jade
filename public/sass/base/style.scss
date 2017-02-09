@@ -6,7 +6,7 @@ html {
     font-size: 16px !important;
 }
 body {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 * {
     box-sizing: border-box;
@@ -36,6 +36,69 @@ body {
     background-size: cover;
     overflow: hidden;
 }
+.txt-rotate > .wrap {
+    border-right: 0.08em solid #FFF;
+    animation: pulse 1.5s step-end infinite;
+}
+@keyframes pulse {
+  0% {
+    border-right: 0.08em solid #FFF;
+  }
+  50% {
+    border-right: none;
+  }
+}
+
+//
+// @keyframes "blink" {
+//   from, to {
+//     color: transparent;
+//   }
+//   50% {
+//     color: black;
+//   }
+// }
+//
+// @-moz-keyframes blink {
+//   from, to {
+//     color: transparent;
+//   }
+//   50% {
+//     color: black;
+//   }
+// }
+//
+// @-webkit-keyframes blink {
+//   from, to {
+//     color: transparent;
+//   }
+//   50% {
+//     color: black;
+//   }
+// }
+//
+// @-ms-keyframes blink {
+//   from, to {
+//     color: transparent;
+//   }
+//   50% {
+//     color: black;
+//   }
+// }
+//
+// @-o-keyframes blink {
+//   from, to {
+//     color: transparent;
+//   }
+//   50% {
+//     color: black;
+//   }
+// }
+
+
+
+
+
 #about {
     background: linear-gradient(black, #36AFE8);
     padding-bottom: 40%;
@@ -111,6 +174,12 @@ body {
     text-decoration: none;
     text-align: center;
 }
+.navlink {
+    .active {
+        background-color: #22A39F;
+        color: white;
+    }
+}
 @keyframes rotate {
     0% {
         transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(0);
@@ -138,15 +207,19 @@ body {
     transform: translate3d(0, 0, -150px);
     backface-visibility: hidden;
 }
+.stars1 {
+    transform: perspective(500px);
+    transform-style: preserve-3d;
+    position: absolute;
+    bottom: 0;
+    perspective-origin: 40% 100%;
+    animation: rotate 720s infinite linear;
+}
 /* Change the link color on hover */
 .navlink a:hover {
     background-color: #555;
     color: white;
     text-decoration: none;
-}
-.active {
-    background-color: #22A39F;
-    color: white;
 }
 /*TEXT STYLING*/
 .titleContainer {
@@ -213,7 +286,7 @@ body {
     position: absolute;
     top: 0;
     left: 20%;
-    bottom: 30%;
+    bottom: 25%;
     right: 0;
     width: auto;
     height: 20%;
@@ -573,7 +646,7 @@ ul.socialnetwork {
         margin: 5px;
     }
     .aboutShort {
-        line-height: 1.0 !important;
+        line-height: 1.3 !important;
     }
     .bb8 {
         position: relative;

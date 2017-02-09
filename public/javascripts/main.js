@@ -7,30 +7,30 @@ $(document).ready(function() {
         position: 'absolute',
         top: Math.floor(Math.random() * 80) + 5 + '%',
         left: Math.floor(Math.random() * 100) + '%',
-        opacity: Math.random()/2 + 0.25,
+        opacity: Math.random() / 2 + 0.25,
       }));
     $("#about").prepend(
       $('<img src="images/svg/cloud-1.svg" />').css({
         position: 'absolute',
         top: Math.floor(Math.random() * 80) + 5 + '%',
         left: Math.floor(Math.random() * 100) + '%',
-        opacity: Math.random()/2 + 0.25,
-        height:"150px"
+        opacity: Math.random() / 2 + 0.25,
+        height: "150px"
       }));
     $("#about").prepend(
       $('<div class="cloud8" />').css({
         position: 'absolute',
         top: Math.floor(Math.random() * 80) + 5 + '%',
         left: Math.floor(Math.random() * 100) + '%',
-        opacity: Math.random()/2 + 0.25,
+        opacity: Math.random() / 2 + 0.25,
       }));
     $("#about").prepend(
       $('<img src="images/svg/cloud-2.svg" />').css({
         position: 'absolute',
         top: Math.floor(Math.random() * 80) + 5 + '%',
         left: Math.floor(Math.random() * 100) + '%',
-        opacity: Math.random()/2 + 0.25,
-        height: Math.random()/2 * 300
+        opacity: Math.random() / 2 + 0.25,
+        height: Math.random() / 2 * 300
       }));
     $("#skills").prepend(
       $('<div class="cloud5" />').css({
@@ -38,7 +38,7 @@ $(document).ready(function() {
         top: Math.floor(Math.random() * 75) + 5 + '%',
         left: Math.floor(Math.random() * 100) + '%',
         'background-color': cloudColor[Math.floor(Math.random() * 5)],
-        opacity: Math.random()/2 + 0.6
+        opacity: Math.random() / 2 + 0.6
       }));
 
     $("#skills").prepend(
@@ -46,7 +46,7 @@ $(document).ready(function() {
         position: 'absolute',
         top: Math.floor(Math.random() * 75) + 5 + '%',
         left: Math.floor(Math.random() * 100) + '%',
-        opacity: Math.random()/2 + 0.5
+        opacity: Math.random() / 2 + 0.5
       }));
     $("#skills").prepend(
       $('<img src="images/svg/cloud.svg" />').css({
@@ -69,38 +69,6 @@ $(document).ready(function() {
   feed.run();
 
   $(document).on("scroll", onScroll);
-
-  //smoothscroll
-  $('a[href^="#"]').on('click', function(e) {
-    e.preventDefault();
-    $(document).off("scroll");
-
-    $('a').each(function() {
-      $(this).removeClass('active');
-    })
-    $(this).addClass('active');
-
-    var target = this.hash,
-      menu = target;
-    $target = $(target);
-    $('html, body').stop().animate({
-      'scrollTop': $target.offset().top + 2
-    }, 500, 'swing', function() {
-      window.location.hash = target;
-      $(document).on("scroll", onScroll);
-    });
-  });
-
-  $(function() {
-    count = 0;
-    wordsArray = ["developer", "traveller", "nap enthusiast", "homo Sapien", "buffet connoisseur"];
-    setInterval(function() {
-      count++;
-      $("#word").fadeOut(400, function() {
-        $(this).text(wordsArray[count % wordsArray.length]).fadeIn(400);
-      });
-    }, 4000);
-  });
 
   $(function() {
     count = 0;
@@ -130,13 +98,22 @@ $(document).ready(function() {
     }, 1300);
   });
 
-  var stars = 800;
+  var stars = 400;
   var $stars = $(".stars");
   var r = 800;
   for (var i = 0; i < stars; i++) {
     var $star = $("<div/>").addClass("star");
     $stars.append($star);
   }
+
+  var stars1 = 400;
+  var $stars1 = $(".stars1");
+  var r = 800;
+  for (var i = 0; i < stars1; i++) {
+    var $star1 = $("<div/>").addClass("star");
+    $stars1.append($star1);
+  }
+
   $(".star").each(function() {
     var cur = $(this);
     var s = 0.2 + (Math.random() * 1);
@@ -144,48 +121,98 @@ $(document).ready(function() {
     cur.css({
       transformOrigin: "0 0 " + curR + "px",
       transform: " translate3d(0,0,-" + curR + "px) rotateY(" + (Math.random() * 360) + "deg) rotateX(" + (Math.random() * -50) + "deg) scale(" + s + "," + s + ")"
-
     })
   })
 
 
-  function skillSet() {
-  // Iterate over each element w/ a class of
-  // bar-info, storing the value of data-total
-  // in a variable.  Using jQuery's CSS method,
-  // dynamically update the width of each bar.
-  $('.bar-info').each(function() {
-    total = $(this).data("total");
-    $(this).css("width", total + "%");
-  });
 
-  // Iterate over each element w/ the class percent.  Using
-  // jQuery's $(this) will allow us to interact w/ each specific
-  // object in the loop.  Then use jQuery's super awesome animate method
-  // to implement a counter on each .percent element, which will "count"
-  // up incrementally until it reaches the number inside the percent span,
-  // aka it's "ceiling".
-  $('.percent').each(function() {
-    var $this = $(this);
-    $({
-      Counter: 10
-    }).animate({
-      Counter: $this.text()
-    }, {
-      duration: 1000,
-      easing: 'swing',
-      step: function() {
-        $this.text(Math.ceil(this.Counter) + "%");
-      }
+
+
+
+  function skillSet() {
+    // Iterate over each element w/ a class of
+    // bar-info, storing the value of data-total
+    // in a variable.  Using jQuery's CSS method,
+    // dynamically update the width of each bar.
+    $('.bar-info').each(function() {
+      total = $(this).data("total");
+      $(this).css("width", total + "%");
     });
-  });
-};
-// Invoke our skillSet function inside a setTimeout,
-// to create a short delay before the animation begins.
-setTimeout(skillSet, 1000);
+
+    // Iterate over each element w/ the class percent.  Using
+    // jQuery's $(this) will allow us to interact w/ each specific
+    // object in the loop.  Then use jQuery's super awesome animate method
+    // to implement a counter on each .percent element, which will "count"
+    // up incrementally until it reaches the number inside the percent span,
+    // aka it's "ceiling".
+    $('.percent').each(function() {
+      var $this = $(this);
+      $({
+        Counter: 10
+      }).animate({
+        Counter: $this.text()
+      }, {
+        duration: 1000,
+        easing: 'swing',
+        step: function() {
+          $this.text(Math.ceil(this.Counter) + "%");
+        }
+      });
+    });
+  };
+  // Invoke our skillSet function inside a setTimeout,
+  // to create a short delay before the animation begins.
+  setTimeout(skillSet, 1000);
+
+
+  var dataRotate = ["developer", "traveller", "nap enthusiast", "homo Sapien", "buffet connoisseur"];
+  var element = document.getElementsByClassName('txt-rotate')[0];
+  new TxtRotate(element, dataRotate, 4000);
 
 
 });
+
+
+var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
 
 function onScroll(event) {
   var scrollPos = $(document).scrollTop();
