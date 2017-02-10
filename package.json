@@ -5,7 +5,10 @@
   "scripts": {
     "start": "node ./bin/www",
     "test": "eslint **/*.js",
-    "watch": "sass --watch public/sass:public/stylesheets --style compressed"
+    "watch": "sass --watch public/sass:public/stylesheets --style compressed",
+    "uglyifyJs": "uglifyjs public/javascripts/main.js --compress --mangle --output public/dist/javascript/main.min.js",
+    "uglyifyCss": "",
+    "build": ""
   },
   "dependencies": {
     "body-parser": "~1.15.2",

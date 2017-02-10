@@ -3,16 +3,19 @@ var router = express.Router();
 var fs = require('fs');
 
 var obj;
-fs.readFile('data.json', 'utf8', function (err, data) {
-    if (err) {
-      throw err;
-    };
-    obj = JSON.parse(data);
+fs.readFile('data.json', 'utf8', function(err, data) {
+  if (err) {
+    throw err;
+  };
+  obj = JSON.parse(data);
 });
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { data: obj });
+  if (!res.getHeader('Cache-Control')) res.setHeader('Cache-Control', 'public, max-age=' + (86400000 / 1000));
+  res.render('index', {
+    data: obj
+  });
 });
 
 module.exports = router;
