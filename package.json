@@ -6,7 +6,7 @@
     "start": "node ./bin/www",
     "test": "eslint **/*.js",
     "watch": "sass --watch public/sass:public/stylesheets --style compressed",
-    "uglyifyJs": "uglifyjs public/javascripts/main.js --compress --mangle --output public/dist/javascript/main.min.js",
+    "uglyifyJs": "uglifyjs public/javascripts/main.js --compress --mangle --output public/javascripts/main.min.js",
     "uglyifyCss": "",
     "build": ""
   },

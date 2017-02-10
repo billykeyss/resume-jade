@@ -170,6 +170,82 @@ $(document).ready(function() {
   new TxtRotate(element, dataRotate, 4000);
 
 
+
+
+
+
+
+
+  var randomColorFactor = function() {
+    return Math.round(Math.random() * 255);
+  };
+  var randomColor = function(opacity) {
+    return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '1.0') + ')';
+  };
+
+  var configDoughnut = {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        data: [
+          40,
+          20,
+          20,
+          30,
+          35,
+          35,
+          20
+        ],
+        backgroundColor: [
+          randomColor(),
+          randomColor(),
+          randomColor(),
+          randomColor(),
+          randomColor(),
+          randomColor(),
+          randomColor()
+        ],
+        label: 'Dataset 1'
+      }],
+      labels: [
+        "Javascript (ES6)",
+        "HTML",
+        "CSS",
+        "Python",
+        "ReactJS",
+        "NodeJS",
+        "AngularJS"
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: false,
+        text: 'SkillSet',
+        fontSize: 16
+      },
+      animation: {
+        animateScale: true,
+        animateRotate: true
+      }
+    }
+  };
+  var ctx = document.getElementById("skillsChart").getContext("2d");
+  window.myDoughnut = new Chart(ctx, configDoughnut);
+  // window.myRadar = new Chart(document.getElementById("canvas"), config);
+
+
+
+
+
+
+
+
+
 });
 
 
@@ -193,12 +269,14 @@ TxtRotate.prototype.tick = function() {
     this.txt = fullTxt.substring(0, this.txt.length + 1);
   }
 
-  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+  this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
   var that = this;
   var delta = 300 - Math.random() * 100;
 
-  if (this.isDeleting) { delta /= 2; }
+  if (this.isDeleting) {
+    delta /= 2;
+  }
 
   if (!this.isDeleting && this.txt === fullTxt) {
     delta = this.period;
