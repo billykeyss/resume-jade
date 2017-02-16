@@ -5,6 +5,11 @@
 	img.pirateShipOne(src='images/svg/pirate-ship-1.svg')
 	include ../components/island
 	.container.profileContainer.align-center
-		h1.titleText Skills
-		#canvas-holder(style='margin-top:5%;')
-			canvas#skillsChart
+		h1.titleText Full Stack Developer
+		.row(style="background-color: white; border-color: black; border: solid; z-index: 10000; opacity: 0.7; padding:25px")
+			.col-md-6
+				#canvas-holder
+					canvas#frontEndSkillsChart
+			.col-md-5
+				#canvas-holder
+					canvas#backEndSkillsChart

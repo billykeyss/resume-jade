@@ -12,7 +12,7 @@ fs.readFile('data.json', 'utf8', function(err, data) {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  if (!res.getHeader('Cache-Control')) res.setHeader('Cache-Control', 'public, max-age=' + (86400000 / 1000));
+  // if (!res.getHeader('Cache-Control')) res.setHeader('Cache-Control', 'public, max-age=' + (86400000 / 1000));
   res.render('index', {
     data: obj
   });

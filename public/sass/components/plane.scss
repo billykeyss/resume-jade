@@ -3,6 +3,7 @@
   width: 236px;
   height: 20vh;
   margin: auto;
+  position: absolute;
   animation: flight 10s linear infinite;
   img {
     animation: plane-stutter 8s infinite;

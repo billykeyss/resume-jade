@@ -4,3 +4,20 @@
 	img.shark(src='images/svg/shark.svg')
 	.container.profileContainer.align-center
 		h1.titleText Experiences
+
+		.container
+			#timeline
+				each experience, index in data.experiences
+					if experience.show == "True"
+						.timeline-item
+							.timeline-icon
+							if index % 2 == 0
+								.timeline-content
+									h2 !{experience.company}
+									h5 !{experience.dates}
+									p !{experience.descriptionShort}
+							else
+								.timeline-content.right
+									h2 !{experience.company}
+									h5 !{experience.dates}
+									p !{experience.descriptionShort}

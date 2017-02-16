@@ -1,60 +1,14 @@
 $(document).ready(function() {
-  var cloudColor = ["#d7d7d7", "#e0e0e0", "#F6F3F2", "#e9e9e9", "#e4e4e4", "#bdbdbd"];
-
   for (var i = 1; i <= 2; i++) {
-    $("#about").prepend(
-      $('<img src="images/svg/cloud.svg" />').css({
-        position: 'absolute',
-        top: Math.floor(Math.random() * 80) + 5 + '%',
-        left: Math.floor(Math.random() * 100) + '%',
-        opacity: Math.random() / 2 + 0.25,
-      }));
-    $("#about").prepend(
-      $('<img src="images/svg/cloud-1.svg" />').css({
-        position: 'absolute',
-        top: Math.floor(Math.random() * 80) + 5 + '%',
-        left: Math.floor(Math.random() * 100) + '%',
-        opacity: Math.random() / 2 + 0.25,
-        height: "150px"
-      }));
-    $("#about").prepend(
-      $('<div class="cloud8" />').css({
-        position: 'absolute',
-        top: Math.floor(Math.random() * 80) + 5 + '%',
-        left: Math.floor(Math.random() * 100) + '%',
-        opacity: Math.random() / 2 + 0.25,
-      }));
-    $("#about").prepend(
-      $('<img src="images/svg/cloud-2.svg" />').css({
-        position: 'absolute',
-        top: Math.floor(Math.random() * 80) + 5 + '%',
-        left: Math.floor(Math.random() * 100) + '%',
-        opacity: Math.random() / 2 + 0.25,
-        height: Math.random() / 2 * 300
-      }));
-    $("#skills").prepend(
-      $('<div class="cloud5" />').css({
-        position: 'absolute',
-        top: Math.floor(Math.random() * 75) + 5 + '%',
-        left: Math.floor(Math.random() * 100) + '%',
-        'background-color': cloudColor[Math.floor(Math.random() * 5)],
-        opacity: Math.random() / 2 + 0.6
-      }));
+    svgRender("about", "images/svg/cloud.svg", "150px");
+    svgRender("about", "images/svg/cloud-1.svg", "150px");
+    svgRender("about", "images/svg/cloud-2.svg", "150px");
+    svgRender("about", "images/svg/cloud.svg", "150px");
+    divRender("about", "cloud8");
 
-    $("#skills").prepend(
-      $('<div class="cloud6" />').css({
-        position: 'absolute',
-        top: Math.floor(Math.random() * 75) + 5 + '%',
-        left: Math.floor(Math.random() * 100) + '%',
-        opacity: Math.random() / 2 + 0.5
-      }));
-    $("#skills").prepend(
-      $('<img src="images/svg/cloud.svg" />').css({
-        position: 'absolute',
-        top: Math.floor(Math.random() * 80) + 5 + '%',
-        left: Math.floor(Math.random() * 100) + '%',
-        opacity: Math.random()
-      }));
+    divRender("skills", "cloud5");
+    divRender("skills", "cloud6");
+    svgRender("skills", "images/svg/cloud.svg", "150px");
   }
 
   var feed = new Instafeed({
@@ -170,50 +124,35 @@ $(document).ready(function() {
   new TxtRotate(element, dataRotate, 4000);
 
 
-
-
-
-
-
-
   var randomColorFactor = function() {
     return Math.round(Math.random() * 255);
   };
   var randomColor = function(opacity) {
-    return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '1.0') + ')';
+    return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ', 1.0)';
   };
 
-  var configDoughnut = {
+  var frontEndChartConfig = {
     type: 'doughnut',
     data: {
       datasets: [{
         data: [
+          60,
           40,
-          20,
-          20,
-          30,
-          35,
-          35,
-          20
+          40,
+          40
         ],
         backgroundColor: [
           randomColor(),
           randomColor(),
           randomColor(),
-          randomColor(),
-          randomColor(),
-          randomColor(),
           randomColor()
         ],
-        label: 'Dataset 1'
+        borderWidth: [0, 0, 0, 0]
       }],
       labels: [
-        "Javascript (ES6)",
         "HTML",
-        "CSS",
-        "Python",
+        "CSS/SCSS",
         "ReactJS",
-        "NodeJS",
         "AngularJS"
       ]
     },
@@ -221,11 +160,15 @@ $(document).ready(function() {
       responsive: true,
       maintainAspectRatio: false,
       legend: {
-        position: 'top',
+        position: 'bottom',
+        fullWidth: 'true',
+        labels: {
+          fontSize: 14
+        }
       },
       title: {
-        display: false,
-        text: 'SkillSet',
+        display: true,
+        text: 'Frontend Skill Set',
         fontSize: 16
       },
       animation: {
@@ -234,18 +177,55 @@ $(document).ready(function() {
       }
     }
   };
-  var ctx = document.getElementById("skillsChart").getContext("2d");
-  window.myDoughnut = new Chart(ctx, configDoughnut);
-  // window.myRadar = new Chart(document.getElementById("canvas"), config);
-
-
-
-
-
-
-
-
-
+  var backEndChartConfig = {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        data: [
+          60,
+          40,
+          20,
+          40
+        ],
+        backgroundColor: [
+          randomColor(),
+          randomColor(),
+          randomColor()
+        ],
+        borderWidth: [0, 0, 0]
+      }],
+      labels: [
+        "Javascript (ES6)",
+        "NodeJS",
+        "Database Solutions",
+        "Express"
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      legend: {
+        position: 'bottom',
+        fullWidth: 'true',
+        labels: {
+          fontSize: 14
+        }
+      },
+      title: {
+        display: true,
+        text: 'Backend Skill Set',
+        fontSize: 16
+      },
+      animation: {
+        animateScale: true,
+        animateRotate: true
+      }
+    }
+  };
+  var frontendctx = document.getElementById("frontEndSkillsChart").getContext("2d");
+  var backendctx = document.getElementById("backEndSkillsChart").getContext("2d");
+  new Chart(frontendctx, frontEndChartConfig);
+  new Chart(backendctx, backEndChartConfig);
 });
 
 
@@ -310,13 +290,23 @@ function clamp(num, min, max) {
   return num <= min ? min : num >= max ? max : num;
 }
 
-// function divRender(parent, child) {
-//   $("#" + parent).prepend(
-//     $('<div class="' + child '" />').css({
-//       position: 'absolute',
-//       top: Math.floor(Math.random() * 60) + 5 + '%',
-//       left: Math.floor(Math.random() * 100) + '%',
-//       'background-color': cloudColor[Math.floor(Math.random() * 5)]
-//     }));
-//   return;
-// }
+function divRender(parent, child) {
+  $("#" + parent).prepend(
+    $('<div class="' + child + '" />').css({
+      position: 'absolute',
+      top: Math.floor(Math.random() * 75) + 5 + '%',
+      left: Math.floor(Math.random() * 100) + '%',
+      opacity: Math.random() / 2 + 0.5
+    }));
+}
+
+function svgRender(parent, child, height) {
+  $("#" + parent).prepend(
+    $('<img src="' + child + '"/>').css({
+      position: 'absolute',
+      top: Math.floor(Math.random() * 80) + 5 + '%',
+      left: Math.floor(Math.random() * 100) + '%',
+      opacity: Math.random() / 2 + 0.25,
+      height: height
+    }));
+}
