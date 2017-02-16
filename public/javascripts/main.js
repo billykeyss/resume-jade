@@ -60,7 +60,7 @@ $(document).ready(function() {
     $stars.append($star);
   }
 
-  var stars1 = 400;
+  var stars1 = 100;
   var $stars1 = $(".stars1");
   var r = 800;
   for (var i = 0; i < stars1; i++) {
@@ -157,6 +157,7 @@ $(document).ready(function() {
       ]
     },
     options: {
+      defaultFontFamily: 'Open Sans',
       responsive: true,
       maintainAspectRatio: false,
       legend: {
@@ -169,7 +170,8 @@ $(document).ready(function() {
       title: {
         display: true,
         text: 'Frontend Skill Set',
-        fontSize: 16
+        fontSize: 20,
+        fontFamily: 'Open Sans'
       },
       animation: {
         animateScale: true,
@@ -214,7 +216,8 @@ $(document).ready(function() {
       title: {
         display: true,
         text: 'Backend Skill Set',
-        fontSize: 16
+        fontSize: 20,
+        fontFamily: 'Open Sans'
       },
       animation: {
         animateScale: true,
