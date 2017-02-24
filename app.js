@@ -1,3 +1,5 @@
+'use strict'
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -6,9 +8,28 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
 
 var app = express();
+
+var mcache = require('memory-cache');
+
+var cache = (duration) => {
+  return (req, res, next) => {
+    let key = '__express__' + req.originalUrl || req.url
+    let cachedBody = mcache.get(key)
+    if (cachedBody) {
+      res.send(cachedBody)
+      return
+    } else {
+      res.sendResponse = res.send
+      res.send = (body) => {
+        mcache.put(key, body, duration * 1000);
+        res.sendResponse(body)
+      }
+      next()
+    }
+  }
+}
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -25,8 +46,7 @@ app.use(express.static(__dirname + '/public', { maxAge: 86400000 }));
 app.locals.env = process.env;
 
 
-app.use('/', index);
-app.use('/users', users);
+app.use('/', cache(10000000), index);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
