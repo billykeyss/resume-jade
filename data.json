@@ -8,11 +8,44 @@
   "email": "yichenhuang95@gmail.com",
   "phone": "+1 (403) 828-6082",
   "age": 21,
+  "values": [
+    {
+        "imgSrc": "images/svg/values/code.svg",
+        "value": "Code Quality",
+        "description": "Maintain readability and uphold good coding practices."
+    },
+    {
+        "imgSrc": "images/svg/values/feedback-loop.svg",
+        "value": "Seek feedback",
+        "description": "Actively seek feedback to incorporate into my work."
+    },
+    {
+        "imgSrc": "images/svg/values/simplify.svg",
+        "value": "Simplify",
+        "description": "Simplicity is better."
+    },
+    {
+        "imgSrc": "images/svg/values/fail.svg",
+        "value": "Fail Gracefully",
+        "description": "Embrace failure as part of the learning process."
+    },
+    {
+        "imgSrc": "images/svg/values/learn.svg",
+        "value": "Always Grow",
+        "description": "Constantly strive to become a better developer. Constanly strive to help others become better developers."
+    },
+    {
+        "imgSrc": "images/svg/values/plan.svg",
+        "value": "Plan Ahead",
+        "description": "Always have a road map in terms of future functionality and scalability. Never build blindly."
+    }
+  ],
   "experiences": [
     {
       "show": "True",
       "company": "Connected Lab",
-      "descriptionShort": "Solutions Architect",
+      "title": "Solutions Architect",
+      "descriptionShort": "At Connected Lab, I aided product managers in translating technical requirements into a long term development plan and estimating development effort for each solution.",
       "description": "Connected Lab is a company that is building standalone mobile and web apps, while increasingly building ‘connected software’ across multiple devices and environments. At Connected Lab, I worked on the connected allocations web tool. The allocations web tool is an internal tool used by Connected Lab for resource, client, and project management. Functionalities for report/invoice generation was also implemented during my time at Connected. This project used ReactJS on a Node Framework. Swig was used for HTML templating PostgreSQL and Sequelize was used for the back end.",
       "location": "Toronto, Ontario",
       "dates": "(Jan 2017 - April 2017)",
@@ -21,7 +54,8 @@
     {
       "show": "True",
       "company": "Connected Lab",
-      "descriptionShort": "Software Engineer",
+      "title": "Software Engineer",
+      "descriptionShort": "I helped build an internal resource management tool using the PERN stack (Postgres, Express, React, Node). Express was used for routing  I also performed RnD on the capabilities of React Native.",
       "description": "Connected Lab is a company that is building standalone mobile and web apps, while increasingly building ‘connected software’ across multiple devices and environments. At Connected Lab, I worked on the connected allocations web tool. The allocations web tool is an internal tool used by Connected Lab for resource, client, and project management. Functionalities for report/invoice generation was also implemented during my time at Connected. This project used ReactJS on a Node Framework. Swig was used for HTML templating PostgreSQL and Sequelize was used for the back end.",
       "location": "Toronto, Ontario",
       "dates": "(Jan 2016 - April 2016)",
@@ -30,7 +64,8 @@
     {
       "show": "True",
       "company": "nanoPay",
-      "descriptionShort": "Frontend Developer",
+      "title": "Frontend Developer",
+      "descriptionShort": "While at nanoPay, I implemented UI/UX of an Android app as well as using AngularJS to build a responsive website with Rest API. I worked closely with designers to implement the designs and was responsible for high code quality.",
       "description": "nanoPay is a relatively new startup company that streamlines checkout and creates a smoother shopping experiences by delivering loyalty, coupons and payment with a single touch. I have had the pleasure to work for nanoPay as a Front End Developer, spending my time creating the loyalty portal that the clients of nanoPay will use. Here, I gained significant experience in development using AngularJS and also the Continuous Integration Software Development Cycle. I also started development on an mobile app for android using Android Studio.",
       "location": "Toronto, Ontario",
       "dates": "(May 2015 - August 2015)",
@@ -39,7 +74,8 @@
     {
       "show": "False",
       "company": "PCL Intracon",
-      "descriptionShort": "Project Coordinator",
+      "title": "Project Coordinator",
+      "descriptionShort": "Test",
       "description": "The Kearl Expansion Project is an oil sands mine in the Athabasca Oil Sands Region in northern Alberta. I feel lucky to have played a part in both the construction portion as well as the quality control portion for the Electrical Heat Trace of this project. Here I learned more about the turnover to client process as I have worked at Kearl to it's completion in terms of EHT.",
       "location": "Fort McMurray, Alberta",
       "dates": "(Sept 2014 - Dec 2014)",
@@ -48,7 +84,8 @@
     {
       "show": "False",
       "company": "Conoco Phillips Phase II",
-      "descriptionShort": "Project Coordinator",
+      "title": "Project Coordinator",
+      "descriptionShort": "Test",
       "description": "I have had the pleasure to have been apart of the team that is currently constructing the worlds largest Steam-assisted gravity drainage (or SAGD) facility in the world. Here, I gained extensive knowledge and experience with regards to Project Coordination and Project planning.",
       "location": "Fort McMurray, Alberta",
       "dates": "(Jan 2014 - April 2014)",
@@ -57,7 +94,7 @@
     {
       "show": "False",
       "company": "Alberta Health Services",
-      "descriptionShort": "Health Intern",
+      "title": "Health Intern",
       "description": "I spent the summer of 2012 working for Alberta Health Services as a dietician intern. A fellow intern and I lead a research project on celiac disease as well as working on a celiac disease support group.",
       "location": "Calgary, Alberta",
       "dates": "(Sept 2014 - Dec 2014)",

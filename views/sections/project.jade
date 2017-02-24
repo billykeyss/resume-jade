@@ -1,0 +1,32 @@
+#project
+	.whale
+		.whale-body
+			.whale-eye
+		.whale-tail
+	.sea
+		.circle-wrapper
+			.bubble
+			.submarine-wrapper
+				.submarine-body
+					.window
+					.engine
+					.light
+				.helix
+				.hat
+					.leds-wrapper
+						.periscope
+						.leds
+	.container.profileContainer.align-center
+		h1.titleText(style='color:white') Projects
+
+
+		ul#categories.clr
+			each project in data.projects
+				if project.name == "pusher"
+					li.pusher
+				else
+					li
+						div
+							img(src=project.src, alt='')
+							h1=project.name
+							p=project.description
