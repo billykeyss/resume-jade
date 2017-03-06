@@ -52,35 +52,8 @@ $(document).ready(function() {
     }, 1300);
   });
 
-  var stars = 400;
-  var $stars = $(".stars");
-  var r = 800;
-  for (var i = 0; i < stars; i++) {
-    var $star = $("<div/>").addClass("star");
-    $stars.append($star);
-  }
-
-  var stars1 = 100;
-  var $stars1 = $(".stars1");
-  var r = 800;
-  for (var i = 0; i < stars1; i++) {
-    var $star1 = $("<div/>").addClass("star");
-    $stars1.append($star1);
-  }
-
-  $(".star").each(function() {
-    var cur = $(this);
-    var s = 0.2 + (Math.random() * 1);
-    var curR = r + (Math.random() * 300);
-    cur.css({
-      transformOrigin: "0 0 " + curR + "px",
-      transform: " translate3d(0,0,-" + curR + "px) rotateY(" + (Math.random() * 360) + "deg) rotateX(" + (Math.random() * -50) + "deg) scale(" + s + "," + s + ")"
-    })
-  })
-
-
-
-
+  particlesJS.load('particles-js', 'javascripts/particles.json');
+  particlesJS.load('particles-js-about', 'javascripts/particles-about.json');
 
 
   function skillSet() {

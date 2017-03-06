@@ -1,40 +1,197 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'start' ]
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'memory-cache' ]
 2 info using npm@2.15.1
 3 info using node@v4.4.3
-4 verbose run-script [ 'prestart', 'start', 'poststart' ]
-5 info prestart resume-jade@0.0.0
-6 info start resume-jade@0.0.0
-7 verbose unsafe-perm in lifecycle true
-8 info resume-jade@0.0.0 Failed to exec start script
-9 verbose stack Error: resume-jade@0.0.0 start: `node ./bin/www`
-9 verbose stack Exit status 1
-9 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:217:16)
-9 verbose stack     at emitTwo (events.js:87:13)
-9 verbose stack     at EventEmitter.emit (events.js:172:7)
-9 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
-9 verbose stack     at emitTwo (events.js:87:13)
-9 verbose stack     at ChildProcess.emit (events.js:172:7)
-9 verbose stack     at maybeClose (internal/child_process.js:827:16)
-9 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
-10 verbose pkgid resume-jade@0.0.0
-11 verbose cwd /Users/Bill/Documents/GitProjects/resume-jade
-12 error Darwin 16.4.0
-13 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
-14 error node v4.4.3
-15 error npm  v2.15.1
-16 error code ELIFECYCLE
-17 error resume-jade@0.0.0 start: `node ./bin/www`
-17 error Exit status 1
-18 error Failed at the resume-jade@0.0.0 start script 'node ./bin/www'.
-18 error This is most likely a problem with the resume-jade package,
-18 error not with npm itself.
-18 error Tell the author that this fails on your system:
-18 error     node ./bin/www
-18 error You can get information on how to open an issue for this project with:
-18 error     npm bugs resume-jade
-18 error Or if that isn't available, you can get their info via:
-18 error
-18 error     npm owner ls resume-jade
-18 error There is likely additional logging output above.
-19 verbose exit [ 1, true ]
+4 verbose install initial load of /Users/Bill/Documents/GitProjects/resume-jade/package.json
+5 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/body-parser/package.json
+6 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/cookie-parser/package.json
+7 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/debug/package.json
+8 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint/package.json
+9 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-config-airbnb/package.json
+10 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-config-google/package.json
+11 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-plugin-import/package.json
+12 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-plugin-jsx-a11y/package.json
+13 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/eslint-plugin-react/package.json
+14 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/express/package.json
+15 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/install/package.json
+16 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/jade/package.json
+17 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/jquery/package.json
+18 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/memory-cache/package.json
+19 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/morgan/package.json
+20 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/npm/package.json
+21 verbose installManyTop reading scoped package data from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/serve-favicon/package.json
+22 verbose readDependencies loading dependencies from /Users/Bill/Documents/GitProjects/resume-jade/package.json
+23 verbose install memory-cache is installed as 0.1.6
+24 silly cache add args [ 'memory-cache', null ]
+25 verbose cache add spec memory-cache
+26 silly cache add parsed spec Result {
+26 silly cache add   raw: 'memory-cache',
+26 silly cache add   scope: null,
+26 silly cache add   name: 'memory-cache',
+26 silly cache add   rawSpec: '',
+26 silly cache add   spec: 'latest',
+26 silly cache add   type: 'tag' }
+27 silly addNamed memory-cache@latest
+28 verbose addNamed "latest" is being treated as a dist-tag for memory-cache
+29 info addNameTag [ 'memory-cache', 'latest' ]
+30 silly mapToRegistry name memory-cache
+31 silly mapToRegistry using default registry
+32 silly mapToRegistry registry https://registry.npmjs.org/
+33 silly mapToRegistry data Result {
+33 silly mapToRegistry   raw: 'memory-cache',
+33 silly mapToRegistry   scope: null,
+33 silly mapToRegistry   name: 'memory-cache',
+33 silly mapToRegistry   rawSpec: '',
+33 silly mapToRegistry   spec: 'latest',
+33 silly mapToRegistry   type: 'tag' }
+34 silly mapToRegistry uri https://registry.npmjs.org/memory-cache
+35 verbose addNameTag registry:https://registry.npmjs.org/memory-cache not in flight; fetching
+36 verbose request uri https://registry.npmjs.org/memory-cache
+37 verbose request no auth needed
+38 info attempt registry request try #1 at 12:54:00 AM
+39 verbose request id 051ae27456a21cba
+40 verbose etag W/"58979ba1-4168"
+41 verbose lastModified Sun, 05 Feb 2017 21:39:45 GMT
+42 http request GET https://registry.npmjs.org/memory-cache
+43 http 304 https://registry.npmjs.org/memory-cache
+44 verbose headers { date: 'Fri, 24 Feb 2017 05:54:01 GMT',
+44 verbose headers   via: '1.1 varnish',
+44 verbose headers   'cache-control': 'max-age=300',
+44 verbose headers   etag: 'W/"58979ba1-4168"',
+44 verbose headers   age: '54',
+44 verbose headers   connection: 'keep-alive',
+44 verbose headers   'x-served-by': 'cache-ord1732-ORD',
+44 verbose headers   'x-cache': 'HIT',
+44 verbose headers   'x-cache-hits': '2',
+44 verbose headers   'x-timer': 'S1487915641.072057,VS0,VE0',
+44 verbose headers   vary: 'Accept-Encoding' }
+45 silly get cb [ 304,
+45 silly get   { date: 'Fri, 24 Feb 2017 05:54:01 GMT',
+45 silly get     via: '1.1 varnish',
+45 silly get     'cache-control': 'max-age=300',
+45 silly get     etag: 'W/"58979ba1-4168"',
+45 silly get     age: '54',
+45 silly get     connection: 'keep-alive',
+45 silly get     'x-served-by': 'cache-ord1732-ORD',
+45 silly get     'x-cache': 'HIT',
+45 silly get     'x-cache-hits': '2',
+45 silly get     'x-timer': 'S1487915641.072057,VS0,VE0',
+45 silly get     vary: 'Accept-Encoding' } ]
+46 verbose etag https://registry.npmjs.org/memory-cache from cache
+47 verbose get saving memory-cache to /Users/Bill/.npm/registry.npmjs.org/memory-cache/.cache.json
+48 verbose correctMkdir /Users/Bill/.npm correctMkdir not in flight; initializing
+49 silly addNameTag next cb for memory-cache with tag latest
+50 silly addNamed memory-cache@0.1.6
+51 verbose addNamed "0.1.6" is a plain semver version for memory-cache
+52 silly cache afterAdd memory-cache@0.1.6
+53 verbose afterAdd /Users/Bill/.npm/memory-cache/0.1.6/package/package.json not in flight; writing
+54 verbose correctMkdir /Users/Bill/.npm correctMkdir not in flight; initializing
+55 verbose afterAdd /Users/Bill/.npm/memory-cache/0.1.6/package/package.json written
+56 silly install resolved [ { name: 'memory-cache',
+56 silly install resolved     description: 'A simple in-memory cache. put(), get() and del()',
+56 silly install resolved     author: { name: 'Paul Tarjan', email: 'npm@paulisageek.com' },
+56 silly install resolved     contributors: [ [Object], [Object] ],
+56 silly install resolved     keywords: [ 'cache', 'ram', 'simple', 'storage' ],
+56 silly install resolved     main: './index.js',
+56 silly install resolved     version: '0.1.6',
+56 silly install resolved     repository: { type: 'git', url: 'git://github.com/ptarjan/node-cache.git' },
+56 silly install resolved     scripts: { test: 'gulp test' },
+56 silly install resolved     license: 'BSD-2-Clause',
+56 silly install resolved     devDependencies:
+56 silly install resolved      { chai: '^2.2.0',
+56 silly install resolved        gulp: '^3.8.11',
+56 silly install resolved        'gulp-exit': '0.0.2',
+56 silly install resolved        'gulp-istanbul': '^0.7.0',
+56 silly install resolved        'gulp-jshint': '^1.10.0',
+56 silly install resolved        'gulp-mocha': '^2.0.1',
+56 silly install resolved        'jshint-stylish': '^1.0.1',
+56 silly install resolved        sinon: '^1.14.1',
+56 silly install resolved        'sinon-chai': '^2.7.0' },
+56 silly install resolved     gitHead: 'cb26698fd2561c2ffadfc210c0a3dae08862bc8a',
+56 silly install resolved     bugs: { url: 'https://github.com/ptarjan/node-cache/issues' },
+56 silly install resolved     homepage: 'https://github.com/ptarjan/node-cache#readme',
+56 silly install resolved     _id: 'memory-cache@0.1.6',
+56 silly install resolved     _shasum: '2ed9933ed7a8c718249be7366f7ca8749acf8a24',
+56 silly install resolved     _from: 'memory-cache@latest',
+56 silly install resolved     _npmVersion: '3.8.9',
+56 silly install resolved     _nodeVersion: '6.2.0',
+56 silly install resolved     _npmUser: { name: 'ptarjan', email: 'npm@paulisageek.com' },
+56 silly install resolved     dist:
+56 silly install resolved      { shasum: '2ed9933ed7a8c718249be7366f7ca8749acf8a24',
+56 silly install resolved        tarball: 'https://registry.npmjs.org/memory-cache/-/memory-cache-0.1.6.tgz' },
+56 silly install resolved     maintainers: [ [Object] ],
+56 silly install resolved     _npmOperationalInternal:
+56 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+56 silly install resolved        tmp: 'tmp/memory-cache-0.1.6.tgz_1465375626623_0.52936717774719' },
+56 silly install resolved     directories: {},
+56 silly install resolved     _resolved: 'https://registry.npmjs.org/memory-cache/-/memory-cache-0.1.6.tgz',
+56 silly install resolved     readme: 'ERROR: No README data found!' } ]
+57 info install memory-cache@0.1.6 into /Users/Bill/Documents/GitProjects/resume-jade
+58 info installOne memory-cache@0.1.6
+59 verbose installOne of memory-cache to /Users/Bill/Documents/GitProjects/resume-jade not in flight; installing
+60 verbose correctMkdir /Users/Bill/.npm/_locks correctMkdir not in flight; initializing
+61 verbose lock using /Users/Bill/.npm/_locks/memory-cache-50b314864a676ca4.lock for /Users/Bill/Documents/GitProjects/resume-jade/node_modules/memory-cache
+62 silly install write writing memory-cache 0.1.6 to /Users/Bill/Documents/GitProjects/resume-jade/node_modules/memory-cache
+63 verbose unbuild node_modules/memory-cache
+64 info preuninstall memory-cache@0.1.6
+65 info uninstall memory-cache@0.1.6
+66 verbose unbuild rmStuff memory-cache@0.1.6 from /Users/Bill/Documents/GitProjects/resume-jade/node_modules
+67 info postuninstall memory-cache@0.1.6
+68 silly gentlyRm /Users/Bill/Documents/GitProjects/resume-jade/node_modules/memory-cache is being purged from base /Users/Bill/Documents/GitProjects/resume-jade
+69 verbose gentlyRm don't care about contents; nuking /Users/Bill/Documents/GitProjects/resume-jade/node_modules/memory-cache
+70 silly vacuum-fs purging /Users/Bill/Documents/GitProjects/resume-jade/node_modules/memory-cache
+71 silly vacuum-fs quitting because other entries in /Users/Bill/Documents/GitProjects/resume-jade/node_modules
+72 verbose tar unpack /Users/Bill/.npm/memory-cache/0.1.6/package.tgz
+73 verbose tar unpacking to /Users/Bill/Documents/GitProjects/resume-jade/node_modules/memory-cache
+74 silly gentlyRm /Users/Bill/Documents/GitProjects/resume-jade/node_modules/memory-cache is being purged
+75 verbose gentlyRm don't care about contents; nuking /Users/Bill/Documents/GitProjects/resume-jade/node_modules/memory-cache
+76 silly gunzTarPerm modes [ '755', '644' ]
+77 silly gunzTarPerm extractEntry package.json
+78 silly gunzTarPerm extractEntry .npmignore
+79 silly gunzTarPerm extractEntry README.md
+80 silly gunzTarPerm extractEntry gulpfile.js
+81 silly gunzTarPerm extractEntry index.js
+82 silly gunzTarPerm extractEntry test.js
+83 silly gunzTarPerm extractEntry .jsbeautifyrc
+84 silly gunzTarPerm extractEntry .jshintrc
+85 silly gunzTarPerm extractEntry .travis.yml
+86 silly gunzTarPerm extractEntry LICENSE.md
+87 verbose write writing to /Users/Bill/Documents/GitProjects/resume-jade/node_modules/memory-cache/package.json
+88 info preinstall memory-cache@0.1.6
+89 verbose readDependencies loading dependencies from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/memory-cache/package.json
+90 verbose readDependencies loading dependencies from /Users/Bill/Documents/GitProjects/resume-jade/node_modules/memory-cache/package.json
+91 silly install resolved []
+92 verbose about to build /Users/Bill/Documents/GitProjects/resume-jade/node_modules/memory-cache
+93 info build /Users/Bill/Documents/GitProjects/resume-jade/node_modules/memory-cache
+94 info linkStuff memory-cache@0.1.6
+95 silly linkStuff memory-cache@0.1.6 has /Users/Bill/Documents/GitProjects/resume-jade/node_modules as its parent node_modules
+96 verbose linkBins memory-cache@0.1.6
+97 verbose linkMans memory-cache@0.1.6
+98 verbose rebuildBundles memory-cache@0.1.6
+99 info install memory-cache@0.1.6
+100 info postinstall memory-cache@0.1.6
+101 verbose unlock done using /Users/Bill/.npm/_locks/memory-cache-50b314864a676ca4.lock for /Users/Bill/Documents/GitProjects/resume-jade/node_modules/memory-cache
+102 verbose validateInstall loading /Users/Bill/Documents/GitProjects/resume-jade/package.json for validation
+103 verbose stack Error: The package eslint-plugin-jsx-a11y@3.0.1 does not satisfy its siblings' peerDependencies requirements!
+103 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:125:32
+103 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:268:7
+103 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
+103 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+103 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+103 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+103 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+103 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+103 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+103 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+104 verbose cwd /Users/Bill/Documents/GitProjects/resume-jade
+105 error Darwin 16.4.0
+106 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "memory-cache"
+107 error node v4.4.3
+108 error npm  v2.15.1
+109 error code EPEERINVALID
+110 error peerinvalid The package eslint-plugin-jsx-a11y@3.0.1 does not satisfy its siblings' peerDependencies requirements!
+110 error peerinvalid Peer eslint-config-airbnb@13.0.0 wants eslint-plugin-jsx-a11y@^2.2.3
+111 verbose exit [ 1, true ]

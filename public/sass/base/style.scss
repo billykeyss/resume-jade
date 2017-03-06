@@ -210,35 +210,26 @@ body {
     }
 }
 
-.stars {
-    transform: perspective(500px);
-    transform-style: preserve-3d;
-    position: absolute;
-    bottom: 0;
-    perspective-origin: 40% 100%;
-    animation: rotate 720s infinite linear;
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
-.star {
-    width: 2px;
-    height: 2px;
-    background: #F7F7B6;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform-origin: 0 0 -300px;
-    transform: translate3d(0, 0, -150px);
-    backface-visibility: hidden;
+#particles-js-about {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
-.stars1 {
-    transform: perspective(500px);
-    transform-style: preserve-3d;
-    position: absolute;
-    bottom: 0;
-    perspective-origin: 40% 100%;
-    animation: rotate 720s infinite linear;
-}
 /* Change the link color on hover */
 .navlink a:hover {
     background-color: #555;
