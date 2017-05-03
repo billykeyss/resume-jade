@@ -1,288 +1,283 @@
-$(document).ready(function() {
-  for (var i = 1; i <= 2; i++) {
-    svgRender("about", "images/svg/cloud.svg", "150px");
-    svgRender("about", "images/svg/cloud-1.svg", "150px");
-    svgRender("about", "images/svg/cloud-2.svg", "150px");
-    svgRender("about", "images/svg/cloud.svg", "150px");
-    divRender("about", "cloud8");
+$(document).ready(function () {
+    for (let i = 1; i <= 2; i++) {
+        svgRender('about', 'images/svg/cloud.svg', '150px');
+        svgRender('about', 'images/svg/cloud-1.svg', '150px');
+        svgRender('about', 'images/svg/cloud-2.svg', '150px');
+        svgRender('about', 'images/svg/cloud.svg', '150px');
+        divRender('about', 'cloud8');
 
-    divRender("skills", "cloud5");
-    divRender("skills", "cloud6");
-    svgRender("skills", "images/svg/cloud.svg", "150px");
-  }
-
-  // var feed = new Instafeed({
-  //   get: 'user',
-  //   userId: '28940206',
-  //   clientId: 'b0bd23583f3f48f6a5c00eab0207f6b7',
-  //   accessToken: '28940206.1677ed0.2f83218cc4644a699b42ac0bdf1147ec',
-  //   resolution: 'low_resolution',
-  //   limit: '12',
-  //   template: '<a href="{{link}}"><img style="border:solid; border-color:white;" src="{{image}}" /></a>'
-  // });
-  // feed.run();
-
-  $(document).on("scroll", onScroll);
-
-  $(function() {
-    count = 0;
-    wordsArrayShirt = ["CSS", "HTML", "JS", "Node"];
-    setInterval(function() {
-      count++;
-      $("#change-text").fadeOut(400, function() {
-        $(this).text(wordsArrayShirt[count % wordsArrayShirt.length]).fadeIn(400);
-        document.getElementById("change-text").style.animationDelay = "0.5s";
-      });
-    }, 8000);
-  });
-
-  $(window).scroll(function() {
-    var y = $(this).scrollTop();
-    if (y > 700 && $(window).width() > 500) {
-      $('.sidenavbar').fadeIn();
-    } else {
-      $('.sidenavbar').fadeOut();
+        divRender('skills', 'cloud5');
+        divRender('skills', 'cloud6');
+        svgRender('skills', 'images/svg/cloud.svg', '150px');
     }
-  });
 
-  $(".mouse_scroll").click(function(e) {
-    e.preventDefault();
-    $('html, body').stop().animate({
-      scrollTop: $(window).height()
-    }, 1300);
-  });
+    $(document).on('scroll', onScroll);
 
-  particlesJS.load('particles-js', 'javascripts/particles.json');
-  particlesJS.load('particles-js-about', 'javascripts/particles-about.json');
-
-
-  function skillSet() {
-    // Iterate over each element w/ a class of
-    // bar-info, storing the value of data-total
-    // in a variable.  Using jQuery's CSS method,
-    // dynamically update the width of each bar.
-    $('.bar-info').each(function() {
-      total = $(this).data("total");
-      $(this).css("width", total + "%");
+    $(function () {
+        count = 0;
+        wordsArrayShirt = ['CSS', 'HTML', 'JS', 'Node'];
+        setInterval(function () {
+            count++;
+            $('#change-text').fadeOut(400, function () {
+                $(this).text(wordsArrayShirt[count % wordsArrayShirt.length]).fadeIn(400);
+                document.getElementById('change-text').style.animationDelay = '0.5s';
+            });
+        }, 8000);
     });
 
-    // Iterate over each element w/ the class percent.  Using
-    // jQuery's $(this) will allow us to interact w/ each specific
-    // object in the loop.  Then use jQuery's super awesome animate method
-    // to implement a counter on each .percent element, which will "count"
-    // up incrementally until it reaches the number inside the percent span,
-    // aka it's "ceiling".
-    $('.percent').each(function() {
-      var $this = $(this);
-      $({
-        Counter: 10
-      }).animate({
-        Counter: $this.text()
-      }, {
-        duration: 1000,
-        easing: 'swing',
-        step: function() {
-          $this.text(Math.ceil(this.Counter) + "%");
+    $(window).scroll(function () {
+        let y = $(this).scrollTop();
+        if (y > 700 && $(window).width() > 500) {
+            $('.sidenavbar').fadeIn();
+        } else {
+            $('.sidenavbar').fadeOut();
         }
-      });
     });
-  };
-  // Invoke our skillSet function inside a setTimeout,
-  // to create a short delay before the animation begins.
-  setTimeout(skillSet, 1000);
+
+    $('.mouse_scroll').click(function (e) {
+        e.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: $(window).height(),
+        }, 1300);
+    });
+
+    particlesJS.load('particles-js', 'javascripts/particles.json');
+    particlesJS.load('particles-js-about', 'javascripts/particles-about.json');
+
+    let dataRotate = ['developer', 'traveller', 'nap enthusiast', 'homo Sapien', 'buffet connoisseur'];
+    let element = document.getElementsByClassName('txt-rotate')[0];
+    new TxtRotate(element, dataRotate, 4000);
 
 
-  var dataRotate = ["developer", "traveller", "nap enthusiast", "homo Sapien", "buffet connoisseur"];
-  var element = document.getElementsByClassName('txt-rotate')[0];
-  new TxtRotate(element, dataRotate, 4000);
+    let randomColorFactor = function () {
+        return Math.round(Math.random() * 255);
+    };
+    let randomColor = function (opacity) {
+        return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + opacity + ')';
+    };
+
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var data = {
+        labels: ["Website Design", "Node", "Elixir", "Javascript", "HTML & CSS", "React", "Ping Pong"],
+        datasets: [
+            {
+                label: "Percieved Interest",
+                backgroundColor: "rgba(43,176,212,.4)",
+                borderColor: "rgba(43,176,212,1)",
+                pointBackgroundColor: "rgba(43,176,212,1)",
+                data: [100, 70, 85, 90, 95, 75, 90]
+            },
+            {
+                label: "Relative Skill",
+                backgroundColor: "rgba(140,200,50,.4)",
+                borderColor: "rgba(140,200,50,1)",
+                pointBackgroundColor: "rgba(140,200,50,1)",
+                data: [85, 75, 20, 80, 85, 60, 15]
+            }
+        ]
+    };
+
+    new Chart(ctx, {
+        type: 'radar',
+        data: data,
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            defaultFontFamily: "'Open Sans', Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif",
+            defaultFontColor: "#99b",
+            defaultFontSize: 14,
+
+            legend: {
+                display: false
+            },
+
+            layout: {
+                padding: 20
+            },
+
+            scale: {
+                scaleOverride: true,
+                scaleLineColor: "rgba(200,200,200,.15)",
+                ticks: {
+                    scaleOverride: true,
+                    scaleSteps: 10,
+                    min: 0,
+                    fontFamily: "'Open Sans', Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif",
+                    fontColor: "#99b",
+                },
+                pointLabels: {
+                    fontFamily: "'Open Sans', Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif",
+                    fontColor: "#99b",
+                    fontSize: 16,
+                    padding: 10
+                },
+                gridLines: {
+                    tickMarkLength: 0
+                },
+            },
+
+            pointBackgroundColor: "rgba(200,200,250,.15)",
+            pointRadius: 0,
 
 
-  var randomColorFactor = function() {
-    return Math.round(Math.random() * 255);
-  };
-  var randomColor = function(opacity) {
-    return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ', 1.0)';
-  };
+            animationSteps: 30,
+            animationEasing: "easeInOutExpo",
 
-  var frontEndChartConfig = {
-    type: 'doughnut',
-    data: {
-      datasets: [{
-        data: [
-          60,
-          40,
-          40,
-          40
-        ],
-        backgroundColor: [
-          randomColor(),
-          randomColor(),
-          randomColor(),
-          randomColor()
-        ],
-        borderWidth: [0, 0, 0, 0]
-      }],
-      labels: [
-        "HTML",
-        "CSS/SCSS",
-        "ReactJS",
-        "AngularJS"
-      ]
-    },
-    options: {
-      defaultFontFamily: 'Open Sans',
-      responsive: true,
-      maintainAspectRatio: false,
-      legend: {
-        position: 'bottom',
-        fullWidth: 'true',
-        labels: {
-          fontSize: 14
+            angleShowLineOut: true,
+            angleLineWidth: 1,
+            pointDot: false,
         }
-      },
-      title: {
-        display: true,
-        text: 'Frontend Skill Set',
-        fontSize: 20,
-        fontFamily: 'Open Sans'
-      },
-      animation: {
-        animateScale: true,
-        animateRotate: true
-      }
+    });
+
+
+    var ig = {};
+    ig.token = '28940206.1677ed0.2f83218cc4644a699b42ac0bdf1147ec';
+
+    ig.init = function () {
+        $('.instagram').each(function (i) {
+            var args = {};
+            args.container = $(this);
+            args.userid = '28940206';
+            args.limit = args.container.data('limit');
+            args.feedurl = 'https://api.instagram.com/v1/users/' + args.userid + '/media/recent/?access_token=' + ig.token + '&count=' + args.limit + '&callback=?';
+            args.html = '';
+            // PASS ARGS TO QUERY
+            ig.query(args);
+        });
     }
-  };
-  var backEndChartConfig = {
-    type: 'doughnut',
-    data: {
-      datasets: [{
-        data: [
-          60,
-          40,
-          20,
-          40
-        ],
-        backgroundColor: [
-          randomColor(),
-          randomColor(),
-          randomColor()
-        ],
-        borderWidth: [0, 0, 0]
-      }],
-      labels: [
-        "Javascript (ES6)",
-        "NodeJS",
-        "Database Solutions",
-        "Express"
-      ]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      legend: {
-        position: 'bottom',
-        fullWidth: 'true',
-        labels: {
-          fontSize: 14
+
+    ig.query = function (args) {
+        $.getJSON(args.feedurl, {}, function (data) {
+            // PASS QUERY DATA TO BUILDER
+            ig.build(data, args);
+        });
+    }
+
+
+    ig.build = function (data, args) {
+
+        $.each(data.data, function (i, item) {
+            if (item.caption) var caption = item.caption.text;
+            var thumb = item.images.low_resolution.url;
+            var img = item.images.standard_resolution.url;
+            //get 1280 size photo [hack until avail in api]
+            var hires = img.replace('s640x640', '1080x1080');
+            args.html += '<a class="image" style="background-image: url(' + thumb + ');" data-img="' + hires + '">';
+            if (caption) args.html += '<span class="caption">' + caption + '</span>';
+            args.html += '</a>';
+            // PASS TO OUTPUT
+            ig.output(args);
+        });
+    }
+
+    ig.output = function (args) {
+        args.container.html(args.html);
+    }
+
+    ig.view = {
+        viewer: $('.igviewer'),
+        image: $('.igviewer img'),
+        open: function (img) {
+            ig.view.viewer.removeClass('hidden');
+            ig.view.image.attr('src', img);
+        },
+        close: function () {
+            ig.view.viewer.addClass('hidden');
+            ig.view.image.attr('src', '');
         }
-      },
-      title: {
-        display: true,
-        text: 'Backend Skill Set',
-        fontSize: 20,
-        fontFamily: 'Open Sans'
-      },
-      animation: {
-        animateScale: true,
-        animateRotate: true
-      }
     }
-  };
-  var frontendctx = document.getElementById("frontEndSkillsChart").getContext("2d");
-  var backendctx = document.getElementById("backEndSkillsChart").getContext("2d");
-  new Chart(frontendctx, frontEndChartConfig);
-  new Chart(backendctx, backEndChartConfig);
+
+    ig.init();
+
+//Listeners
+    $('.instagram').on('click', '.image', function () {
+        var img = this.dataset.img;
+        ig.view.open(img);
+    });
+    $('.igviewer').on('click', function () {
+        ig.view.close();
+    });
 });
 
 
-var TxtRotate = function(el, toRotate, period) {
-  this.toRotate = toRotate;
-  this.el = el;
-  this.loopNum = 0;
-  this.period = parseInt(period, 10) || 2000;
-  this.txt = '';
-  this.tick();
-  this.isDeleting = false;
+function TxtRotate(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
 };
 
-TxtRotate.prototype.tick = function() {
-  var i = this.loopNum % this.toRotate.length;
-  var fullTxt = this.toRotate[i];
+TxtRotate.prototype.tick = function () {
+    let i = this.loopNum % this.toRotate.length;
+    let fullTxt = this.toRotate[i];
 
-  if (this.isDeleting) {
-    this.txt = fullTxt.substring(0, this.txt.length - 1);
-  } else {
-    this.txt = fullTxt.substring(0, this.txt.length + 1);
-  }
+    if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
 
-  this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+    this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
-  var that = this;
-  var delta = 300 - Math.random() * 100;
+    let that = this;
+    let delta = 300 - Math.random() * 100;
 
-  if (this.isDeleting) {
-    delta /= 2;
-  }
+    if (this.isDeleting) {
+        delta /= 2;
+    }
 
-  if (!this.isDeleting && this.txt === fullTxt) {
-    delta = this.period;
-    this.isDeleting = true;
-  } else if (this.isDeleting && this.txt === '') {
-    this.isDeleting = false;
-    this.loopNum++;
-    delta = 500;
-  }
+    if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+    }
 
-  setTimeout(function() {
-    that.tick();
-  }, delta);
+    setTimeout(function () {
+        that.tick();
+    }, delta);
 };
 
 function onScroll(event) {
-  var scrollPos = $(document).scrollTop();
-  $('#menu-center a').each(function() {
-    var currLink = $(this);
-    var refElement = $(currLink.attr("href"));
-    if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-      $('#menu-center ul li a').removeClass("active");
-      currLink.addClass("active");
-    } else {
-      currLink.removeClass("active");
-    }
-  });
-}
+    let scrollPos = $(document).scrollTop();
+    $('#menu-center').find('a').each(function () {
+        let currLink = $(this);
+        let refElement = $(currLink.attr('href'));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('#menu-center').find('ul li a').removeClass('active');
+            currLink.addClass('active');
 
-function clamp(num, min, max) {
-  return num <= min ? min : num >= max ? max : num;
+            // console.log("currlink: " + currLink);
+            // console.log("otherLink: " + $('#menu-center').find('ul li a'));
+        } else {
+            currLink.removeClass('active');
+        }
+    });
 }
 
 function divRender(parent, child) {
-  $("#" + parent).prepend(
-    $('<div class="' + child + '" />').css({
-      position: 'absolute',
-      top: Math.floor(Math.random() * 75) + 5 + '%',
-      left: Math.floor(Math.random() * 100) + '%',
-      opacity: Math.random() / 2 + 0.5
-    }));
+    $('#' + parent).prepend(
+        $('<div class="' + child + '" />').css({
+            position: 'absolute',
+            top: Math.floor(Math.random() * 75) + 5 + '%',
+            left: Math.floor(Math.random() * 100) + '%',
+            opacity: Math.random() / 2 + 0.5,
+        }));
 }
 
 function svgRender(parent, child, height) {
-  $("#" + parent).prepend(
-    $('<img src="' + child + '"/>').css({
-      position: 'absolute',
-      top: Math.floor(Math.random() * 80) + 5 + '%',
-      left: Math.floor(Math.random() * 100) + '%',
-      opacity: Math.random() / 2 + 0.25,
-      height: height
-    }));
+    $('#' + parent).prepend(
+        $('<img src="' + child + '"/>').css({
+            position: 'absolute',
+            top: Math.floor(Math.random() * 80) + 5 + '%',
+            left: Math.floor(Math.random() * 100) + '%',
+            opacity: Math.random() / 2 + 0.25,
+            height: height,
+        })
+    );
 }

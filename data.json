@@ -44,9 +44,9 @@
     {
       "show": "True",
       "company": "Connected Lab",
-      "title": "Solutions Architect",
-      "descriptionShort": "At Connected Lab, I aided product managers in translating technical requirements into a long term development plan and estimating development effort for each solution.",
-      "description": "Connected Lab is a company that is building standalone mobile and web apps, while increasingly building ‘connected software’ across multiple devices and environments. At Connected Lab, I worked on the connected allocations web tool. The allocations web tool is an internal tool used by Connected Lab for resource, client, and project management. Functionalities for report/invoice generation was also implemented during my time at Connected. This project used ReactJS on a Node Framework. Swig was used for HTML templating PostgreSQL and Sequelize was used for the back end.",
+      "title": "Software Engineer",
+      "descriptionShort": "At Connected Lab, I aided product managers in translating technical requirements into a long term development plan and estimating development effort for each solution. I worked on a variety of web/mobile/server projects during my time here.",
+      "description": "",
       "location": "Toronto, Ontario",
       "dates": "(Jan 2017 - April 2017)",
       "url": "https://www.google.ca/maps/place/171+E+Liberty+St+%23303,+Toronto,+ON+M6K+3P6/@43.6331596,-79.4141207,15z/data=!4m2!3m1!1s0x882b35038ee3e361:0xf323210028f78e7c?hl=en"
@@ -166,6 +166,11 @@
       "name": "Casty",
       "description": "A household movie queue and streaming device for the raspberry pi.",
       "src": "images/projects/casty.png"
+    },
+    {
+      "name": "Palette",
+      "description": "Analyzes an image/camera feed and grabs a custom color palette",
+      "src": "images/projects/palette.png"
     }
   ]
 }
