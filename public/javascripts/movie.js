@@ -1,3 +1,8 @@
+const shouldPrint = false;
+
+var log = shouldPrint ? console.log.bind(window.console) : function() {};
+
+
 /* eslint no-undef: "off"*/
 function post(path, params, methodInput) {
     const method = methodInput || 'post'; // Set method to post by default if not specified.
