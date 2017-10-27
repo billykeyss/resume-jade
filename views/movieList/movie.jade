@@ -1,0 +1,81 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='utf-8')
+		title Casty McCast Cast
+		meta(name='description', content='The HTML5 Herald')
+		meta(name='author', content='SitePoint')
+		// Latest compiled and minified CSS
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7', crossorigin='anonymous')
+		// Optional theme
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css', integrity='sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r', crossorigin='anonymous')
+		link(href='https://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet', type='text/css')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js')
+		link(rel='stylesheet', href='/css/movieStyles.css')
+		link(rel='stylesheet', href='/css/stars.css')
+		script.
+			var info = !{JSON.stringify(info)};
+		script(src='/javascripts/utils.js')
+		script(src='/javascripts/movie.js')
+
+		//if lt IE 9
+			script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
+	body
+		//- canvas
+		#stars
+		#stars2
+		#stars3
+		img#moon(src='/images/svg/moon.svg', alt='moon')
+		//- #stars4
+		.container
+			.jumbotron.center-align
+				h1
+					| Welcome to Basin 3.0 Movie List!
+					h1
+						h2  In the textbox below, enter in a movie for the queue
+						br
+						form.form-inline
+							.form-group
+								.form-group
+									.input-group(style='width: 250px;')
+										input#year.form-control(type='text', placeholder='Year...')
+								.form-group
+									.input-group(style='width: 250px;')
+										input#movieName.form-control(type='text', placeholder='Movie Name...')
+								.form-group
+									.input-group(style='width: 250px;')
+										input#url.form-control(type='password', placeholder='Password')
+						br
+						.btn-container
+							button#button.submit
+						br
+			.center-align.grid(data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }')
+				each item in info.Items
+					.grid-item
+						img(src=item.poster, onerror="this.src='http://sd.keepcalm-o-matic.co.uk/i/keep-calm-poster-not-found.png'", style='max-height:200px; max-width: 160px;padding-top:20px;')
+						.grid-item-container
+							p
+								.grid-title !{item.info.Title} 
+								|                           (
+								span.grid-year !{item.year}
+								|                           )
+							p.grid-rating
+								| IMDB Rating:
+								br
+								|  !{item.info.imdbRating}/10
+								//- p.grid-rating Rotton Tomatoes Rating: {{infoRT.rating}}/100
+								p.grid-plot !{item.info.Plot}
+								p.grid-actor Starring: !{item.info.Actors}
+								.row.center
+									.svg-container
+										a.playBut.play-btn(href='#')
+											svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xmlns:a='http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/', x='0px', y='0px', width='50px', height='50px', viewbox='0 0 213.7 213.7', enable-background='new 0 0 213.7 213.7', xml:space='preserve')
+												polygon#XMLID_18_.triangle(fill='none', stroke-width='10', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', points='\
+												73.5,62.5 148.5,105.8 73.5,149.1 ')
+												circle#XMLID_17_.circle(fill='none', stroke-width='10', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', cx='106.8', cy='106.8', r='103.3')
+									.svg-container
+										a.playBut.delete-btn(href='#', onclick='handleDelete("' + item.id + '")')
+											svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xmlns:a='http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/', x='0px', y='0px', width='50px', height='50px', viewbox='0 0 213.7 213.7', enable-background='new 0 0 213.7 213.7', xml:space='preserve')
+												line.triangle(x1='80', x2='130', y1='80', y2='130', stroke='orange', fill='transparent', stroke-width='10')
+												line.triangle(x1='80', x2='130', y1='130', y2='80', stroke='orange', fill='transparent', stroke-width='10')
+												circle#XMLID_17_.circle(fill='none', stroke-width='10', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', cx='106.8', cy='106.8', r='103.3')
