@@ -78,6 +78,24 @@ app.post('/movie-list', function(req, res) {
     // const urlOmdb = 'http://www.omdbapi.com/?t=' + movieNameArray + '&y=&plot=short&r=json&apikey=4545f38d';
     // const urlRT = 'http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=ny97sdcpqetasj8a4v2na8va&q=' + movieNameArray + '&page_limit=1';
     // const movieNameArray = req.body.movie.split(' ').join('+');
+    var params = {
+        TableName: "MovieTracker",
+        KeyConditionExpression: "title = :title",
+        ExpressionAttributeValues: {
+            ":title": req.body.movie
+        }
+    };
+
+    docClient.query(params, function(err, data) {
+        if (err) {
+            console.log("Unable to query. Error:", JSON.stringify(err, null, 2));
+        } else {
+            console.log("Query succeeded.");
+            console.log(data);
+            res.status(204).send("Duplicate Entry");
+            return;
+        }
+    });
 
     const movieNameArray = req.body.movie.split(' ').join('+');
     const urlOmdb = 'http://www.omdbapi.com/?t=' + movieNameArray + '&y=&plot=short&r=json&apikey=' + process.env.OMDB_API_KEY;
@@ -102,7 +120,7 @@ app.post('/movie-list', function(req, res) {
                 Item: {
                     id: uuidv1(),
                     year: parseInt(req.body.year) || parseInt(info.Year),
-                    title: titleCase(movieNameArray),
+                    title: info.Title,
                     info: info,
                     infoMovieDB: result.results[0],
                     poster: 'http://img.omdbapi.com/?i=' + info.imdbID + '&apikey=4545f38d'
@@ -122,7 +140,7 @@ app.post('/movie-list', function(req, res) {
     });
 });
 
-app.delete('/movie-list', function (req, res) { // eslint-disable-line no-unused-vars
+app.delete('/movie-list', function(req, res) { // eslint-disable-line no-unused-vars
     console.log('Attempting a delete...');
     console.log(req.body.id);
 
@@ -131,12 +149,12 @@ app.delete('/movie-list', function (req, res) { // eslint-disable-line no-unused
         Key: {
             id: req.body.id
         }
-    }, function (err, data) {
+    }, function(err, data) {
         if (err) {
             console.error('Unable to delete item. Error JSON:', JSON.stringify(err, null, 2));
         } else {
             console.log('DeleteItem succeeded:', JSON.stringify(data, null, 2));
-            res.redirect(req.get('referer'));
+            res.sendStatus(200)
         }
     });
 });
