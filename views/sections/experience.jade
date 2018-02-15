@@ -1,25 +1,27 @@
 #experiences.wholepage(style='')
-    //- img.bb8.fish(src='images/svg/submarine.svg', style='display:block;')
-    img.angler(src='images/svg/angler.svg')
-    img.octopus(src='images/svg/octopus-1.svg', style='display:inline;')
+	//- img.bb8.fish(src='images/svg/submarine.svg', style='display:block;')
+	img.angler(src='images/svg/angler.svg')
+	img.octopus(src='images/svg/octopus-1.svg', style='display:inline;')
 
-    .container.profileContainer.align-center
-        h1.titleText Experiences
-    .container
-        #timeline
-            each experience, index in data.experiences
-                if experience.show == "True"
-                    .timeline-item
-                        .timeline-icon
-                        if index % 2 == 0
-                            .timeline-content
-                                h2 !{experience.company}
-                                h5 !{experience.dates}
-                                h4 < !{experience.title} >
-                                p !{experience.descriptionShort}
-                        else
-                            .timeline-content.right
-                                h2 !{experience.company}
-                                h5 !{experience.dates}
-                                h4 < !{experience.title} >
-                                p !{experience.descriptionShort}
+	.container.profileContainer.align-center
+		h1.titleText Experiences
+	.container
+		#timeline
+			each experience, index in data.experiences
+				if experience.show == "True"
+					.timeline-item
+						.timeline-icon
+						if index % 2 == 0
+							.timeline-content
+								h2 !{experience.company}
+								h5 !{experience.dates}
+								#[a(href='#{!{experience.url}}') !{experience.location}]
+								h4 < !{experience.title} />
+								p !{experience.descriptionShort}
+						else
+							.timeline-content.right
+								h2 !{experience.company}
+								h5 !{experience.dates}
+								#[a(href='#{!{experience.url}}') !{experience.location}]
+								h4 < !{experience.title} >
+								p !{experience.descriptionShort}

@@ -6,8 +6,8 @@
     "start": "node ./bin/www",
     "test": "eslint **/*.js",
     "watch": "sass --watch public/sass:public/stylesheets --style compressed",
-    "uglyifyJs": "uglifyjs public/javascripts/main.js --compress --mangle --output public/javascripts/main.min.js",
-    "uglyifyCss": "",
+    "watchJS": "watch 'npm run uglyifyJs -s' public/javascripts",
+    "uglyifyJs": "uglifyjs public/javascripts/main.js --compress --mangle --output public/main.min.js",
     "build": ""
   },
   "dependencies": {
@@ -23,5 +23,8 @@
     "request": "^2.83.0",
     "serve-favicon": "~2.3.0",
     "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "watch": "^1.0.2"
   }
 }

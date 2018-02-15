@@ -1,5 +1,5 @@
-$(document).ready(function () {
-    for (let i = 1; i <= 2; i++) {
+$(document).ready(function() {
+    for (var i = 1; i <= 2; i++) {
         svgRender('about', 'images/svg/cloud.svg', '150px');
         svgRender('about', 'images/svg/cloud-1.svg', '150px');
         svgRender('about', 'images/svg/cloud-2.svg', '150px');
@@ -13,20 +13,20 @@ $(document).ready(function () {
 
     $(document).on('scroll', onScroll);
 
-    $(function () {
+    $(function() {
         count = 0;
         wordsArrayShirt = ['CSS', 'HTML', 'JS', 'Node'];
-        setInterval(function () {
+        setInterval(function() {
             count++;
-            $('#change-text').fadeOut(400, function () {
+            $('#change-text').fadeOut(400, function() {
                 $(this).text(wordsArrayShirt[count % wordsArrayShirt.length]).fadeIn(400);
                 document.getElementById('change-text').style.animationDelay = '0.5s';
             });
         }, 8000);
     });
 
-    $(window).scroll(function () {
-        let y = $(this).scrollTop();
+    $(window).scroll(function() {
+        var y = $(this).scrollTop();
         if (y > 700 && $(window).width() > 500) {
             $('.sidenavbar').fadeIn();
         } else {
@@ -34,7 +34,7 @@ $(document).ready(function () {
         }
     });
 
-    $('.mouse_scroll').click(function (e) {
+    $('.mouse_scroll').click(function(e) {
         e.preventDefault();
         $('html, body').stop().animate({
             scrollTop: $(window).height(),
@@ -44,23 +44,22 @@ $(document).ready(function () {
     particlesJS.load('particles-js', 'javascripts/particles.json');
     particlesJS.load('particles-js-about', 'javascripts/particles-about.json');
 
-    let dataRotate = ['developer', 'traveller', 'nap enthusiast', 'homo Sapien', 'buffet connoisseur'];
-    let element = document.getElementsByClassName('txt-rotate')[0];
+    var dataRotate = ['developer', 'traveller', 'nap enthusiast', 'homo Sapien', 'buffet connoisseur'];
+    var element = document.getElementsByClassName('txt-rotate')[0];
     new TxtRotate(element, dataRotate, 4000);
 
 
-    let randomColorFactor = function () {
+    var randomColorFactor = function() {
         return Math.round(Math.random() * 255);
     };
-    let randomColor = function (opacity) {
+    var randomColor = function(opacity) {
         return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + opacity + ')';
     };
 
     var ctx = document.getElementById("myChart").getContext("2d");
     var data = {
         labels: ["Website Design", "Node", "Elixir", "Javascript", "HTML & CSS", "React", "Ping Pong"],
-        datasets: [
-            {
+        datasets: [{
                 label: "Percieved Interest",
                 backgroundColor: "rgba(43,176,212,.4)",
                 borderColor: "rgba(43,176,212,1)",
@@ -133,8 +132,8 @@ $(document).ready(function () {
     var ig = {};
     ig.token = '28940206.1677ed0.2f83218cc4644a699b42ac0bdf1147ec';
 
-    ig.init = function () {
-        $('.instagram').each(function (i) {
+    ig.init = function() {
+        $('.instagram').each(function(i) {
             var args = {};
             args.container = $(this);
             args.userid = '28940206';
@@ -146,17 +145,17 @@ $(document).ready(function () {
         });
     }
 
-    ig.query = function (args) {
-        $.getJSON(args.feedurl, {}, function (data) {
+    ig.query = function(args) {
+        $.getJSON(args.feedurl, {}, function(data) {
             // PASS QUERY DATA TO BUILDER
             ig.build(data, args);
         });
     }
 
 
-    ig.build = function (data, args) {
+    ig.build = function(data, args) {
 
-        $.each(data.data, function (i, item) {
+        $.each(data.data, function(i, item) {
             if (item.caption) var caption = item.caption.text;
             var thumb = item.images.low_resolution.url;
             var img = item.images.standard_resolution.url;
@@ -170,18 +169,18 @@ $(document).ready(function () {
         });
     }
 
-    ig.output = function (args) {
+    ig.output = function(args) {
         args.container.html(args.html);
     }
 
     ig.view = {
         viewer: $('.igviewer'),
         image: $('.igviewer img'),
-        open: function (img) {
+        open: function(img) {
             ig.view.viewer.removeClass('hidden');
             ig.view.image.attr('src', img);
         },
-        close: function () {
+        close: function() {
             ig.view.viewer.addClass('hidden');
             ig.view.image.attr('src', '');
         }
@@ -189,14 +188,15 @@ $(document).ready(function () {
 
     ig.init();
 
-//Listeners
-    $('.instagram').on('click', '.image', function () {
+    //Listeners
+    $('.instagram').on('click', '.image', function() {
         var img = this.dataset.img;
         ig.view.open(img);
     });
-    $('.igviewer').on('click', function () {
+    $('.igviewer').on('click', function() {
         ig.view.close();
     });
+    1
 });
 
 
@@ -207,14 +207,16 @@ function TxtRotate(el, toRotate, period) {
     this.period = parseInt(period, 10) || 2000;
     this.txt = '';
     this.tick();
-    this.isDeleting = false;
+    this.isDevaring = false;
 };
 
-TxtRotate.prototype.tick = function () {
-    let i = this.loopNum % this.toRotate.length;
-    let fullTxt = this.toRotate[i];
 
-    if (this.isDeleting) {
+
+TxtRotate.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+
+    if (this.isDevaring) {
         this.txt = fullTxt.substring(0, this.txt.length - 1);
     } else {
         this.txt = fullTxt.substring(0, this.txt.length + 1);
@@ -222,32 +224,32 @@ TxtRotate.prototype.tick = function () {
 
     this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
-    let that = this;
-    let delta = 300 - Math.random() * 100;
+    var that = this;
+    var delta = 300 - Math.random() * 100;
 
-    if (this.isDeleting) {
+    if (this.isDevaring) {
         delta /= 2;
     }
 
-    if (!this.isDeleting && this.txt === fullTxt) {
+    if (!this.isDevaring && this.txt === fullTxt) {
         delta = this.period;
-        this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
+        this.isDevaring = true;
+    } else if (this.isDevaring && this.txt === '') {
+        this.isDevaring = false;
         this.loopNum++;
         delta = 500;
     }
 
-    setTimeout(function () {
+    setTimeout(function() {
         that.tick();
     }, delta);
 };
 
 function onScroll(event) {
-    let scrollPos = $(document).scrollTop();
-    $('#menu-center').find('a').each(function () {
-        let currLink = $(this);
-        let refElement = $(currLink.attr('href'));
+    var scrollPos = $(document).scrollTop();
+    $('#menu-center').find('a').each(function() {
+        var currLink = $(this);
+        var refElement = $(currLink.attr('href'));
         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
             $('#menu-center').find('ul li a').removeClass('active');
             currLink.addClass('active');

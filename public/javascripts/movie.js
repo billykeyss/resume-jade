@@ -6,6 +6,11 @@ function handleDelete(id) {
     location.reload();
 };
 
+function handleRedirect(website) {
+    log(website);
+    window.location.replace(website);
+}
+
 $(document).ready(function() {
     $('.submit').click(function() {
         const movie = document.getElementById('movieName').value;
@@ -31,19 +36,6 @@ $(document).ready(function() {
             post: true
         }, function(data, status) {
           location.reload();
-        });
-    });
-
-    $('.play-btn').click(function() {
-        const $grid = $(this).parent().parent().parent(); // Find the row
-        const $title = $grid.find('.grid-title').text(); // Find the text
-        const $year = $grid.find('.grid-year').text(); // Find the text
-        post('/movie-list', {
-            movie: $title,
-            year: $year,
-            post: false
-        }, function(status) {
-          console.log(status);
         });
     });
 

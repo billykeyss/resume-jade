@@ -7,7 +7,7 @@
   "location": "Toronto, Ontario, Canada",
   "email": "yichenhuang95@gmail.com",
   "phone": "+1 (403) 828-6082",
-  "age": 21,
+  "age": 22,
   "values": [
     {
         "imgSrc": "images/svg/values/code.svg",
@@ -41,6 +41,16 @@
     }
   ],
   "experiences": [
+    {
+      "show": "True",
+      "company": "Amazon Lab126",
+      "title": "Software Engineer",
+      "descriptionShort": "",
+      "description": "",
+      "location": "Sunnyvale, California",
+      "dates": "(Spetember 2017 - December 2017)",
+      "url": "https://www.google.ca/maps/place/171+E+Liberty+St+%23303,+Toronto,+ON+M6K+3P6/@43.6331596,-79.4141207,15z/data=!4m2!3m1!1s0x882b35038ee3e361:0xf323210028f78e7c?hl=en"
+    },
     {
       "show": "True",
       "company": "Connected Lab",
