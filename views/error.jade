@@ -1,6 +1,12 @@
 extends layout
 
 block content
-    h1= message
-    h2= error.status
-    pre #{error.stack}
+	#error.wholepage(style="height:100%;")
+		#particles-js
+		img.spaceStation(src='images/svg/space-station-1.svg')
+		img.mars(src='images/svg/mars.svg')
+		.container.titleContainer
+			.borderContainer
+				h1 Not all who wander are lost...
+				h4 But... you are definitely lost.
+				#[a(href='./') Lets get you home]

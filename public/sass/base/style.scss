@@ -41,6 +41,12 @@ body {
   overflow: hidden;
 }
 
+#error {
+  background: linear-gradient(black, #001b48);
+  opacity: 20;
+  color: white;
+}
+
 .txt-rotate > .wrap {
   border-right: 0.08em solid #FFF;
   animation: pulse 1.5s step-end infinite;

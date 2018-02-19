@@ -10,18 +10,19 @@
 			each experience, index in data.experiences
 				if experience.show == "True"
 					.timeline-item
-						.timeline-icon
 						if index % 2 == 0
-							.timeline-content
-								h2 !{experience.company}
+							.timeline-icon.icon-left
+							.timeline-content.left
+								h2.titleLeft !{experience.company}
 								h5 !{experience.dates}
-								#[a(href='#{!{experience.url}}') !{experience.location}]
+								#[a(href='#{!{experience.url}}') !{experience.location} ]
 								h4 < !{experience.title} />
 								p !{experience.descriptionShort}
 						else
+							.timeline-icon.icon-right
 							.timeline-content.right
-								h2 !{experience.company}
+								h2.titleRight !{experience.company}
 								h5 !{experience.dates}
-								#[a(href='#{!{experience.url}}') !{experience.location}]
-								h4 < !{experience.title} >
+								#[a(href='#{!{experience.url}}') !{experience.location} ]
+								h4 < !{experience.title} />
 								p !{experience.descriptionShort}

@@ -1,3 +1,10 @@
+
+$(window).load(function() {
+  // Animate loader off screen
+  $(".loadingContainer").fadeOut(1000);
+});
+
+
 $(document).ready(function() {
     for (var i = 1; i <= 2; i++) {
         svgRender('about', 'images/svg/cloud.svg', '150px');
