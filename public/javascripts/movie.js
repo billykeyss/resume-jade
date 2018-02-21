@@ -19,7 +19,6 @@ $(document).ready(function() {
         const year = document.getElementById('year').value;
         const password = document.getElementById('password').value;
 
-        console.log(password);
         for (var i = 0; i < info.Items.length; i++) {
             if(info.Items[i].title.toUpperCase() === movie.toUpperCase()) {
                 RemodalEz.dialog({

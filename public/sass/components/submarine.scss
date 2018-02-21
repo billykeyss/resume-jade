@@ -1,13 +1,7 @@
-* {
-  box-sizing: border-box;
-  &:before, &:after {
-    box-sizing: border-box;
-  }
-}
-
 .sea {
-  margin: 40px auto 0 auto;
+  margin: 0px auto 0 auto;
   overflow: hidden;
+  max-height: 250px;
   .bubble {
     position: absolute;
     width: 7px;

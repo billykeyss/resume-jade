@@ -1,7 +1,7 @@
 
 $(window).load(function() {
   // Animate loader off screen
-  $(".loadingContainer").fadeOut(1000);
+    $(".loadingContainer").fadeOut(1000);
 });
 
 
@@ -65,20 +65,20 @@ $(document).ready(function() {
 
     var ctx = document.getElementById("myChart").getContext("2d");
     var data = {
-        labels: ["Website Design", "Node", "Elixir", "Javascript", "HTML & CSS", "React", "Ping Pong"],
+        labels: ["Website Design", "Node", "Vue", "Javascript", "HTML & CSS", "React", "Ping Pong", "Music Production"],
         datasets: [{
                 label: "Percieved Interest",
                 backgroundColor: "rgba(43,176,212,.4)",
                 borderColor: "rgba(43,176,212,1)",
                 pointBackgroundColor: "rgba(43,176,212,1)",
-                data: [100, 70, 85, 90, 95, 75, 90]
+                data: [100, 70, 85, 90, 95, 75, 90, 90]
             },
             {
                 label: "Relative Skill",
                 backgroundColor: "rgba(140,200,50,.4)",
                 borderColor: "rgba(140,200,50,1)",
                 pointBackgroundColor: "rgba(140,200,50,1)",
-                data: [85, 75, 20, 80, 85, 60, 15]
+                data: [85, 75, 20, 80, 85, 60, 15, 50]
             }
         ]
     };
@@ -260,9 +260,6 @@ function onScroll(event) {
         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
             $('#menu-center').find('ul li a').removeClass('active');
             currLink.addClass('active');
-
-            // console.log("currlink: " + currLink);
-            // console.log("otherLink: " + $('#menu-center').find('ul li a'));
         } else {
             currLink.removeClass('active');
         }

@@ -2,7 +2,7 @@
   "title": "Bill Huang",
   "description": "Hi, I'm Bill. I do stuff on the internet.",
   "aboutlong": "My name is Bill Huang... <br> I was raised in the wintery city of Calgary, Alberta. In 2013, I left my hometown for Waterloo, Ontario in order to pursue an undergraduate degree in Computer Engineering. I have always possessed an interest for technology and this degree allows me to sate my curiosity. <br>If you have any questions or concerns, I can be reached through email at any time.",
-  "aboutshort": "I am a fullstack software engineer interested in front end design and front end UI/UX. I am passionate about all things web design. I am currently studying Computer Engineering at the University of Waterloo. ",
+  "aboutshort": "I am a fullstack software engineer interested in Frontend Web Design and Android application development. I am passionate about delivering the best possible experience to the end user. I am currently studying Computer Engineering at the University of Waterloo. ",
   "name": "Yichen Bill Huang",
   "location": "Toronto, Ontario, Canada",
   "email": "yichenhuang95@gmail.com",
@@ -22,7 +22,7 @@
     {
         "imgSrc": "images/svg/values/simplify.svg",
         "value": "Simplify",
-        "description": "Simplicity is better."
+        "description": "Strive for simplicity but not at the cost of quality."
     },
     {
         "imgSrc": "images/svg/values/fail.svg",
@@ -32,12 +32,12 @@
     {
         "imgSrc": "images/svg/values/learn.svg",
         "value": "Always Grow",
-        "description": "Constantly strive to become a better developer. Constanly strive to help others become better developers."
+        "description": "Constantly strive to become a better developer and help others become better developers."
     },
     {
         "imgSrc": "images/svg/values/plan.svg",
         "value": "Plan Ahead",
-        "description": "Always have a road map in terms of future functionality and scalability. Never build blindly."
+        "description": "Always have a road map for future functionality and scalability. Never build blindly."
     }
   ],
   "experiences": [
@@ -49,13 +49,13 @@
       "description": "",
       "location": "Sunnyvale, California",
       "dates": "(Spetember 2017 - December 2017)",
-      "url": "https://www.google.ca/maps/place/171+E+Liberty+St+%23303,+Toronto,+ON+M6K+3P6/@43.6331596,-79.4141207,15z/data=!4m2!3m1!1s0x882b35038ee3e361:0xf323210028f78e7c?hl=en"
+      "url": "https://www.google.com/maps/place/Sunnyvale,+CA/@37.3971408,-122.094161,12z/data=!3m1!4b1!4m5!3m4!1s0x808fb645a9d05d3b:0x768dfb26dd7cc3a2!8m2!3d37.36883!4d-122.0363496"
     },
     {
       "show": "True",
       "company": "Connected Lab",
       "title": "Software Engineer",
-      "descriptionShort": "At Connected Lab, I aided product managers in translating technical requirements into a long term development plan and estimating development effort for each solution. I worked on a variety of web/mobile/server projects during my time here.",
+      "descriptionShort": "At Connected Lab, I aided product managers in translating technical requirements into a long term development plan and estimating development effort for each solution. I worked on a variety of web/mobile/server projects for numerous clients during my time here.",
       "description": "",
       "location": "Toronto, Ontario",
       "dates": "(Jan 2017 - April 2017)",

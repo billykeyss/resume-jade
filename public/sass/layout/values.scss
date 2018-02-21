@@ -1,15 +1,11 @@
 .valueContainers {
   margin-top: 50px;
 }
-// .valueContainer {
-//   padding:25px;
-// }
+
 .value {
   height: 75px;
   width: 75px;
 }
-
-
 
 .valueTitle {
   text-align: center;
@@ -18,6 +14,10 @@
 
 .valueText {
   text-align: center;
-  // padding-left:10px;
-  // padding-right:10px;
+}
+
+@media (max-width: 1000px) {
+  .valueContainers {
+    margin-top: 0px !important;
+  }
 }
