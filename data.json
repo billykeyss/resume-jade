@@ -113,71 +113,67 @@
   ],
   "projects": [
     {
+      "show": "False",
       "name": "Morse Code Translator",
       "description": "Takes in string inputs and outputs morse signals. Programmed using an ARM board and assembly language.",
       "src": "images/projects/armboard.png"
     },
     {
+      "show": "True",
       "name": "Alexa Rap Bot",
       "description": "Node project that uses AWS Lambda and DynamoDB to create an application that allows you to participate in a rap battle with Alexa.",
       "src": "images/projects/echohackathon.jpg"
     },
     {
-      "name": "pusher",
-      "description": "",
-      "src": ""
-    },
-    {
+      "show": "True",
       "name": "TapExchange",
       "description": "TapExchange is a simple phone app that allows users to transmit contact info via NFC.",
       "src": "images/projects/tapExchange.png"
     },
     {
+      "show": "True",
       "name": "Blogging Site",
       "description": "A Blogging website created from scratch for a friend.",
       "src": "images/projects/blog.png"
     },
     {
+      "show": "True",
       "name": "Android Pedometer",
       "description": "Designed and implemented Android Pedometer using finite state machines and sensor event handlers. Contains map loading and path finding capabilities.",
       "src": "images/projects/pedometer.png"
     },
     {
+      "show": "False",
       "name": "Reaction Timer",
       "description": "Designed a program using the ARM board that records the reaction time of user based on LED stimulus and button input.",
       "src": "images/projects/reaction.jpg"
     },
     {
+      "show": "False",
       "name": "Traffic light system",
       "description": "Designed and programmed a 4-way traffic light system on a FPGA board using VHDL programming language",
       "src": "images/projects/trafficlight.jpg"
     },
     {
+      "show": "True",
       "name": "Pong",
       "description": "A Recreation of the classic game of Pong using Unity.",
       "src": "images/projects/pong.png"
     },
     {
+      "show": "True",
       "name": "Portfolio sites",
       "description": "Portfolio style website created using Node, Express and Jade",
       "src": "images/projects/portfolio-site.png"
     },
     {
-      "name": "pusher",
-      "description": "",
-      "src": ""
-    },
-    {
-      "name": "pusher",
-      "description": "",
-      "src": ""
-    },
-    {
+      "show": "True",
       "name": "Casty",
       "description": "A household movie queue and streaming device for the raspberry pi.",
       "src": "images/projects/casty.png"
     },
     {
+      "show": "True",
       "name": "Palette",
       "description": "Analyzes an image/camera feed and grabs a custom color palette",
       "src": "images/projects/palette.png"

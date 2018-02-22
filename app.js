@@ -13,7 +13,7 @@ var app = express();
 const uuidv1 = require('uuid/v1');
 var mcache = require('memory-cache');
 var AWS = require("aws-sdk");
-const MovieDB = require('moviedb')(process.env.MOVIEDB_API_KEY);
+const MovieDB = require('moviedb')('23f1fc561b630d36d81b1ea7c34e59eb');
 
 AWS.config.update({
     region: 'us-west-2',

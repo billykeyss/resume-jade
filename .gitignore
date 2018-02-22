@@ -1,5 +1,6 @@
 .DS_Store
 .sass-cache/
+*.css.map
 
 
 # ignore all files starting with . or ~

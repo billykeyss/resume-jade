@@ -1,9 +1,13 @@
+WebFont.load({
+  google: {
+    families: ['Open Sans:400,600,700,400italic,700italic', 'Roboto Condensed:400,700']
+  }
+});
 
 $(window).load(function() {
   // Animate loader off screen
     $(".loadingContainer").fadeOut(1000);
 });
-
 
 $(document).ready(function() {
     for (var i = 1; i <= 2; i++) {
