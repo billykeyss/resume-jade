@@ -11,7 +11,6 @@ $(document).bind('scroll',function () {
 
 
 var expandCollapse = function(){
-  console.log('test');
     if ( $(window).width() < 1000 ) {
         $(function(){
             $('.masonry').css('display', '');
