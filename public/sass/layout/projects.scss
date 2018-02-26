@@ -5,6 +5,148 @@ $itemBg3: #FFC093;
 $itemBg4: #FF7F51;
 $counterBg: #222;
 
+/*
+* === PROJECTS SECTION ===
+*/
+#categories {
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.clr:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#categories {
+  li {
+    position: relative;
+    list-style-type: none;
+    width: 27.85714285714286%;
+    /* = (100-2.5) / 3.5 */
+    padding-bottom: 32.16760145166612%;
+    /* =  width /0.866 */
+    float: left;
+    overflow: hidden;
+    visibility: hidden;
+    -webkit-transform: rotate(-60deg) skewY(30deg);
+    -ms-transform: rotate(-60deg) skewY(30deg);
+    transform: rotate(-60deg) skewY(30deg);
+
+    &:nth-child(3n+2) {
+      margin: 0 1%;
+    }
+
+    &:nth-child(6n+4) {
+      margin-left: 0.5%;
+      margin-top: -6.9285714285%;
+      margin-bottom: -6.9285714285%;
+      -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+      -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+      transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    }
+
+    &:nth-child(6n+5),
+    &:nth-child(6n+6) {
+      margin-top: -6.9285714285%;
+      margin-bottom: -6.9285714285%;
+      -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+      -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+      transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    }
+
+    &:nth-child(6n+4):last-child,
+    &:nth-child(6n+5):last-child,
+    &:nth-child(6n+6):last-child {
+      margin-bottom: 0;
+    }
+
+    * {
+      position: absolute;
+      visibility: visible;
+    }
+
+    > div {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+      background: white;
+      -webkit-transform: skewY(-30deg) rotate(60deg);
+      -ms-transform: skewY(-30deg) rotate(60deg);
+      transform: skewY(-30deg) rotate(60deg);
+      -webkit-backface-visibility: hidden;
+    }
+
+    img {
+      left: -100%;
+      right: -100%;
+      width: auto;
+      height: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  div {
+    h1,
+    p {
+      width: 100%;
+      padding: 0 5%;
+      background-color: #008080;
+      background-color: rgba(0, 128, 128, 0.8);
+      font-size: 11px;
+      -webkit-transition: top 0.1s ease-out, bottom 0.1s ease-out, 0.5s padding 0.1s ease-out;
+      -ms-transition: top 0.1s ease-out, bottom 0.1s ease-out, 0.5s padding 0.1s ease-out;
+      transition: top 0.1s ease-out, bottom 0.1s ease-out, 0.5s padding 0.1s ease-out;
+    }
+  }
+
+  li {
+    h1 {
+      bottom: 110%;
+      font-style: italic;
+      font-weight: normal;
+      font-size: 1.5em;
+      padding-top: 100%;
+      padding-bottom: 100%;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -1px;
+        left: 45%;
+        width: 10%;
+        text-align: center;
+        z-index: 1;
+        border-bottom: 2px solid #fff;
+      }
+    }
+
+    p {
+      padding-top: 50%;
+      top: 110%;
+      padding-bottom: 50%;
+    }
+
+    div:hover {
+      h1 {
+        bottom: 50%;
+        padding-bottom: 10%;
+      }
+
+      p {
+        top: 50%;
+        padding-top: 10%;
+      }
+    }
+  }
+}
+
+
 @mixin setColorAndHover($baseColor) {
   // color: $baseColor;
   &:hover {
@@ -24,11 +166,11 @@ $counterBg: #222;
   }
 
   @media screen and (min-width: 600px) {
-    column-count: 2;
+    column-count: 1;
   }
 
   @media screen and (min-width: 800px) {
-    column-count: 3;
+    column-count: 2;
   }
 
   @media screen and (min-width: 1100px) {
@@ -138,9 +280,9 @@ $counterBg: #222;
     display: inline-block;
     opacity: 0;
     vertical-align: middle;
-    max-width: 66.666%;
+    max-width: 80%;
     padding: 12px;
-    background: #2ecc71;
+    background: #008ecc;
     font-weight: normal;
     font-size: 1rem; /* Setting a font-size again */
   }

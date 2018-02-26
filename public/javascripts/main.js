@@ -4,9 +4,37 @@ WebFont.load({
   }
 });
 
+$('body').css({'overflow':'hidden'});
+$(document).bind('scroll',function () {
+     window.scrollTo(0,0);
+});
+
+
+var expandCollapse = function(){
+  console.log('test');
+    if ( $(window).width() < 1000 ) {
+        $(function(){
+            $('.masonry').css('display', '');
+            $('#categories').css('display', 'none');
+        });
+    }
+    else {
+        $(function(){
+          // add a class .collapse to a div .showHide
+          $('#categories').css('display', '');
+          $('.masonry').css('display', 'none');// hides button display on bigger screen
+        });
+    }
+}
+
+expandCollapse();
+$(window).resize(expandCollapse);
+
 $(window).load(function() {
   // Animate loader off screen
     $(".loadingContainer").fadeOut(1000);
+    $(document).unbind('scroll');
+    $('body').css({'overflow':'visible'});
 });
 
 $(document).ready(function() {

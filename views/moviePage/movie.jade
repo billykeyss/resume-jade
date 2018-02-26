@@ -56,7 +56,7 @@ html(lang='en')
 			.center-align.grid(data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }')
 				each item in info.Items
 					.grid-item
-						img(src=item.poster, onerror="this.src='http://sd.keepcalm-o-matic.co.uk/i/keep-calm-poster-not-found.png'", style='max-height:200px; max-width: 160px;padding-top:20px;')
+						img(src=item.info.Poster, onerror="this.src='http://sd.keepcalm-o-matic.co.uk/i/keep-calm-poster-not-found.png'", style='max-height:200px; max-width: 160px;padding-top:20px;')
 						.grid-item-container
 							p
 								.grid-title !{item.info.Title} 
@@ -67,19 +67,23 @@ html(lang='en')
 								| IMDB Rating:
 								br
 								|  !{item.info.imdbRating}/10
-								//- p.grid-rating Rotton Tomatoes Rating: {{infoRT.rating}}/100
-								p.grid-plot !{item.info.Plot}
-								p.grid-actor Starring: !{item.info.Actors}
-								.row.center
-									.svg-container
-										a.playBut.play-btn(href='#')
-											svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xmlns:a='http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/', x='0px', y='0px', width='50px', height='50px', viewbox='0 0 213.7 213.7', enable-background='new 0 0 213.7 213.7', xml:space='preserve')
-												polygon#XMLID_18_.triangle(fill='none', stroke-width='10', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', points='\
-												73.5,62.5 148.5,105.8 73.5,149.1 ')
-												circle#XMLID_17_.circle(fill='none', stroke-width='10', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', cx='106.8', cy='106.8', r='103.3')
-									.svg-container
-										a.playBut.delete-btn(href='#', onclick='handleDelete("' + item.id + '")')
-											svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xmlns:a='http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/', x='0px', y='0px', width='50px', height='50px', viewbox='0 0 213.7 213.7', enable-background='new 0 0 213.7 213.7', xml:space='preserve')
-												line.triangle(x1='80', x2='130', y1='80', y2='130', stroke='orange', fill='transparent', stroke-width='10')
-												line.triangle(x1='80', x2='130', y1='130', y2='80', stroke='orange', fill='transparent', stroke-width='10')
-												circle#XMLID_17_.circle(fill='none', stroke-width='10', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', cx='106.8', cy='106.8', r='103.3')
+							p.grid-rating
+								| Metacritic Rating:
+								br
+								|  !{item.info.Metascore}/100
+							p.grid-plot Directed by: !{item.info.Director}
+							p.grid-plot !{item.info.Plot}
+							p.grid-actor Starring: !{item.info.Actors}
+							.row.center
+								.svg-container
+									a.playBut.play-btn(href='#')
+										svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xmlns:a='http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/', x='0px', y='0px', width='50px', height='50px', viewbox='0 0 213.7 213.7', enable-background='new 0 0 213.7 213.7', xml:space='preserve')
+											polygon#XMLID_18_.triangle(fill='none', stroke-width='10', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', points='\
+											73.5,62.5 148.5,105.8 73.5,149.1 ')
+											circle#XMLID_17_.circle(fill='none', stroke-width='10', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', cx='106.8', cy='106.8', r='103.3')
+								.svg-container
+									a.playBut.delete-btn(href='#', onclick='handleDelete("' + item.id + '")')
+										svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xmlns:a='http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/', x='0px', y='0px', width='50px', height='50px', viewbox='0 0 213.7 213.7', enable-background='new 0 0 213.7 213.7', xml:space='preserve')
+											line.triangle(x1='80', x2='130', y1='80', y2='130', stroke='orange', fill='transparent', stroke-width='10')
+											line.triangle(x1='80', x2='130', y1='130', y2='80', stroke='orange', fill='transparent', stroke-width='10')
+											circle#XMLID_17_.circle(fill='none', stroke-width='10', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', cx='106.8', cy='106.8', r='103.3')

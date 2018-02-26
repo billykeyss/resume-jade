@@ -23,24 +23,22 @@
 					//- 	.item_content.item__content--large(style="background-image:url('" + project.src + "')")
 					//- 		h1=project.name
 					//- 		p=project.description
-					if project.show="True"
+					if project.show == "True"
 						.items
 							.item_content.item__content--large
 								a.info-box(href='#')
-									h1.info-box__txt=project.name
-										p.info-box_txt=project.description
+									.info-box__txt
+										h1=project.name
+										p=project.description
 									img.info-box__img(src=project.src)
 
-
-
-
-		//- ul#categories.clr
-		//- 	each project in data.projects
-		//- 		if project.name == "pusher"
-		//- 			li.pusher
-		//- 		else
-		//- 			li
-		//- 				div
-		//- 					img(src=project.src, alt='')
-		//- 					h1=project.name
-		//- 					p=project.description
+		ul#categories.clr
+			each project in data.projects
+				if project.name == "pusher"
+					li.pusher
+				else
+					li
+						div
+							img(src=project.src, alt='')
+							h1=project.name
+							p=project.description
