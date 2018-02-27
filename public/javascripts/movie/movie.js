@@ -6,11 +6,6 @@ function handleDelete(id) {
     location.reload();
 };
 
-function handleRedirect(website) {
-    log(website);
-    window.location.replace(website);
-}
-
 function postMovieIfNotExist(movie, year, password) {
     for (var i = 0; i < info.Items.length; i++) {
         if (info.Items[i].title.toUpperCase() === movie.toUpperCase()) {
@@ -41,27 +36,6 @@ $(document).ready(function() {
 
         postMovieIfNotExist(movie, year, password);
     });
-
-    // function callback() {
-    //     setTimeout(function() {
-    //         $('#button').removeClass('validate');
-    //     }, 1250);
-    // }
-    //
-    // function validate() {
-    //     setTimeout(function() {
-    //         $('#button').removeClass('onSubmitClick');
-    //         $('#button').addClass('validate');
-    //         setTimeout(callback, 450);
-    //     }, 2250);
-    // }
-    //
-    // $('#button').click(function() {
-    //     $('#button').addClass('onSubmitClick');
-    //     setTimeout(validate, 250);
-    // });
-
-
 
     var $input = document.getElementById('searchBox');
     var baseUrl = "http://sg.media-imdb.com/suggests/";
