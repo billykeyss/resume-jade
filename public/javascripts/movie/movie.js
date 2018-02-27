@@ -94,7 +94,6 @@ $(document).ready(function() {
 
                         // resultRow.setAttribute('href', destinationUrl);
                         // resultRow.setAttribute('target', '_blank');
-                        console.log(result);
                         resultRow.addEventListener("click", function(e) {
                           var children = $(this).closest('.resultRow')[0].children[1].children;
                           postMovieIfNotExist(children[0].innerText, children[1].innerText, "dummy");

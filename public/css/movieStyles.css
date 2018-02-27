@@ -218,6 +218,11 @@ button:active {
   left:60%;
 }
 
+#rocket {
+  position: absolute;
+  left: 20%;
+  max-width: 200px;
+}
 
 /* Style for address input box*/
 input{
