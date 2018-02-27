@@ -5,6 +5,6 @@ var router = express.Router();
 
 router.route('/').get(movieCtrl.getMovies);
 router.route('/').post(movieCtrl.postMovie);
-router.route('/').delete(movieCtrl.getMovies);
+router.route('/').delete(movieCtrl.deleteMovie);
 
 module.exports = router;

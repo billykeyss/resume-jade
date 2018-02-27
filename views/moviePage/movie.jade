@@ -29,7 +29,6 @@ html(lang='en')
 		#stars
 		#stars2
 		#stars3
-		img#moon(src='/images/svg/moon.svg', alt='moon')
 		//- #stars4
 		.container
 			.jumbotron.center-align
@@ -38,21 +37,10 @@ html(lang='en')
 					h1
 						h2  Recommend me a Movie!
 						br
-						form.form-inline
-							.form-group
-								.form-group
-									.input-group(style='width: 250px;')
-										input#year.form-control(type='text', placeholder='Year...')
-								.form-group
-									.input-group(style='width: 250px;')
-										input#movieName.form-control(type='text', placeholder='Movie Name...')
-								.form-group
-									.input-group(style='width: 250px;')
-										input#password.form-control(type='password', placeholder='Password')
+						input#searchBox(type='text', placeholder='enter a movie or actor name')
+						#result
 						br
-						.btn-container
-							button#button.submit
-						br
+			img#moon(src='/images/svg/moon.svg', alt='moon')
 			.center-align.grid(data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }')
 				each item in info.Items
 					.grid-item

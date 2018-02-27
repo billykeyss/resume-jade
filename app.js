@@ -12,33 +12,8 @@ var moviePage = require('./routes/moviePage');
 var app = express();
 var mcache = require('memory-cache');
 
-var cache = (duration) => {
-    return (req, res, next) => {
-        let key = '__express__' + req.originalUrl || req.url
-        let cachedBody = mcache.get(key)
-        if (cachedBody) {
-            res.send(cachedBody)
-            return
-        } else {
-            res.sendResponse = res.send
-            res.send = (body) => {
-                mcache.put(key, body, duration * 1000);
-                res.sendResponse(body)
-            }
-            next()
-        }
-    }
-}
-
-function titleCase(str) {
-    const inputStr = str.toLowerCase().split(' ');
-
-    for (var i = 0; i < inputStr.length; i++) { // eslint-disable-line no-var
-        inputStr[i] = inputStr[i].split('');
-        inputStr[i][0] = inputStr[i][0].toUpperCase();
-        inputStr[i] = inputStr[i].join('');
-    }
-    return inputStr.join(' '); //  converts the array of words back to a sentence.
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config({path: './config.env'});
 }
 
 // view engine setup
@@ -60,7 +35,22 @@ app.use(express.static(__dirname + '/public', {
 app.locals.env = process.env;
 
 
-app.use('/', cache(10000000), index);
+app.use('/', function(req, res, next) {
+    var key = '__express__' + req.originalUrl || req.url;
+    var cachedBody = mcache.get(key);
+    if (cachedBody) {
+        res.send(cachedBody);
+        return;
+    } else {
+        res.sendResponse = res.send;
+        res.send = function(body) {
+            mcache.put(key, body, 10000000 * 1000);
+            res.sendResponse(body);
+        };
+        next();
+    }
+}, index);
+
 app.use('/movies', movie);
 app.use('/movie-list', moviePage);
 

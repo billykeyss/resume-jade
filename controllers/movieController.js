@@ -15,7 +15,7 @@ module.exports = {
 
     getMovies : function (resolve, reject) {
         docClient.scan({
-            TableName: 'MovieTracker',
+            TableName: process.env.TABLE_NAME,
             Limit: 50
         }, function (err, data) {
             if (err) {
@@ -36,7 +36,7 @@ module.exports = {
         console.log(req.body.id);
 
         docClient.delete({
-            TableName: 'MovieTracker',
+            TableName: process.env.TABLE_NAME,
             Key: {
                 id: req.body.id
             }
@@ -56,7 +56,7 @@ module.exports = {
         // const urlRT = 'http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=ny97sdcpqetasj8a4v2na8va&q=' + movieNameArray + '&page_limit=1';
         // const movieNameArray = req.body.movie.split(' ').join('+');
         var params = {
-            TableName: "MovieTracker",
+            TableName: process.env.TABLE_NAME,
             KeyConditionExpression: "title = :title",
             ExpressionAttributeValues: {
                 ":title": req.body.movie
@@ -94,7 +94,7 @@ module.exports = {
         }, (err, result) => {
             imdbRequest().then(function(info) {
                 var putParams = { // eslint-disable-line no-var
-                    TableName: 'MovieTracker',
+                    TableName: process.env.TABLE_NAME,
                     Item: {
                         id: uuidv1(),
                         year: parseInt(req.body.year) || parseInt(info.Year),
