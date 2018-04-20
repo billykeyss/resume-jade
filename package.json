@@ -24,6 +24,7 @@
     "memory-cache": "~0.1.6",
     "morgan": "~1.7.0",
     "moviedb": "^0.2.10",
+    "npm": "^5.8.0",
     "request": "^2.83.0",
     "serve-favicon": "~2.3.0",
     "uuid": "^3.1.0"
