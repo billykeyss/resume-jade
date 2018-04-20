@@ -9,6 +9,8 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var movie = require('./routes/movie');
 var moviePage = require('./routes/moviePage');
+var color = require('./routes/color');
+var color = require('./routes/api');
 var app = express();
 var mcache = require('memory-cache');
 
@@ -51,8 +53,10 @@ app.use('/', function(req, res, next) {
     }
 }, index);
 
+app.use('/api', api)
 app.use('/movies', movie);
 app.use('/movie-list', moviePage);
+app.use('/color-recommend', color);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

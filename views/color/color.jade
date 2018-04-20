@@ -1,0 +1,33 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		meta(name='description', content='A simple tool for converting HEX values to RGB and vice versa.')
+		meta(name='keywords', content='hex, hexadecimal, rgb, converter, hex to rgb, hexadecimal to rgb, hex to rgb converter, rgb to hex, rgb to hex converter, convert hex to rgb, convert rgb to hex, hex to rgb conversion, rgb to hex conversion, hex converter, rgb converter, simple hex to rgb converter')
+		title Color Information
+
+		link(rel='stylesheet', href='/stylesheets/components/buttons.css')
+		link(rel='stylesheet', href='/css/color.css')
+	body
+		#wrap
+			input#hex(type='text', placeholder='hex', autocomplete='off')
+			input#rgb(type='text', placeholder='rgb', autocomplete='off')
+			.button.button-2#generate(style='margin-top:50px') Generate a color
+		#palette
+			.row.palette
+				p.palette-label test
+			.row.palette
+				p.palette-label test
+			.row.palette
+				p.palette-label test
+			.row.palette
+				p.palette-label test
+			.row.palette
+				p.palette-label test
+
+
+	script(src="/javascripts/lib/jquery.min.js")
+	script(src="/javascripts/lib/url.min.js")
+	script(src='/javascripts/color.js')
