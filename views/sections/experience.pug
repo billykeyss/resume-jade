@@ -15,7 +15,7 @@
 							.timeline-content.left
 								h2.titleLeft !{experience.company}
 								h5 !{experience.dates}
-								#[a(href='#{!{experience.url}}') !{experience.location} ]
+								a(href='#{!{experience.url}}') !{experience.location}
 								h4 < !{experience.title} />
 								p !{experience.descriptionShort}
 						else
@@ -23,6 +23,6 @@
 							.timeline-content.right
 								h2.titleRight !{experience.company}
 								h5 !{experience.dates}
-								#[a(href='#{!{experience.url}}') !{experience.location} ]
+								a(href='#{!{experience.url}}') !{experience.location}
 								h4 < !{experience.title} />
 								p !{experience.descriptionShort}
