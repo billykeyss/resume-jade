@@ -163,7 +163,7 @@
     {
       "show": "True",
       "name": "Portfolio sites",
-      "description": "Portfolio style website created using Node, Express and Jade",
+      "description": "Portfolio style website created using Node, Express and Pug",
       "src": "images/projects/portfolio-site.png"
     },
     {
