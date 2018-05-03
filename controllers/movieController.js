@@ -103,11 +103,12 @@ module.exports = {
                         infoMovieDB: result.results[0]
                     }
                 };
+                console.log(JSON.stringify(putParams));
                 docClient.put(putParams, function(err, data) {
                     if (err) {
-                        console.error("Unable to add movie", putParams.title, ". Error JSON:", JSON.stringify(err, null, 2));
+                        console.error("Unable to add movie", putParams.Item.title, ". Error JSON:", JSON.stringify(err, null, 2));
                     } else {
-                        console.log("PutItem succeeded:", putParams.title);
+                        console.log("PutItem succeeded:", putParams.Item.title);
                         res.redirect(req.get('referer'));
                     }
                 });

@@ -7,14 +7,16 @@ var movieController = require('../controllers/movieController');
 /* GET home page. */
 router.get('/', function (req, res, next) {
     new Promise(movieController.getMovies).then(function (result) {
-        console.log(result.Items[0]);
-        res.render('moviePage/movie', {
+        res.render('pages/movie', {
             info: result
         });
     }, function (err) {
         console.log(err); // Error: 'It broke'
-        res.render('error');
+        res.render('main/error');
     });
 });
+
+router.route('/').post(movieController.postMovie);
+router.route('/').delete(movieController.deleteMovie);
 
 module.exports = router;

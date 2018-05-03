@@ -18,6 +18,7 @@ html(lang='en')
 
 		script.
 			var info = !{JSON.stringify(info)};
+			console.log(info);
 		script(src='/javascripts/utils.js')
 		script(src='/javascripts/movie/dialog.js')
 		script(src='/javascripts/movie/movie.js')
@@ -44,7 +45,7 @@ html(lang='en')
 			img#rocket(src='/images/svg/rocket.svg', alt='rocket')
 			.center-align.grid(data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }')
 				each item in info.Items
-					.grid-item
+					.grid-item(class={"movie": item.info.Type === 'movie', "series": item.info.Type === 'series'})
 						img(src=item.info.Poster, onerror="this.src='http://sd.keepcalm-o-matic.co.uk/i/keep-calm-poster-not-found.png'", style='max-height:200px; max-width: 160px;padding-top:20px;')
 						.grid-item-container
 							p

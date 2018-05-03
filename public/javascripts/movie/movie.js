@@ -1,11 +1,25 @@
+/**
+ * handleDelete - Delete Movie Item from DB
+ *
+ * @param  {string} id: unique id of movie
+ * @return {void} refreshes the page
+ */
 function handleDelete(id) {
     log(id.toString());
-    del('/movie-list', {
+    del('/movies', {
         id: id.toString()
     });
     location.reload();
 };
 
+/**
+ * postMovieIfNotExist - Post Movie to DynamoDB if it doesn't exist
+ *
+ * @param  {string} movie
+ * @param  {int} year
+ * @param  {string} password
+ * @return {void}
+ */
 function postMovieIfNotExist(movie, year, password) {
     for (var i = 0; i < info.Items.length; i++) {
         if (info.Items[i].title.toUpperCase() === movie.toUpperCase()) {
@@ -17,7 +31,7 @@ function postMovieIfNotExist(movie, year, password) {
         }
     }
 
-    post('/movie-list', {
+    post('/movies', {
         movie: movie,
         year: year,
         password: password

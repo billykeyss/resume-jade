@@ -1,17 +1,19 @@
 'use strict'
 
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var index = require('./routes/index');
-var movie = require('./routes/movie');
-var moviePage = require('./routes/moviePage');
-var color = require('./routes/color');
-var app = express();
-var mcache = require('memory-cache');
+let express = require('express');
+let path = require('path');
+let favicon = require('serve-favicon');
+let logger = require('morgan');
+let cookieParser = require('cookie-parser');
+let bodyParser = require('body-parser');
+
+let index = require('./routes/index');
+let movie = require('./routes/movie');
+let color = require('./routes/color');
+let tracker = require('./routes/tracker');
+
+let app = express();
+let mcache = require('memory-cache');
 
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config({path: './config.env'});
@@ -22,7 +24,7 @@ if (process.env.NODE_ENV !== 'production') {
  * disable X-Powered-By header, because it exposes information
  * about the used frameworks to potential attackers.
  */
-// app.disable('x-powered-by');
+app.disable('x-powered-by');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -44,8 +46,8 @@ app.locals.env = process.env;
 
 
 app.use('/', function(req, res, next) {
-    var key = '__express__' + req.originalUrl || req.url;
-    var cachedBody = mcache.get(key);
+    let key = '__express__' + req.originalUrl || req.url;
+    let cachedBody = mcache.get(key);
     if (cachedBody) {
         res.send(cachedBody);
         return;
@@ -60,12 +62,12 @@ app.use('/', function(req, res, next) {
 }, index);
 
 app.use('/movies', movie);
-app.use('/movie-list', moviePage);
 app.use('/color-recommend', color);
+app.use('/tracker', tracker)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-    var err = new Error('Not Found');
+    let err = new Error('Not Found');
     err.status = 404;
     next(err);
 });
@@ -78,7 +80,7 @@ app.use(function(err, req, res, next) {
 
     // render the error page
     res.status(err.status || 500);
-    res.render('error');
+    res.render('main/error');
 });
 
 module.exports = app;

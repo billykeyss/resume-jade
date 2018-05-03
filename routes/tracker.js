@@ -6,7 +6,7 @@ let fs = require('fs');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    res.render('pages/color');
+    res.render('pages/tracker');
 });
 
 module.exports = router;
