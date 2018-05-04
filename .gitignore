@@ -2,6 +2,7 @@
 .sass-cache/
 *.css.map
 *.env
+public/sass/
 
 
 # ignore all files starting with . or ~
