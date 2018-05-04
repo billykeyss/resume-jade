@@ -9,7 +9,23 @@ html
 
 		link(rel='stylesheet', href='/stylesheets/pages/tracker.css')
 	body
-		p test
+		.toggle.toggle--like
+			input#toggle--like.toggle--checkbox(type='checkbox')
+			label.toggle--btn(for='toggle--like')
+				span.toggle--feature
+
+		form
+			.radio-group
+				input#bong(type='radio' name='selector' value='Bong')
+				label(for='bong') Bong
+				input#vape(type='radio' name='selector' value='Vape')
+				label(for='vape') Vape
+				input#dab(type='radio' name='selector' value='Dab')
+				label(for='dab') Dab
+				input#pipe(type='radio' name='selector' value='Pipe')
+				label(for='pipe') Pipe
+				input#joint(type='radio' name='selector' value='Joint')
+				label(for='joint') Joint
 
 
 	script(src="/javascripts/lib/jquery.min.js")
