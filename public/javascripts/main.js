@@ -234,7 +234,6 @@ $(document).ready(function() {
     $('.igviewer').on('click', function() {
         ig.view.close();
     });
-    1
 });
 
 
