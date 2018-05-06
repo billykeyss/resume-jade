@@ -9,24 +9,56 @@ html
 
 		link(rel='stylesheet', href='/stylesheets/pages/tracker.css')
 	body
-		.toggle.toggle--like
-			input#toggle--like.toggle--checkbox(type='checkbox')
-			label.toggle--btn(for='toggle--like')
-				span.toggle--feature
+		.section-title Consumption tracker
+		.toggle-type Indica/Sativa
+		.toggle.toggle-daynight
+			input#toggle-daynight.toggle-checkbox(type='checkbox')
+			label.toggle-btn(for='toggle-daynight')
+				span.toggle-feature
+		hr
+		.toggle-title Type
+		.wrap
+			input#flower.sw(type='checkbox' name='flower')
+			label(for='flower')
+				span Flower
+		.wrap
+			input#shatter.sw(type='checkbox' name='shatter')
+			label(for='shatter')
+				span Shatter
+		.wrap
+			input#oil.sw(type='checkbox' name='oil')
+			label(for='oil')
+				span Oil
+		.wrap
+			input#kief.sw(type='checkbox' name='kief')
+			label(for='kief')
+				span Kief
+		hr
+		.toggle-title Method
+		.selector
+			input#bong(type='radio' name='duration' value='Bong' checked='')
+			label(for='bong') 
+				.title Bong
+			input#vape(type='radio' name='duration' value='Vape')
+			label(for='vape') 
+				.title Vape
+			input#dab(type='radio' name='duration' value='Dab')
+			label(for='dab') 
+				.title Dab
+			input#pipe(type='radio' name='duration' value='Pipe')
+			label(for='pipe') 
+				.title Pipe
+			input#joint(type='radio' name='duration' value='Joint')
+			label(for='joint')
+				.title Joint
+		.wrap
+			span
+				input#password.balloon(type="text" placeholder="Enter Password...")
+		.wrap
+			button.button Submit
 
-		form
-			.radio-group
-				input#bong(type='radio' name='selector' value='Bong')
-				label(for='bong') Bong
-				input#vape(type='radio' name='selector' value='Vape')
-				label(for='vape') Vape
-				input#dab(type='radio' name='selector' value='Dab')
-				label(for='dab') Dab
-				input#pipe(type='radio' name='selector' value='Pipe')
-				label(for='pipe') Pipe
-				input#joint(type='radio' name='selector' value='Joint')
-				label(for='joint') Joint
 
 
 	script(src="/javascripts/lib/jquery.min.js")
+	script(src='/javascripts/utils.js')
 	script(src='/javascripts/tracker.js')
