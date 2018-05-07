@@ -39,7 +39,7 @@ button.click(function() {
 		"body": {
 			"tableName": "TrackingDataTable",
 			"data": {
-				"date_time": 3,
+				"date_time": timestamp,
 				"strain": strain,
 				"method": method,
 				"flower": flower,
