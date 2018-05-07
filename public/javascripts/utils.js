@@ -1,5 +1,5 @@
 const shouldPrint = false;
-var log = shouldPrint ? console.log.bind(window.console) : function() {};
+const log = shouldPrint ? console.log.bind(window.console) : function() {};
 
 function post(path, params, callback) {
     $.post(path, params, function(data, status) {

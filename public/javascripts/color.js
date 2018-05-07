@@ -1,5 +1,11 @@
 const COLOR_MIND_URL = "http://colormind.io/api/";
 
+
+let $hex = $('#hex'),
+	$rgb = $('#rgb'),
+	$body = $('body');
+
+
 function getRecommendedColor(r,g,b) {
 	sendPostRequest({
 		model: "default",
@@ -17,10 +23,10 @@ function generateColorPalette() {
 }
 
 function sendPostRequest(data) {
-	var http = new XMLHttpRequest();
+	let http = new XMLHttpRequest();
 	http.onreadystatechange = function() {
 		if (http.readyState == 4 && http.status == 200) {
-			var palette = JSON.parse(http.responseText).result;
+			let palette = JSON.parse(http.responseText).result;
 			updatePalette(palette);
 		}
 	}
@@ -42,12 +48,12 @@ function rgbToHex(r, g, b) {
 }
 
 function componentToHex(c) {
-    var hex = c.toString(16);
+    let hex = c.toString(16);
     return hex.length == 1 ? "0" + hex : hex;
 }
 
 function hashColour() {
-	var url, urlHash, urlColour;
+	let url, urlHash, urlColour;
 	url = window.location.href;
 	urlHash = window.url('#', url);
 
@@ -70,27 +76,22 @@ function hashColour() {
 				$rgb.val('');
 			}
 
-			$('body').css('background-color', $rgb.val());
-			$('body').colourBrightness();
+			$body.css('background-color', $rgb.val());
+			$body.colourBrightness();
 		} else {
 			$hex.focus();
 		}
 	}
 }
 
-var $hex = $('#hex'),
-	$rgb = $('#rgb'),
-	$hex_val = $('#hex').val(),
-	$rgb_val = $('#rgb').val();
-
 window.onhashchange = hashColour;
 hashColour();
 
 $hex.bind('blur keyup', function(e) {
-	colour = $.rgbHex($('#hex').val());
+	colour = $.rgbHex($hex.val());
 
 	if (colour) {
-		$('#rgb').val(colour);
+		$rgb.val(colour);
 		$('body').css('background-color', $rgb.val());
 		$('body').colourBrightness();
 	} else {
@@ -103,14 +104,14 @@ $hex.bind('blur keyup', function(e) {
 });
 
 $rgb.bind('blur keyup', function(e) {
-	colour = $.rgbHex($('#rgb').val());
+	colour = $.rgbHex($rgb.val());
 
 	if (colour) {
-		$('#hex').val(colour);
+		$hex.val(colour);
 		$('body').css('background-color', $hex.val());
 		$('body').colourBrightness();
 	} else {
-		$('#hex').val('');
+		$hex.val('');
 	}
 
 	if (e.keyCode == 13) {
@@ -119,9 +120,9 @@ $rgb.bind('blur keyup', function(e) {
 });
 
 $('#generate').click(function(e) {
-	if($('#rgb').val() == '') {
-		// getRecommendedColor(); TODO: IMPLEMENT RECOMMENDATION BASED ON COLOR
-		generateColorPalette();
+	if($rgb.val() !== '') {
+		let hex = $hex.val();
+		getRecommendedColor(hex.substring(0, 1), hex.substring(2, 3), hex.substring(4, 5));
 	} else {
 		generateColorPalette();
 	}
@@ -131,9 +132,9 @@ $('body').css('background-color', getRandomColor());
 $('body').colourBrightness();
 
 function getRandomColor() {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
+  let letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
   }
   return color;

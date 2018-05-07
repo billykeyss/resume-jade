@@ -15,7 +15,7 @@ button.click(function() {
 
 	let method = '';
 	let methodRadioGroup = document.getElementsByName('duration');
-	for (var i = 0, length = methodRadioGroup.length; i < length; i++) {
+	for (let i = 0, length = methodRadioGroup.length; i < length; i++) {
 		if (methodRadioGroup[i].checked) {
 			// do whatever you want with the checked radio
 			method = methodRadioGroup[i].value;
