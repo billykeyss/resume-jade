@@ -79,8 +79,8 @@ $(document).ready(function() {
         }, 1300);
     });
 
-    particlesJS.load('particles-js', 'javascripts/particles.json');
-    particlesJS.load('particles-js-about', 'javascripts/particles-about.json');
+    particlesJS.load('particles-js', 'javascripts/config/particles.json');
+    particlesJS.load('particles-js-about', 'javascripts/config/particles-about.json');
 
     var dataRotate = ['developer', 'traveller', 'nap enthusiast', 'homo Sapien', 'buffet connoisseur'];
     var element = document.getElementsByClassName('txt-rotate')[0];

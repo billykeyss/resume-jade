@@ -1,12 +1,18 @@
 const COLOR_MIND_URL = "http://colormind.io/api/";
 
-
 let $hex = $('#hex'),
 	$rgb = $('#rgb'),
 	$body = $('body');
 
-
-function getRecommendedColor(r,g,b) {
+/**
+ * generatePaletteFromInput - creates a color palette from user
+ *
+ * @param  {sting} r red value
+ * @param  {sting} g green value
+ * @param  {sting} b blue vale
+ * @return {void}   description
+ */
+function generatePaletteFromInput(r,g,b) {
 	sendPostRequest({
 		model: "default",
 		input: [
@@ -122,7 +128,7 @@ $rgb.bind('blur keyup', function(e) {
 $('#generate').click(function(e) {
 	if($rgb.val() !== '') {
 		let hex = $hex.val();
-		getRecommendedColor(hex.substring(0, 1), hex.substring(2, 3), hex.substring(4, 5));
+		generatePaletteFromInput(hex.substring(0, 1), hex.substring(2, 3), hex.substring(4, 5));
 	} else {
 		generateColorPalette();
 	}

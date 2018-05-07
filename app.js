@@ -6,6 +6,7 @@ let favicon = require('serve-favicon');
 let logger = require('morgan');
 let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
+let cors = require('cors');
 
 let index = require('./routes/index');
 let movie = require('./routes/movie');
@@ -42,6 +43,7 @@ app.use(cookieParser());
 app.use(express.static(__dirname + '/public', {
     maxAge: 86400000
 }));
+app.use(cors());
 app.locals.env = process.env;
 
 

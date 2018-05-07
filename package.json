@@ -11,13 +11,14 @@
     "test": "eslint **/*.js",
     "watch": "sass --watch public/sass:public/stylesheets --style compressed",
     "watchJS": "watch 'npm run uglyifyJs -s' public/javascripts",
-    "uglyifyJs": "uglifyjs public/javascripts/lib/webfont.min.js public/javascripts/lib/jquery.min.js public/javascripts/lib/jquery.scrollTo.min.js public/javascripts/lib/Chart.bundle.min.js public/javascripts/lib/particles.min.js public/javascripts/main.js --compress --mangle --output public/main.min.js",
+    "uglyifyJs": "uglifyjs public/javascripts/lib/webfont.min.js public/javascripts/lib/jquery.min.js public/javascripts/lib/jquery.scrollTo.min.js public/javascripts/lib/Chart.bundle.min.js public/javascripts/lib/particles.min.js public/javascripts/pages/main.js --compress --mangle --output public/main.min.js",
     "build": ""
   },
   "dependencies": {
     "aws-sdk": "^2.229.1",
     "body-parser": "~1.15.2",
     "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
     "debug": "~2.2.0",
     "express": "^4.16.3",
     "memory-cache": "~0.1.6",

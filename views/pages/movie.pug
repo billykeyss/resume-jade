@@ -17,10 +17,8 @@ html(lang='en')
 
 		script.
 			var info = !{JSON.stringify(info)};
-			console.log(info);
-		script(src='/javascripts/utils.js')
-		script(src='/javascripts/movie/dialog.js')
-		script(src='/javascripts/movie/movie.js')
+		script(src='/javascripts/utils/request-utils.js')
+		script(src='/javascripts/pages/movie.js')
 
 		//if lt IE 9
 			script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')

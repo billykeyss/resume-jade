@@ -6,6 +6,7 @@ button.click(function() {
 	if(document.getElementById("password").value !== "password") {
 		log("wrong password");
 		return;
+		
 	}
 	let shatter = document.getElementById("shatter").checked;
 	let flower = document.getElementById("flower").checked;
