@@ -63,9 +63,9 @@ app.use('/', function(req, res, next) {
     }
 }, index);
 
-app.use('/movies', movie);
+// app.use('/movies', movie);
 app.use('/color', color);
-app.use('/tracker', tracker)
+app.use('/tracker', tracker);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
