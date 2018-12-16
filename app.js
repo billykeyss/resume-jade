@@ -63,7 +63,7 @@ app.use('/', function(req, res, next) {
     }
 }, index);
 
-// app.use('/movies', movie);
+app.use('/movies', movie);
 app.use('/color', color);
 app.use('/tracker', tracker);
 
