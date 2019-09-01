@@ -23,7 +23,7 @@
     "memory-cache": "~0.1.6",
     "morgan": "^1.9.1",
     "moviedb": "^0.2.10",
-    "npm": "^6.4.1",
+    "npm": "^6.11.2",
     "pug": "^2.0.3",
     "request": "^2.85.0",
     "serve-favicon": "^2.5.0",
