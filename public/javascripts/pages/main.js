@@ -53,7 +53,7 @@ $(document).ready(function() {
 
     $(function() {
         count = 0;
-        wordsArrayShirt = ['CSS', 'HTML', 'JS', 'Node'];
+        wordsArrayShirt = ['CSS', 'HTML', 'JS', 'Node', 'Android', 'AWS'];
         setInterval(function() {
             count++;
             $('#change-text').fadeOut(400, function() {

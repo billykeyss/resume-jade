@@ -3,6 +3,7 @@
 *.css.map
 *.env
 public/sass/
+.idea/*
 
 
 # ignore all files starting with . or ~

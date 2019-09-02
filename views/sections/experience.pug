@@ -2,9 +2,12 @@
 	//- img.bb8.fish(src='images/svg/submarine.svg', style='display:block;')
 	img.angler(src='images/svg/angler.svg')
 	img.octopus(src='images/svg/octopus-1.svg', style='display:inline;')
+	img.fishSVGOne(src='images/svg/fish.svg')
+	include ../components/fish
+	img.shark(src='images/svg/shark.svg')
 
 	.container.profileContainer.align-center
-		h1.titleText Experiences
+		h1.titleText(style="color:white;") Experiences
 	.container
 		#timeline
 			each experience, index in data.experiences

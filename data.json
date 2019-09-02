@@ -2,7 +2,7 @@
   "title": "Bill Huang",
   "description": "Hi, I'm Bill. I do stuff on the internet.",
   "aboutlong": "My name is Bill Huang... <br> I was raised in the wintery city of Calgary, Alberta. In 2013, I left my hometown for Waterloo, Ontario in order to pursue an undergraduate degree in Computer Engineering. I have always possessed an interest for technology and this degree allows me to sate my curiosity. <br>If you have any questions or concerns, I can be reached through email at any time.",
-  "aboutshort": "I am a fullstack software engineer interested in Frontend Web Design and Android application development. I am passionate about delivering the best possible experience to the end user. I am currently studying Computer Engineering at the University of Waterloo. ",
+  "aboutshort": "I am a fullstack software engineer interested in Frontend Web Design and Android application development. I am passionate about delivering the best possible experience to the end user. In 2018, I graduated with a Computer Engineering degree from the University of Waterloo and I am currently working as a Software Engineer for Amazon.",
   "name": "Yichen Bill Huang",
   "location": "Toronto, Ontario, Canada",
   "email": "yichenhuang95@gmail.com",
@@ -17,7 +17,7 @@
     {
         "imgSrc": "images/svg/values/feedback-loop.svg",
         "value": "Seek feedback",
-        "description": "Actively seek feedback to incorporate into my work."
+        "description": "Actively seek feedback to incorporate back into my work."
     },
     {
         "imgSrc": "images/svg/values/simplify.svg",
@@ -44,7 +44,17 @@
     {
       "show": "True",
       "company": "Amazon Lab126",
-      "title": "Software Engineer",
+      "title": "Software Development Engineer",
+      "descriptionShort": "I am currently working as an Android software developer on the FireTV Partners and Advertising Team.",
+      "description": "",
+      "location": "Sunnyvale, California",
+      "dates": "(August 2018 - Current)",
+      "url": "https://www.google.com/maps/place/Sunnyvale,+CA/@37.3971408,-122.094161,12z/data=!3m1!4b1!4m5!3m4!1s0x808fb645a9d05d3b:0x768dfb26dd7cc3a2!8m2!3d37.36883!4d-122.0363496"
+    },
+    {
+      "show": "True",
+      "company": "Amazon Lab126",
+      "title": "Software Engineer Intern",
       "descriptionShort": "At Amazon, I was a part of the WebVideo team (formerly the YouTube team). When Google blocked YouTube from Amazon devices, we transitioned into displaying WebVideos from various sources (Vimeo, DailyMotion). With the WebVideo team, we pushed out a production ready product in 2 months to millions of Echo Show users.",
       "description": "",
       "location": "Sunnyvale, California",
@@ -54,7 +64,7 @@
     {
       "show": "True",
       "company": "Connected Lab",
-      "title": "Software Engineer",
+      "title": "Software Engineer Intern",
       "descriptionShort": "At Connected Lab, I aided product managers in translating technical requirements into a long term development plan and estimating development effort for each solution. I worked on a variety of web/mobile/server projects for numerous clients during my time here.",
       "description": "",
       "location": "Toronto, Ontario",
@@ -64,7 +74,7 @@
     {
       "show": "True",
       "company": "Connected Lab",
-      "title": "Software Engineer",
+      "title": "Software Engineer Intern",
       "descriptionShort": "I helped build an internal resource management tool using the PERN stack (Postgres, Express, React, Node). Express was used for routing  I also performed RnD on the capabilities of React Native.",
       "description": "Connected Lab is a company that is building standalone mobile and web apps, while increasingly building ‘connected software’ across multiple devices and environments. At Connected Lab, I worked on the connected allocations web tool. The allocations web tool is an internal tool used by Connected Lab for resource, client, and project management. Functionalities for report/invoice generation was also implemented during my time at Connected. This project used ReactJS on a Node Framework. Swig was used for HTML templating PostgreSQL and Sequelize was used for the back end.",
       "location": "Toronto, Ontario",
@@ -74,7 +84,7 @@
     {
       "show": "True",
       "company": "nanoPay",
-      "title": "Frontend Developer",
+      "title": "Frontend Developer Intern",
       "descriptionShort": "While at nanoPay, I implemented UI/UX of an Android app as well as using AngularJS to build a responsive website with Rest API. I worked closely with designers to implement the designs and was responsible for high code quality.",
       "description": "nanoPay is a relatively new startup company that streamlines checkout and creates a smoother shopping experiences by delivering loyalty, coupons and payment with a single touch. I have had the pleasure to work for nanoPay as a Front End Developer, spending my time creating the loyalty portal that the clients of nanoPay will use. Here, I gained significant experience in development using AngularJS and also the Continuous Integration Software Development Cycle. I also started development on an mobile app for android using Android Studio.",
       "location": "Toronto, Ontario",
