@@ -2,7 +2,7 @@
   "title": "Bill Huang",
   "description": "Hi, I'm Bill. I do stuff on the internet.",
   "aboutlong": "My name is Bill Huang... <br> I was raised in the wintery city of Calgary, Alberta. In 2013, I left my hometown for Waterloo, Ontario in order to pursue an undergraduate degree in Computer Engineering. I have always possessed an interest for technology and this degree allows me to sate my curiosity. <br>If you have any questions or concerns, I can be reached through email at any time.",
-  "aboutshort": "I am a fullstack software engineer interested in Frontend Web Design and Android application development. I am passionate about delivering the best possible experience to the end user. In 2018, I graduated with a Computer Engineering degree from the University of Waterloo and I am currently working as a Software Engineer for Amazon.",
+  "aboutshort": "I am a fullstack software engineer interested in Frontend Web Design and Android application development. I am passionate about delivering the best possible experience to the end user. In 2018, I graduated with a Computer Engineering degree from the University of Waterloo and I am currently working as a Software Engineer for Amazon in the Bay Area. In my free time, I enjoy rock climbing, surfing, soccer, yoga, and doing cool/weird projects around the house.",
   "name": "Yichen Bill Huang",
   "location": "Toronto, Ontario, Canada",
   "email": "yichenhuang95@gmail.com",
@@ -12,17 +12,17 @@
     {
         "imgSrc": "images/svg/values/code.svg",
         "value": "Code Quality",
-        "description": "Maintain readability and uphold good coding practices."
+        "description": "Maintain readability and uphold good coding practices. Code should be easy to read and understand."
     },
     {
         "imgSrc": "images/svg/values/feedback-loop.svg",
         "value": "Seek feedback",
-        "description": "Actively seek feedback to incorporate back into my work."
+        "description": "Actively seek feedback to incorporate back into my work; improving the process every step of the way."
     },
     {
         "imgSrc": "images/svg/values/simplify.svg",
         "value": "Simplify",
-        "description": "Strive for simplicity but not at the cost of quality."
+        "description": "Strive for simplicity but not at the cost of quality. Invent, then simplify."
     },
     {
         "imgSrc": "images/svg/values/fail.svg",
@@ -45,7 +45,7 @@
       "show": "True",
       "company": "Amazon Lab126",
       "title": "Software Development Engineer",
-      "descriptionShort": "I am currently working as an Android software developer on the FireTV Partners and Advertising Team.",
+      "descriptionShort": "I am currently working as an Android software developer on the FireTV platform working for the FireTV Partners and Advertising Team. I am currently working on the <a href=\"https://amazonfiretv.blog/introducing-the-news-app-on-fire-tv-5138d80a8dc9\">news experience</a>",
       "description": "",
       "location": "Sunnyvale, California",
       "dates": "(August 2018 - Current)",
@@ -55,7 +55,7 @@
       "show": "True",
       "company": "Amazon Lab126",
       "title": "Software Engineer Intern",
-      "descriptionShort": "At Amazon, I was a part of the WebVideo team (formerly the YouTube team). When Google blocked YouTube from Amazon devices, we transitioned into displaying WebVideos from various sources (Vimeo, DailyMotion). With the WebVideo team, we pushed out a production ready product in 2 months to millions of Echo Show users.",
+      "descriptionShort": "At Amazon, I was a part of the WebVideo team (formerly the YouTube team). When Google blocked YouTube from Amazon devices, we transitioned into displaying WebVideos from various sources (Vimeo, DailyMotion). With the WebVideo team, we pushed out a production ready <a href=\"https://www.theverge.com/circuitbreaker/2017/11/21/16686174/youtube-amazon-echo-show-google-back-updated-design-ui\">WebVideo application</a> with support for Youtube, Vimeo, and DailyMotion in 2 months to millions of Echo Show users.",
       "description": "",
       "location": "Sunnyvale, California",
       "dates": "(Spetember 2017 - December 2017)",
