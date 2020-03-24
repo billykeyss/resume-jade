@@ -12,12 +12,12 @@
     {
         "imgSrc": "images/svg/values/code.svg",
         "value": "Code Quality",
-        "description": "Maintain readability and uphold good coding practices. Code should be easy to read and understand."
+        "description": "Maintain readability and uphold good coding practices. Code should be easy to read, understand, extend, and test."
     },
     {
         "imgSrc": "images/svg/values/feedback-loop.svg",
         "value": "Seek feedback",
-        "description": "Actively seek feedback to incorporate back into my work; improving the process every step of the way."
+        "description": "Actively seek feedback to incorporate back into my work; improving the process in every iteration."
     },
     {
         "imgSrc": "images/svg/values/simplify.svg",
