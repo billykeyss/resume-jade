@@ -44,11 +44,21 @@
     {
       "show": "True",
       "company": "Amazon Lab126",
-      "title": "Software Development Engineer",
-      "descriptionShort": "I am currently working as an Android software developer on the FireTV platform working for the FireTV Partners and Advertising Team. I am currently working on the <a href=\"https://amazonfiretv.blog/introducing-the-news-app-on-fire-tv-5138d80a8dc9\">news experience</a>",
+      "title": "Software Development Engineer II",
+      "descriptionShort": "I am currently working as an Android platform developer on the for Amazon Lab126 I am currently working on the <a href=\"https://www.amazon.com/Introducing-Amazon-Astro/dp/B078NSDFSB\">Amazon Astro</a>",
       "description": "",
       "location": "Sunnyvale, California",
-      "dates": "(August 2018 - Current)",
+      "dates": "(August 2020 - Current)",
+      "url": "https://www.google.com/maps/place/Sunnyvale,+CA/@37.3971408,-122.094161,12z/data=!3m1!4b1!4m5!3m4!1s0x808fb645a9d05d3b:0x768dfb26dd7cc3a2!8m2!3d37.36883!4d-122.0363496"
+    },
+    {
+      "show": "True",
+      "company": "Amazon Lab126",
+      "title": "Software Development Engineer I",
+      "descriptionShort": "I worked as an Android software developer on the FireTV platform working for the FireTV Partners and Advertising Team. I helped to build FireTV's <a href=\"https://amazonfiretv.blog/introducing-the-news-app-on-fire-tv-5138d80a8dc9\">news experience</a>",
+      "description": "",
+      "location": "Sunnyvale, California",
+      "dates": "(August 2018 - August 2020)",
       "url": "https://www.google.com/maps/place/Sunnyvale,+CA/@37.3971408,-122.094161,12z/data=!3m1!4b1!4m5!3m4!1s0x808fb645a9d05d3b:0x768dfb26dd7cc3a2!8m2!3d37.36883!4d-122.0363496"
     },
     {
