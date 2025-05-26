@@ -5,6 +5,7 @@
 public/sass/
 .idea/*
 
+build/
 
 # ignore all files starting with . or ~
 .*

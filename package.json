@@ -11,7 +11,8 @@
     "watch": "sass --watch public/sass:public/stylesheets --style compressed",
     "watchJS": "watch 'npm run uglyifyJs -s' public/javascripts",
     "uglyifyJs": "uglifyjs public/javascripts/lib/webfont.min.js public/javascripts/lib/jquery.min.js public/javascripts/lib/jquery.scrollTo.min.js public/javascripts/lib/Chart.bundle.min.js public/javascripts/lib/particles.min.js public/javascripts/pages/main.js --compress --mangle --output public/main.min.js",
-    "build": ""
+    "build": "node build-static.js",
+    "build:prod": "npm run uglyifyJs && npm run build"
   },
   "dependencies": {
     "aws-sdk": "^2.568.0",
