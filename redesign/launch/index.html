@@ -180,6 +180,7 @@
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .12), 0 18px 40px rgba(0, 0, 0, .35);
   }
   .craft-card[hidden], .craft[hidden] { display: none; }
+  .dock { display: contents; }
   .craft-card { transform-origin: 50% 0; animation: pop .34s cubic-bezier(.16, 1, .3, 1); }
   .craft.aux { animation: pop .4s cubic-bezier(.16, 1, .3, 1); }
   @keyframes pop { from { opacity: 0; scale: .9; } }
@@ -198,9 +199,18 @@
   .cc-spec dd { margin: .25rem 0 0; font-size: 15px; font-weight: 500; font-variant-numeric: tabular-nums; }
 
   @media (max-width: 760px) {
-    .ship { width: 52px; }
+    .ship { width: 52px; z-index: 4; }
     .gauge { display: none; }
-    .craft { z-index: 2; }
+    /* Phones: the text fills the width, so the tags sit in a dock along the bottom and the card opens above it */
+    .dock {
+      position: fixed; z-index: 4; left: 0; right: 0; bottom: 0; display: flex; gap: 8px; overflow-x: auto;
+      padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); pointer-events: none; scrollbar-width: none;
+    }
+    .dock::-webkit-scrollbar { display: none; }
+    .dock .craft { position: static; flex: none; transform: none !important; pointer-events: auto; min-height: 36px; font-size: 13px; box-shadow: 0 6px 18px rgba(0, 0, 0, .35); }
+    .dock .craft::before { display: none; }
+    .readout { bottom: calc(62px + env(safe-area-inset-bottom)); }
+    .craft-card, .craft-card.wide { width: calc(100vw - 24px); max-height: calc(100vh - 100px); }
     section { min-height: 70vh; padding: 4vh 12px; }
     .col { max-width: none; padding: 22px; }
     /* Thinner glass on phones so the ship stays visible behind the text */
@@ -263,7 +273,9 @@
     <g id="p-orbiter"><path class="fillable" d="M-7 34 L-7 -22 C-7 -32 -3 -38 0 -38 C3 -38 7 -32 7 -22 L7 34 Z"/><path d="M-7 34 L-7 -22 C-7 -32 -3 -38 0 -38 C3 -38 7 -32 7 -22 L7 34 Z" fill="url(#shade)"/><path d="M-5.6 -29 C-4 -35 -2 -38 0 -38 C2 -38 4 -35 5.6 -29 Q0 -27 -5.6 -29 Z" fill="#23262f"/><path d="M-3.6 -24 h7.2 l-1 2.6 h-5.2 Z" fill="#23262f"/><path d="M-4.5 34 h3 l.6 4 h-4.2 Z M1.5 34 h3 l.6 4 h-4.2 Z M-1.5 31 h3 l.5 3.5 h-4 Z" fill="#5d626d"/></g>
   </svg>
 </div>
+<div class="dock">
 <button class="craft" type="button" aria-expanded="false" aria-controls="craft-card"><span class="craft-dot" aria-hidden="true">i</span><span class="craft-name">Mercury-Redstone</span></button>
+</div>
 <div class="craft-card" id="craft-card" role="tooltip" hidden>
   <p class="cc-kick"></p>
   <h4 class="cc-name"></h4>
@@ -829,7 +841,7 @@
     // On desktop, once the rocket lies flat, park it (and its flame) in the open sky right of the text panels
     const clear = colBox.reduce((m, b) => Math.max(m, b[2]), 0) + sw * (.9 + .7 * turn) + 18;
     const dx = Math.min(Math.max(W * .7, clear), W - 84 - sw * (.5 + .45 * turn));
-    const x = (mobile ? W * (.86 - .2 * turn) : W * .7 + (dx - W * .7) * turn) - sw / 2 + Math.sin(t * .0007) * (mobile ? 6 : 18) * k;
+    const x = (mobile ? W - sw * .62 : W * .7 + (dx - W * .7) * turn) - sw / 2 + Math.sin(t * .0007) * (mobile ? 2 : 18) * k;
     const y = (mobile ? H * (.62 - .46 * k) : H * .5 - sw) + Math.sin(t * .0011) * 8 * k;
     return { x, y, cx: x + sw / 2, top: y, sw };
   }
@@ -1216,7 +1228,8 @@
 
     // The vehicle rebuilds itself part by part at each stage of the climb
     const p = shipPos(t, s);
-    const heading = pitch(s) * 90, hr = heading * Math.PI / 180, dx = Math.sin(hr), dy = -Math.cos(hr);
+    // Phones keep the rocket upright in the right margin, above the text
+    const heading = (W < 760 ? 0 : pitch(s)) * 90, hr = heading * Math.PI / 180, dx = Math.sin(hr), dy = -Math.cos(hr);
     const ccx = p.cx, ccy = p.top + p.sw;
     const dodge = -Math.sin(band(s, 4.27, 4.43) * Math.PI) * p.sw * .7;
     const ms = MORPH.map(([a, b]) => band(s, a, b));
@@ -1259,6 +1272,8 @@
     // Rival rockets of the same years, flying alongside, a little above and ahead
     const rx0 = Math.min(ccx + Math.min(W * .08, 120), W - p.sw * 1.6), ry0 = Math.max(H * .14, ccy - Math.min(H * .26, 230)), RL = p.sw * 1.3;
     spots.rival = null;
+    // Phones have no room to draw the rival, but its card still goes in the dock
+    if (W < 700 && s > .22) { const rv = RIVALS.find(r => r.ph.includes(phase)); if (rv) spots.rival = [rv, 0, 0, 0, 0, 0]; }
     RIVALS.forEach(rv => {
       const on = W >= 700 && rv.ph.includes(phase) && s > .22;
       rv.a = reduce || STILL ? +on : rv.a + (+on - rv.a) * .05;
@@ -1340,7 +1355,7 @@
 
   addEventListener('resize', resize);
   // Info tags for the vehicle, its rivals, and the worlds we pass; all open one shared fact card
-  const tagTpl = document.querySelector('.craft'), card = document.getElementById('craft-card');
+  const tagTpl = document.querySelector('.craft'), card = document.getElementById('craft-card'), dock = document.querySelector('.dock');
   const tags = {};
   let active = null, pinned = false, hideT = 0;
   const measureCols = () => { colBox = [...document.querySelectorAll('section:not(.hero) .col')].map(c => {
@@ -1360,6 +1375,12 @@
   };
   const placeCard = () => {
     if (!active) return;
+    if (W < 760) {
+      // Phones: open as a sheet just above the dock
+      const dockTop = dock.getBoundingClientRect().top;
+      card.style.transform = `translate(12px, ${Math.max(12, dockTop - card.offsetHeight - 6).toFixed(1)}px)`;
+      return;
+    }
     const [x, ly, top, lx] = active.geo, cw = card.offsetWidth, ch = card.offsetHeight, tw = active.w || 120;
     let cx = Math.min(Math.max(x - cw / 2, 12), W - cw - 12), cy;
     if (ly + 40 + ch < H - 12) cy = ly + 40;
@@ -1404,6 +1425,11 @@
     if (!d) { if (!t.el.hidden) { t.el.hidden = true; if (active === t) close(); } return; }
     const fresh = t.d !== d;
     if (fresh) { t.d = d; t.name.textContent = d.name; t.w = 0; if (active === t) fillCard(d); }
+    if (W < 760) {
+      if (t.el.hidden) t.el.hidden = false;
+      if (active === t) placeCard();
+      return;
+    }
     const ly = y + below;
     let lx = x - (t.w || 120) / 2;
     // Keep clear of the altitude gauge on the right edge
